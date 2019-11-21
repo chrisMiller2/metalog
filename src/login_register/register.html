@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="startup.css">
+    <link rel="stylesheet" type="text/css" href="checkbox.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Registration site</title>
+</head>
+<script src="startup.js"></script>
+<body>
+<div class="register">
+    <form action="register.php" method="post" id="startupForm">
+
+        EMAIL: <input type="text" name="email"><br>
+        PASSWORD: <input type="password" name="password" id="pw"><br>
+        CONFIRM PASSWORD: <input type="password" name="confirmedpassword" id="pw2"><br>
+
+        <!--        password visibility-->
+        <label class="password">Show password
+            <input type="checkbox" onclick="passwordVisibility()">
+            <span class="checkmark"></span>
+        </label>
+
+        <br>
+        NICKNAME: <input type="text" name="nickname"><br>
+        <!--        submit-->
+        <button type="submit" class="button">Register</button><br>
+        <input type="button" class="button" onclick="window.location.href='login.html'" value="Login">
+    </form>
+</div>
+</body>
+</html>

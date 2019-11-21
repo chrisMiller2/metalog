@@ -1,0 +1,65 @@
+<?php
+session_start();
+
+$time = $_SERVER['REQUEST_TIME'];
+$timeout_duration = 60;
+if (isset($_SESSION['nickname']) && ($time - $_SESSION['nickname']) > $timeout_duration) {
+    session_unset();
+    session_destroy();
+    session_start();
+    $_SESSION['nickname'] = $time;
+}
+
+//infos about the Server
+$servername = "192.168.56.10";
+$serverUsername = "root";
+$serverPassword = "fuckoff";
+$DBName = "loginData";
+
+//posting the sent infos about the user
+$email = $_POST['email'];
+$password = $_POST['password'];
+
+//connection
+$con = new mysqli($servername, $serverUsername, $serverPassword, $DBName);
+if ($con->connect_error) {
+    die("Connection failed: " . $con->connect_error);
+}
+
+//select query
+$selectSQL = "SELECT * FROM loginData where email = '$email'";
+$statement = $con->query($selectSQL);
+
+//executing query
+if ($statement->num_rows > 0) {
+    while ($row = $statement->fetch_assoc()) {
+        //checking user validation
+        if (isset($email, $password)) {
+            //checking if input is empty
+            if (filter_var($email, FILTER_VALIDATE_EMAIL) && password_verify($password, $row['password'])) {
+                //checking user authentication
+                if ($row['isAdmin'] == 1) {
+                    $_SESSION['nickname'] = $row['nickname'];
+                    $_SESSION['last_login_timestamp'] = time();
+                    header("Location: ..\mainPage\adminIndex.php");
+                    exit;
+                } else if ($row['isAdmin'] == 0) {
+                    $_SESSION['nickname'] = $row['nickname'];
+                    $_SESSION['last_login_timestamp'] = time();
+                    header("Location: ..\mainPage\userIndex.php");
+                    exit;
+                }
+            }else{
+                echo "<script>alert('(inner)Either email or password is incorrect!');window.location.href='login.html';</script>";
+            }
+        }
+        else{
+            echo "<script>alert('Either email or password is missing!');window.location.href='login.html';</script>";
+        }
+    }
+} else {
+    echo "<script>alert('Either email or password is incorrect!');window.location.href='login.html';</script>";
+}
+
+
+$con->close();
