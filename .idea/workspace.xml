@@ -2,53 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ae899390-2983-46d6-a30b-61b97734a05f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/login_register/mainPage/listCustomLogs.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/login_register/mainPage/notLoggedIn.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/login_register/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainPage/Main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/Main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainPage/about.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/about.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainPage/adminIndex.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/adminIndex.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainPage/css/bootstrap-grid.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/css/bootstrap-grid.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainPage/css/bootstrap-grid.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/css/bootstrap-grid.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainPage/css/bootstrap-grid.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/css/bootstrap-grid.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainPage/css/bootstrap-grid.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/css/bootstrap-grid.min.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainPage/css/bootstrap-reboot.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/css/bootstrap-reboot.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainPage/css/bootstrap-reboot.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/css/bootstrap-reboot.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainPage/css/bootstrap-reboot.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/css/bootstrap-reboot.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainPage/css/bootstrap-reboot.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/css/bootstrap-reboot.min.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainPage/css/bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/css/bootstrap.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainPage/css/bootstrap.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/css/bootstrap.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainPage/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/css/bootstrap.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainPage/css/bootstrap.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/css/bootstrap.min.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainPage/css/searchicon.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/images/searchicon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainPage/headerTemplate/footerTemplate.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainPage/headerTemplate/headerAdminTemplate.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainPage/headerTemplate/headerUserTemplate.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainPage/images/backgroundImage.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/images/backgroundImage.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainPage/images/usericon.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/images/usericon.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainPage/importLogFile.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/importLogFile.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainPage/js/bootstrap.bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/js/bootstrap.bundle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainPage/js/bootstrap.bundle.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/js/bootstrap.bundle.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainPage/js/bootstrap.bundle.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/js/bootstrap.bundle.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainPage/js/bootstrap.bundle.min.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/js/bootstrap.bundle.min.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainPage/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/js/bootstrap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainPage/js/bootstrap.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/js/bootstrap.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainPage/js/bootstrap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/js/bootstrap.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainPage/js/bootstrap.min.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/js/bootstrap.min.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainPage/js/jquery-3.4.1.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/js/jquery-3.4.1.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainPage/log-CenterAdmin.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/log-CenterAdmin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainPage/log-CenterUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/log-CenterUser.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainPage/notLoggedIn.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainPage/readlog.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/readlog.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainPage/searchLog.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/searchLog.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainPage/sessionTimeOut.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/sessionTimeOut.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainPage/statistics.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/statistics.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainPage/upload_test.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainPage/userIndex.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/userIndex.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -236,7 +190,16 @@
       <workItem from="1581624778474" duration="1100000" />
       <workItem from="1581664323978" duration="263000" />
       <workItem from="1581665224171" duration="84000" />
+      <workItem from="1581665322245" duration="234000" />
     </task>
+    <task id="LOCAL-00001" summary="New structure">
+      <created>1581665524514</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1581665524514</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -255,6 +218,12 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
+    <MESSAGE value="20200214" />
+    <MESSAGE value="New structure" />
+    <option name="LAST_COMMIT_MESSAGE" value="New structure" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="1032" y="182" key="#Deployment" timestamp="1581357052874">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -272,10 +241,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1120" y="256" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581252430066" />
-    <state x="790" y="115" key="CommitChangelistDialog2" timestamp="1581665463779">
+    <state x="790" y="115" key="CommitChangelistDialog2" timestamp="1581665522658">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="790" y="115" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1581665463779" />
+    <state x="790" y="115" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1581665522658" />
     <state x="1011" y="100" width="816" height="847" key="DirDiffDialog" timestamp="1581587461934">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

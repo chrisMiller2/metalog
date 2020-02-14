@@ -1,0 +1,32 @@
+Nov 19 14:35:50 linux_server systemd[1]: Stopping MySQL Community Server...
+Nov 19 14:35:53 linux_server systemd[1]: Stopped MySQL Community Server.
+Nov 19 14:35:54 linux_server systemd[1]: Reloading.
+Nov 19 14:35:55 linux_server systemd[1]: /etc/systemd/system/snapd.service.d/snap_proxy.conf:4: Missing '
+='.
+Nov 19 14:36:00 linux_server systemd[1]: Reloading.
+Nov 19 14:36:01 linux_server systemd[1]: /etc/systemd/system/snapd.service.d/snap_proxy.conf:4: Missing '
+='.
+Nov 19 14:36:07 linux_server systemd[1]: Reloading.
+Nov 19 14:36:08 linux_server systemd[1]: /etc/systemd/system/snapd.service.d/snap_proxy.conf:4: Missing '
+='.
+Nov 19 14:36:07 linux_server systemd[1]: Reloading.
+Nov 19 14:36:08 linux_server systemd[1]: /etc/systemd/system/snapd.service.d/snap_proxy.conf:4: Missing '
+='.
+Nov 19 14:36:00 linux_server systemd[1]: Reloading.
+Nov 19 14:36:01 linux_server systemd[1]: /etc/systemd/system/snapd.service.d/snap_proxy.conf:4: Missing '
+='.
+Nov 19 14:36:07 linux_server systemd[1]: Reloading.
+Nov 19 14:36:08 linux_server systemd[1]: /etc/systemd/system/snapd.service.d/snap_proxy.conf:4: Missing '
+='.
+Nov 19 14:36:07 linux_server systemd[1]: Reloading.
+Nov 19 14:36:08 linux_server systemd[1]: /etc/systemd/system/snapd.service.d/snap_proxy.conf:4: Missing '
+='.
+Nov 19 14:36:00 linux_server systemd[1]: Reloading.
+Nov 19 14:36:01 linux_server systemd[1]: /etc/systemd/system/snapd.service.d/snap_proxy.conf:4: Missing '
+='.
+Nov 19 14:36:07 linux_server systemd[1]: Reloading.
+Nov 19 14:36:08 linux_server systemd[1]: /etc/systemd/system/snapd.service.d/snap_proxy.conf:4: Missing '
+='.
+Nov 19 14:36:07 linux_server systemd[1]: Reloading.
+Nov 19 14:36:08 linux_server systemd[1]: /etc/systemd/system/snapd.service.d/snap_proxy.conf:4: Missing '
+='.
