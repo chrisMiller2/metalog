@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 //object classes for the log file
 class SyslogFileData
@@ -148,28 +149,67 @@ if (isset($_POST['select'])) {
     if ($con->connect_error) {
         die("Connection failed: " . $con->connect_error);
     }
+
     switch ($_POST['select']) {
         case 'syslog':
-            shell_exec('cd / && chmod 777 var/log/syslog 2>&1');
+            //Have no permission to read
+//            chmod('/var/log/syslog', 0777);
+            shell_exec("chmod -R 775 /var/log");
+            shell_exec("chown -R christian:www-data /var/log");
+
+            $fileName = "syslog";
+            copyVarLogFileIntoFolder($fileName);
             readLinesFromLog('/var/log/syslog', $con);
             break;
         case "mysql/error.log":
+            //Have no permission to read
+            chmod('/var/log/mysql/error.log', 0444);
+            shell_exec("chown -R christian:www-data /var/log/");
+
+            $fileName = "mysql/error.log";
+            copyVarLogFileIntoFolder($fileName);
             readLinesFromLog('/var/log/mysql/error.log', $con);
             break;
         case "kern.log":
+            //Have no permission to read
+            chmod('/var/log/kern.log', 0444);
+
+            $fileName = "kern.log";
+            copyVarLogFileIntoFolder($fileName);
             readLinesFromLog('/var/log/kern.log', $con);
             break;
         case "auth.log":
+            //Have no permission to read
+            chmod('/var/log/auth.log', 0444);
+
+            $fileName = "auth.log";
+            copyVarLogFileIntoFolder($fileName);
             readLinesFromLog('/var/log/auth.log', $con);
             break;
         case "custom_log":
-            shell_exec("cd /var/www/faildomain.com/html/src/mainPage/logs/ && ");
-            readLinesFromLog("/var/www/faildomain.com/html/src/mainPage/logs/testlog.txt", $con);
+            if($_POST['select2'] != "null"){
+                $_SESSION['customLog'] = $_POST['select2'];
+            }
+            echo $_SESSION['customLog'];
+            print_r($_SESSION);
+            readLinesFromLog("/var/www/faildomain.com/src/login_register/mainPage/logs/", $con);
             break;
     }
 }
 
-//match regex
+//copy log file
+function copyVarLogFileIntoFolder($fileName){
+    chmod("/var/log/auth.log", 0444);
+    chmod("/var/log/kern.log", 0444);
+    chmod("/var/log/mysql/error.log", 0444);
+    chmod("/var/log/syslog", 0444);
+
+    if(!copy("/var/log/$fileName", "system_logs/$fileName")){
+        echo "\nFailed to copy the " . $fileName . " into the folder.\nPossibly permission issue.\n";
+    }
+    chmod('system_logs/' . $fileName, 0777);
+}
+
 function GetRegexMatches($regexType, $line)
 {
     if (preg_match($regexType, $line, $matches)) {
@@ -180,7 +220,6 @@ function GetRegexMatches($regexType, $line)
     }
 }
 
-//analyse logs
 function readLinesFromLog($fileName, $con)
 {
 //reading from file line by line with regex
@@ -201,17 +240,36 @@ function readLinesFromLog($fileName, $con)
     $syslogServiceRegex = "/(?<=\:\d{2}\s).+?(?=\:)/i";
     $syslogMessageRegex = "/(?<=\:\s).*$/i";
 
-//    $filePath = "logs/testlog.txt";
+//    $filePath = "logs/upload_test.txt";
     $file = fopen($fileName, "r");
     if ($file) {
-        if (filesize($fileName)) {
-            //refresh the tables each time it is run
-            $dropTableSQL = "DROP TABLE IF EXISTS Syslog";
-            $createTableSQL = "CREATE TABLE Syslog (time text, service text, message text)";
+        if (filesize($fileName) > 0) {
+            //TABLE MANAGEMENT
+            //refresh the Syslog table each time it is run
+            $dropSyslogTableSQL = "DROP TABLE IF EXISTS Syslog";
+            $createSyslogTableSQL = "CREATE TABLE Syslog (time text, service text, message text)";
+            mysqli_query($con, $dropSyslogTableSQL);
+            mysqli_query($con, $createSyslogTableSQL);
 
-            mysqli_query($con, $dropTableSQL);
-            mysqli_query($con, $createTableSQL);
+            //refresh the Kern.log table each time it is run
+            $dropKernlogTableSQL = "DROP TABLE IF EXISTS Kern_log";
+            $createKernlogTableSQL = "CREATE TABLE Kern_log (time text, service text, message text)";
+            mysqli_query($con, $dropKernlogTableSQL);
+            mysqli_query($con, $createKernlogTableSQL);
 
+            //refresh the Auth.log table each time it is run
+            $dropAuthlogTableSQL = "DROP TABLE IF EXISTS Auth_log";
+            $createAuthlogTableSQL = "CREATE TABLE Auth_log (time text, service text, session text, message text)";
+            mysqli_query($con, $dropAuthlogTableSQL);
+            mysqli_query($con, $createAuthlogTableSQL);
+
+            //refresh the Mysql/Error.log table each time it is run
+            $dropMysqlErrorlogTableSQL = "DROP TABLE IF EXISTS Mysql_Error_log";
+            $createMysqlErrorlogTableSQL = "CREATE TABLE Mysql_Error_log (time text, service text, message text)";
+            mysqli_query($con, $dropMysqlErrorlogTableSQL);
+            mysqli_query($con, $createMysqlErrorlogTableSQL);
+
+            //ANALISE ROWS
             while (($line = fgets($file)) !== false) {
                 //handles rare rows where half of it is separated with semicolons
                 $semicolonArray = explode(';', $line);
@@ -233,7 +291,7 @@ function readLinesFromLog($fileName, $con)
 
                     //get objects
                     $oneColonLine->getDescription();
-                } else if ($fileName == '/var/log/syslog') {
+                } else if ($fileName == '/var/log/syslog' || $fileName ==  '/var/www/faildomain.com/src/login_register/mainPage/logs/upload_test.txt') {
                     $syslogTimeData = GetRegexMatches($syslogTimeRegex, $line);
                     $syslogServiceData = GetRegexMatches($syslogServiceRegex, $line);
                     $syslogMessageData = GetRegexMatches($syslogMessageRegex, $line);
@@ -258,6 +316,11 @@ function readLinesFromLog($fileName, $con)
                     $kernelLine = new KernelFileData($kernelTimeData,
                         $kernelServiceData, $kernelMessageData);
 
+                    //insert into database
+                    $insertKernlogSQL = "INSERT INTO Kern_log(time, service, message)
+                            VALUES ('$kernelTimeData','$kernelServiceData', '$kernelMessageData')";
+                    mysqli_query($con, $insertKernlogSQL);
+
                     //get objects
                     $kernelLine->getDescription();
                 } else if ($fileName == "/var/log/auth.log") {
@@ -270,6 +333,11 @@ function readLinesFromLog($fileName, $con)
                     //create objects
                     $authLine = new AuthFileData($authTimeData, $authServiceData, $authSessionData, $authMessageData);
 
+                    //insert into database
+                    $insertAuthlogSQL = "INSERT INTO Auth_log(time, service, session, message)
+                            VALUES ('$authTimeData','$authServiceData', '$authSessionData', '$authMessageData')";
+                    mysqli_query($con, $insertAuthlogSQL);
+
                     //get objects
                     $authLine->getDescription();
                 } else if ($fileName == "/var/log/mysql/error.log") {
@@ -281,6 +349,11 @@ function readLinesFromLog($fileName, $con)
                     $mysqlLine = new MySQLFileData($mysqlTimeData,
                         $mysqlServiceData, $mysqlMessageData);
 
+                    //insert into database
+                    $insertMysqlErrorlogSQL = "INSERT INTO Mysql_Error_log(time, service, message)
+                            VALUES ('$mysqlTimeData','$mysqlServiceData', '$mysqlMessageData')";
+                    mysqli_query($con, $insertMysqlErrorlogSQL);
+
                     //get objects
                     $mysqlLine->getDescription();
                 }
@@ -289,9 +362,9 @@ function readLinesFromLog($fileName, $con)
             $con->close();
             fclose($file);
         } else {
-            echo "it is empty";
+            echo "The log file " . $fileName . " is empty";
         }
     } else {
-        echo "The filepath is incorrect!";
+        echo "The filepath is incorrect! " . $fileName . " not found";
     }
 }

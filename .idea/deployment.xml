@@ -5,7 +5,7 @@
       <paths name="loganalyser.mik.net">
         <serverdata>
           <mappings>
-            <mapping deploy="/var/www/faildomain.com/html" local="$PROJECT_DIR$" web="/" />
+            <mapping deploy="/var/www/faildomain.com/" local="$PROJECT_DIR$/" web="/" />
           </mappings>
         </serverdata>
       </paths>

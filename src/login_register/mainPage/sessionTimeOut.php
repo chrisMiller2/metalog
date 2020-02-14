@@ -10,6 +10,6 @@ if (isset($_SESSION['nickname'])) {
         echo $counter;
     }
 } else {
-    echo "<script>alert('You got logged out for being inactive');window.location.href='../login_register/logout.php';</script>";
+    echo "<script>alert('You got logged out for being inactive');window.location.href='../logout.php';</script>";
     header("location: login_register/logout.php");
 }

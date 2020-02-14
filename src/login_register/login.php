@@ -41,12 +41,12 @@ if ($statement->num_rows > 0) {
                 if ($row['isAdmin'] == 1) {
                     $_SESSION['nickname'] = $row['nickname'];
                     $_SESSION['last_login_timestamp'] = time();
-                    header("Location: ..\mainPage\adminIndex.php");
+                    header("Location: \mainPage\adminIndex.php");
                     exit;
                 } else if ($row['isAdmin'] == 0) {
                     $_SESSION['nickname'] = $row['nickname'];
                     $_SESSION['last_login_timestamp'] = time();
-                    header("Location: ..\mainPage\userIndex.php");
+                    header("Location: \mainPage\userIndex.php");
                     exit;
                 }
             }else{

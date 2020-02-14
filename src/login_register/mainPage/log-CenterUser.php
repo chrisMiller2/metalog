@@ -1,5 +1,5 @@
 <?php
-require_once('headerTemplate/headerUserTemplate.php'); ?>
+require_once('Template/headerUserTemplate.php'); ?>
 
 
     <div class="heroImage">
@@ -101,4 +101,4 @@ require_once('headerTemplate/headerUserTemplate.php'); ?>
         </div>
     </div>
 
-<?php require_once('headerTemplate/footerTemplate.php'); ?>
+<?php require_once('Template/footerTemplate.php'); ?>

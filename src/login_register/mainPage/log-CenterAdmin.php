@@ -1,5 +1,5 @@
 <?php
-require_once('headerTemplate/headerAdminTemplate.php'); ?>
+require_once('Template/headerAdminTemplate.php'); ?>
 
 
     <div class="heroImage">
@@ -65,21 +65,49 @@ require_once('headerTemplate/headerAdminTemplate.php'); ?>
                 google.charts.load('current', {packages: ['corechart', 'line']});
                 google.charts.setOnLoadCallback(drawBasic);
 
-                var array = <?php echo $dateTimeSecondsJS; ?>;
-                var count = <?php echo $countJS; ?>
+                var array = <?php echo json_encode($dateTimeSeconds, JSON_PRETTY_PRINT); ?>;
+
+                function timeConverter(UNIX_timestamp) {
+                    var a = new Date(UNIX_timestamp * 1000);
+                    var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+                    var year = a.getFullYear();
+                    var month = months[a.getMonth()];
+                    var date = a.getDate();
+                    var hour = a.getHours();
+                    var min = a.getMinutes();
+                    var sec = a.getSeconds();
+                    var time = month + ' ' + date + ' ' + hour + ':' + min + ':' + sec;
+                    return time;
+                }
+
                 function drawBasic() {
 
                     var data = new google.visualization.DataTable();
                     data.addColumn('number', 'X');
                     data.addColumn('number', 'Time');
-                    for(var key in array){
-                        if(array.hasOwnProperty(key)){
-                            data.addRows([array[key], key]);
+
+                    var current = null;
+                    var cnt = 0;
+                    for (var i = 0; i < array.length; i++) {
+                        if (array[i] != current) {
+                            if (cnt > 0) {
+                                var dateFormat = (timeConverter(current));
+                                data.addRows([[current, cnt]]);
+                            }
+                            current = array[i];
+                            cnt = 1;
+                        } else {
+                            cnt++;
                         }
                     }
+                    if (cnt > 0) {
+                        // document.write(current + ": " + cnt);
+                        data.addRows([[current, cnt]]);
+                    }
+
                     // data.addRows([
-                    //     [0, 0],   [1, 10],  [2, 23],  [3, 17],  [4, 18],  [5, 9],
-                    //     [6, 11],  [7, 27],  [8, 33],  [9, 40],  [10, 32], [11, 35],
+                    //     [0, 0], [1, 10], [2, 23], [3, 17], [4, 18], [5, 9],
+                    //     [6, 11], [7, 27], [8, 33], [9, 40], [10, 32], [11, 35],
                     //     [12, 30], [13, 40], [14, 42], [15, 47], [16, 44], [17, 48],
                     //     [18, 52], [19, 54], [20, 42], [21, 55], [22, 56], [23, 57],
                     //     [24, 60], [25, 50], [26, 52], [27, 51], [28, 49], [29, 53],
@@ -106,7 +134,7 @@ require_once('headerTemplate/headerAdminTemplate.php'); ?>
                     chart.draw(data, options);
                 }
                 </script>
-
+                <p id="p1"></p>
             <div class="grid-container">
             <div class="grid-100 grid-parent">
                 <div id="chart_div" style="width: 100%; height: auto"></div>
@@ -117,4 +145,4 @@ require_once('headerTemplate/headerAdminTemplate.php'); ?>
         </div>
     </div>
 
-<?php require_once('headerTemplate/footerTemplate.php'); ?>
+<?php require_once('Template/footerTemplate.php'); ?>

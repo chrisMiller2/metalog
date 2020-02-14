@@ -36,8 +36,9 @@ if ($result = mysqli_query($con, $selectSQL)) {
 //                print_r(CountSameValues($dateTimeSeconds));
 echo "\n";
 //histogram
-Histogram(CountSameValues($dateTimeSeconds));
 $dateTimeCount = CountSameValues($dateTimeSeconds);
+Histogram($dateTimeCount);
+
 function CountSameValues($array)
 {
     return (array_count_values($array));
@@ -76,6 +77,5 @@ array_push($values, array("year" => "2015", "newbalance" => "120"));
 //counting the length of the array
 $countArrayLength = count($values);
 
-//passing the counted dates
-$countJS = json_encode($dateTimeCount, JSON_NUMERIC_CHECK);
-$dateTimeSecondsJS = json_encode($dateTimeSeconds, JSON_NUMERIC_CHECK);
+//passing the dates
+//$dateTimeSecondsJS = json_encode($dateTimeSeconds);

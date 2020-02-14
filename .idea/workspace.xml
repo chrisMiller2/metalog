@@ -1,8 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ae899390-2983-46d6-a30b-61b97734a05f" name="Default Changelist" comment="" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <list default="true" id="ae899390-2983-46d6-a30b-61b97734a05f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/login_register/mainPage/listCustomLogs.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/login_register/mainPage/notLoggedIn.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/login_register/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainPage/Main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/Main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainPage/about.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/about.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainPage/adminIndex.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/adminIndex.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainPage/css/bootstrap-grid.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/css/bootstrap-grid.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainPage/css/bootstrap-grid.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/css/bootstrap-grid.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainPage/css/bootstrap-grid.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/css/bootstrap-grid.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainPage/css/bootstrap-grid.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/css/bootstrap-grid.min.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainPage/css/bootstrap-reboot.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/css/bootstrap-reboot.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainPage/css/bootstrap-reboot.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/css/bootstrap-reboot.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainPage/css/bootstrap-reboot.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/css/bootstrap-reboot.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainPage/css/bootstrap-reboot.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/css/bootstrap-reboot.min.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainPage/css/bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/css/bootstrap.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainPage/css/bootstrap.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/css/bootstrap.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainPage/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/css/bootstrap.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainPage/css/bootstrap.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/css/bootstrap.min.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainPage/css/searchicon.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/images/searchicon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainPage/headerTemplate/footerTemplate.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainPage/headerTemplate/headerAdminTemplate.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainPage/headerTemplate/headerUserTemplate.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainPage/images/backgroundImage.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/images/backgroundImage.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainPage/images/usericon.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/images/usericon.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainPage/importLogFile.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/importLogFile.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainPage/js/bootstrap.bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/js/bootstrap.bundle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainPage/js/bootstrap.bundle.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/js/bootstrap.bundle.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainPage/js/bootstrap.bundle.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/js/bootstrap.bundle.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainPage/js/bootstrap.bundle.min.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/js/bootstrap.bundle.min.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainPage/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/js/bootstrap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainPage/js/bootstrap.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/js/bootstrap.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainPage/js/bootstrap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/js/bootstrap.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainPage/js/bootstrap.min.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/js/bootstrap.min.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainPage/js/jquery-3.4.1.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/js/jquery-3.4.1.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainPage/log-CenterAdmin.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/log-CenterAdmin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainPage/log-CenterUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/log-CenterUser.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainPage/notLoggedIn.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainPage/readlog.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/readlog.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainPage/searchLog.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/searchLog.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainPage/sessionTimeOut.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/sessionTimeOut.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainPage/statistics.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/statistics.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainPage/upload_test.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainPage/userIndex.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/userIndex.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -34,49 +81,48 @@
       </list>
     </option>
   </component>
-  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.3.7" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="MERGE" />
+  </component>
   <component name="ProjectId" id="1RPytfUqD9iZsVnOM6AHUL6dC7w" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/mainPage/images" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\HP EliteBook 8760w\Desktop\szakdolgozat\src\mainPage\images" />
-      <recent name="C:\Users\HP EliteBook 8760w\Desktop\szakdolgozat\src\mainPage" />
-      <recent name="C:\Users\HP EliteBook 8760w\Desktop\szakdolgozat\src\mainPage\headerTemplate" />
-      <recent name="C:\Users\HP EliteBook 8760w\Desktop\szakdolgozat\src" />
-      <recent name="C:\Users\HP EliteBook 8760w\Desktop\szakdolgozat\login_register" />
+      <recent name="C:\Users\Christian Miller\Desktop\szakdolgozat\src\login_register\mainPage\images" />
+      <recent name="C:\Users\Christian Miller\Desktop\szakdolgozat\src\login_register" />
+      <recent name="C:\Users\Christian Miller\Desktop\szakdolgozat\src\login_register\mainPage\Template" />
+      <recent name="C:\Users\Christian Miller\Desktop\szakdolgozat\src\mainPage\images" />
+      <recent name="C:\Users\Christian Miller\Desktop\szakdolgozat\src\mainPage\logs" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\HP EliteBook 8760w\Desktop\szakdolgozat\src\mainPage\images" />
       <recent name="C:\Users\HP EliteBook 8760w\Desktop\szakdolgozat\src\mainPage" />
       <recent name="C:\Users\HP EliteBook 8760w\Desktop\szakdolgozat" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager" selected="PHP Script.userIndex.php">
     <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://192.168.56.10/index.html">
@@ -85,13 +131,13 @@
     <configuration name="login.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://192.168.56.10/src/login_register/login.html">
       <method v="2" />
     </configuration>
-    <configuration name="notLoggedIn.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" path="$PROJECT_DIR$/src/mainPage/notLoggedIn.php">
+    <configuration name="notLoggedIn.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" path="$PROJECT_DIR$/src/login_register/mainPage/notLoggedIn.php">
       <method v="2" />
     </configuration>
-    <configuration name="readlog.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/src/mainPage/readlog.php">
+    <configuration name="readlog.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/src/login_register/mainPage/readlog.php">
       <method v="2" />
     </configuration>
-    <configuration name="userIndex.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/src/mainPage/userIndex.php">
+    <configuration name="userIndex.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/src/login_register/mainPage/userIndex.php">
       <method v="2" />
     </configuration>
     <recent_temporary>
@@ -102,6 +148,18 @@
         <item itemvalue="JavaScript Debug.index.html" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -142,10 +200,121 @@
       <workItem from="1573564017363" duration="41022000" />
       <workItem from="1573994779009" duration="10692000" />
       <workItem from="1574175956309" duration="9950000" />
+      <workItem from="1574361915113" duration="6387000" />
+      <workItem from="1575292593684" duration="919000" />
+      <workItem from="1575713339355" duration="3604000" />
+      <workItem from="1576842288940" duration="1241000" />
+      <workItem from="1579868142629" duration="43000" />
+      <workItem from="1579868295757" duration="4854000" />
+      <workItem from="1579879215218" duration="1957000" />
+      <workItem from="1580556001088" duration="81000" />
+      <workItem from="1580556182301" duration="364000" />
+      <workItem from="1580557046142" duration="5690000" />
+      <workItem from="1580720442771" duration="2027000" />
+      <workItem from="1580908964016" duration="941000" />
+      <workItem from="1580998473752" duration="1124000" />
+      <workItem from="1581000194313" duration="4721000" />
+      <workItem from="1581007923878" duration="1889000" />
+      <workItem from="1581064944432" duration="1204000" />
+      <workItem from="1581066868573" duration="381000" />
+      <workItem from="1581076146100" duration="599000" />
+      <workItem from="1581095315830" duration="2604000" />
+      <workItem from="1581101232098" duration="1368000" />
+      <workItem from="1581159589809" duration="2809000" />
+      <workItem from="1581162827888" duration="4397000" />
+      <workItem from="1581174888790" duration="2471000" />
+      <workItem from="1581252279917" duration="155000" />
+      <workItem from="1581252440996" duration="3675000" />
+      <workItem from="1581356223814" duration="3093000" />
+      <workItem from="1581427484987" duration="5185000" />
+      <workItem from="1581435885534" duration="46000" />
+      <workItem from="1581438800753" duration="3083000" />
+      <workItem from="1581529078328" duration="450000" />
+      <workItem from="1581529980219" duration="721000" />
+      <workItem from="1581586773438" duration="3434000" />
+      <workItem from="1581590729803" duration="415000" />
+      <workItem from="1581624778474" duration="1100000" />
+      <workItem from="1581664323978" duration="263000" />
+      <workItem from="1581665224171" duration="84000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1032" y="182" key="#Deployment" timestamp="1581357052874">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1032" y="182" key="#Deployment/0.0.1920.1040@0.0.1920.1040" timestamp="1581357052874" />
+    <state x="1032" y="182" key="#Notifications" timestamp="1581067009603">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1032" y="182" key="#Notifications/0.0.1920.1040@0.0.1920.1040" timestamp="1581067009603" />
+    <state x="1256" y="327" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1581431582287">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1256" y="327" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1581431582287" />
+    <state x="1120" y="256" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1581252430066">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1120" y="256" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581252430066" />
+    <state x="790" y="115" key="CommitChangelistDialog2" timestamp="1581665463779">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="790" y="115" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1581665463779" />
+    <state x="1011" y="100" width="816" height="847" key="DirDiffDialog" timestamp="1581587461934">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1011" y="100" width="816" height="847" key="DirDiffDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581587461934" />
+    <state x="1220" y="279" key="FileChooserDialogImpl" timestamp="1581000251688">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1220" y="279" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1581000251688" />
+    <state x="1363" y="448" key="NewPhpFileDialog" timestamp="1581165279286">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1363" y="448" key="NewPhpFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581165279286" />
+    <state x="922" y="163" key="SettingsEditor" timestamp="1581664591732">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="922" y="163" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1581664591732" />
+    <state x="661" y="345" key="com.intellij.ide.util.TipDialog" timestamp="1580908975166">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="661" y="345" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1580908975166" />
+    <state x="1249" y="441" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1581358103957">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1249" y="441" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1581358103957" />
+    <state x="1401" y="333" key="ftp.server.browser" timestamp="1581000241451">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1401" y="333" key="ftp.server.browser/0.0.1920.1040@0.0.1920.1040" timestamp="1581000241451" />
+    <state x="1171" y="315" key="git4idea.merge.GitPullDialog" timestamp="1579878934417">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1171" y="315" key="git4idea.merge.GitPullDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1579878934417" />
+    <state x="1295" y="417" key="publish.login" timestamp="1579875499905">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1295" y="417" key="publish.login/0.0.1920.1040@0.0.1920.1040" timestamp="1579875499905" />
+    <state x="1170" y="230" width="672" height="678" key="search.everywhere.popup" timestamp="1581432538642">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1170" y="230" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1581432538642" />
   </component>
 </project>
