@@ -6,6 +6,10 @@ body, html {
     background-color: #2b2b2b;
 }
 
+.footer{
+    text-indent: 20px;
+}
+
 /*lines*/
 hr {
     border-top: 2px dashed gray;
@@ -13,7 +17,7 @@ hr {
 
 .verticalLine {
     border-left: 6px solid #008bd6;
-    height: 768px;
+    height: 1525px;
 }
 
 /*dropdown menu start*/
@@ -26,7 +30,7 @@ li#menuRight {
     position: absolute;
     background-color: #242424;
     min-width: 160px;
-    box-shadow: 10px 10px 10px rgba(0, 83, 128, 0.5);
+    box-shadow: 10px 10px 10px rgba(0, 139, 214, 0.5);
     z-index: 1;
 }
 
@@ -45,16 +49,22 @@ li#menuRight {
 }
 
 /*buttons*/
+.browse_button{
+    display: inline-block;
+    border: none;
+    text-align: center;
+    font-size: 20px;
+}
+
 .button {
     vertical-align: middle;
-    width: 100%;
+    width: 200px;
     display: inline-block;
-    border-radius: 4px;
     border: none;
     color: black;
     background-color: white;
     text-align: center;
-    font-size: 25px;
+    font-size: 20px;
     -webkit-transition-duration: 0.4s;
     transition-duration: 0.4s;
     overflow: hidden;
@@ -62,6 +72,7 @@ li#menuRight {
 
 .button:hover {
     background-color: black;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.5),0 17px 50px 0 rgba(0,0,0,0.19);
     color: white;
 }
 
@@ -93,6 +104,15 @@ li#menuRight {
     padding: 20px;
     color: white;
     border-color: black;
+}
+
+div.custom-select{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    padding: 5px;
+    background-color: rgba(0, 139, 214, 0.5);
+    border: 2px dashed #008bd6;
 }
 
 /*select*/

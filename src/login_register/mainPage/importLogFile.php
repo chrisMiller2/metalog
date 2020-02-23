@@ -23,13 +23,28 @@ if (isset($_FILES['myfile'])) {
     //if no errors occurred
     if (empty($errors) == true) {
         $dest = '/var/www/faildomain.com/src/login_register/mainPage/logs/';
-        move_uploaded_file($file_tmp, $dest . $file_name);
+        move_uploaded_file($file_tmp, $dest . normalizeString($file_name));
         echo "<script>alert('You have successfully uploaded the file!');</script>";
-        echo $file_tmp . " " .$dest . $file_name;
     } else {
         print_r($errors);
         print_r($_FILES);
     }
+
+
+}
+function normalizeString ($str = '')
+{
+    $str = strip_tags($str);
+    $str = preg_replace('/[\r\n\t ]+/', ' ', $str);
+    $str = preg_replace('/[\"\*\/\:\<\>\?\'\|]+/', ' ', $str);
+    $str = strtolower($str);
+    $str = html_entity_decode( $str, ENT_QUOTES, "utf-8" );
+    $str = htmlentities($str, ENT_QUOTES, "utf-8");
+    $str = preg_replace("/(&)([a-z])([a-z]+;)/i", '$2', $str);
+    $str = str_replace(' ', '_', $str);
+    $str = rawurlencode($str);
+    $str = str_replace('%', '-', $str);
+    return $str;
 }
 
 require_once('adminIndex.php');
