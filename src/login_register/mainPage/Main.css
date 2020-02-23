@@ -1,8 +1,9 @@
 body, html {
     height: 100%;
     margin: 0;
-    color: black;
+    color: white;
     font-family: "Lucida Sans Typewriter", serif;
+    background-color: #2b2b2b;
 }
 
 /*lines*/
@@ -11,8 +12,8 @@ hr {
 }
 
 .verticalLine {
-    border-left: 6px solid #50a1a6;
-    height: 754px;
+    border-left: 6px solid #008bd6;
+    height: 768px;
 }
 
 /*dropdown menu start*/
@@ -25,7 +26,7 @@ li#menuRight {
     position: absolute;
     background-color: #242424;
     min-width: 160px;
-    box-shadow: 10px 10px 10px rgba(80, 161, 166, 0.5);
+    box-shadow: 10px 10px 10px rgba(0, 83, 128, 0.5);
     z-index: 1;
 }
 
@@ -66,7 +67,7 @@ li#menuRight {
 
 .loader {
     border: 16px solid #f3f3f3; /* Light grey */
-    border-top: 16px solid #3498db; /* Blue */
+    border-top: 16px solid #008bd6; /* Blue */
     border-radius: 50%;
     width: 120px;
     height: 120px;
@@ -79,14 +80,14 @@ li#menuRight {
 }
 
 /*heroes*/
-.heroImage {
-    /* Used if the image is unavailable */
-    height: 1080px; /* You must set a specified height */
-    /* Center the image */
-    /* Do not repeat the image */
-    background: #cccccc url(images/backgroundImage.jpg) no-repeat center;
-    background-size: cover;
-}
+/*.heroImage {*/
+/*     !* Used if the image is unavailable *!*/
+/*     height: 1080px; !* You must set a specified height *!*/
+/*     !* Center the image *!*/
+/*     !* Do not repeat the image *!*/
+/*     background: #cccccc url(images/backgroundImage.jpg) no-repeat center;*/
+/*     background-size: cover;*/
+/* }*/
 
 .heroText {
     padding: 20px;
@@ -105,7 +106,7 @@ select {
 }
 
 select:hover{
-    background-color: #50a1a6;
+    background-color: #008bd6;
 }
 
 select option {
@@ -127,7 +128,7 @@ textarea{
     width: 250px;
     font-size: 16px;
     padding: 12px 20px 12px 40px;
-    border: 2px solid #50a1a6;
+    border: 2px solid #008bd6;
     margin-bottom: 12px;
 }
 
@@ -166,7 +167,7 @@ textarea{
 
 /*menu header*/
 #main {
-    background-color: #50a1a6;
+    background-color: #008bd6;
 }
 
 #header {
@@ -257,11 +258,11 @@ li a:hover {
 }
 
 input:checked + .slider {
-    background-color: #50a1a6;
+    background-color: #008bd6;
 }
 
 input:focus + .slider {
-    box-shadow: 0 0 1px #50a1a6;
+    box-shadow: 0 0 1px #008bd6;
 }
 
 input:checked + .slider:before {

@@ -3,7 +3,7 @@ session_start();
 
 $dir = '/var/www/faildomain.com/src/login_register/mainPage/logs/';
 echo shell_exec("cd ". $dir . "ls -l");
-$files = array_diff(scandir($dir), array('.', '..'));
+$files = array_diff(scandir($dir), array('.', '..', ' '));
 
 //list uploaded files
 echo '<select name="select2">';

@@ -6,7 +6,7 @@ session_start();?>
     <meta charset="UTF-8">
     <title>MetaLog</title>
     <link rel="stylesheet" href="Main.css">
-    <link rel=" shortcut icon" href="../images/favicon.png" type="img/png" />
+    <link rel="icon" href="../images/favicon.png" sizes="16x16" type="image/png" />
 </head>
 <body>
 <div class="menu" id="reload">

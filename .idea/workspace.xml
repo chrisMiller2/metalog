@@ -2,7 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ae899390-2983-46d6-a30b-61b97734a05f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/login_register/dbInfo.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/webServers.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webServers.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/login_register/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/Main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/Main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/Template/footerTemplate.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/Template/footerTemplate.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/Template/headerAdminTemplate.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/Template/headerAdminTemplate.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/importLogFile.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/importLogFile.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/listCustomLogs.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/listCustomLogs.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/logs/upload_test.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/logs/uploadtest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/logs/uploadtest2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/readlog.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/readlog.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/searchLog.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/searchLog.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/statistics.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/statistics.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/login_register/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/register.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/login_register/startup.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/startup.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +79,7 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="settings.github" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -190,7 +207,25 @@
       <workItem from="1581624778474" duration="1100000" />
       <workItem from="1581664323978" duration="263000" />
       <workItem from="1581665224171" duration="84000" />
-      <workItem from="1581665322245" duration="234000" />
+      <workItem from="1581665322245" duration="1503000" />
+      <workItem from="1581851870176" duration="201000" />
+      <workItem from="1581860133722" duration="690000" />
+      <workItem from="1581861051974" duration="1687000" />
+      <workItem from="1581863380465" duration="3827000" />
+      <workItem from="1581873436275" duration="1036000" />
+      <workItem from="1581875245997" duration="5159000" />
+      <workItem from="1581886714940" duration="694000" />
+      <workItem from="1581930352670" duration="41000" />
+      <workItem from="1581971646633" duration="1614000" />
+      <workItem from="1581973840041" duration="70000" />
+      <workItem from="1581974148106" duration="1933000" />
+      <workItem from="1582053690155" duration="3600000" />
+      <workItem from="1582093221129" duration="611000" />
+      <workItem from="1582093845162" duration="1000" />
+      <workItem from="1582177876011" duration="268000" />
+      <workItem from="1582299808187" duration="3135000" />
+      <workItem from="1582467381469" duration="24000" />
+      <workItem from="1582470708425" duration="2936000" />
     </task>
     <task id="LOCAL-00001" summary="New structure">
       <created>1581665524514</created>
@@ -199,7 +234,14 @@
       <option name="project" value="LOCAL" />
       <updated>1581665524514</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="New structure">
+      <created>1581665612722</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1581665612722</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -225,10 +267,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="New structure" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1032" y="182" key="#Deployment" timestamp="1581357052874">
+    <state x="1032" y="182" key="#Deployment" timestamp="1581864317979">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1032" y="182" key="#Deployment/0.0.1920.1040@0.0.1920.1040" timestamp="1581357052874" />
+    <state x="1032" y="182" key="#Deployment/0.0.1920.1040@0.0.1920.1040" timestamp="1581864317979" />
     <state x="1032" y="182" key="#Notifications" timestamp="1581067009603">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -237,30 +279,34 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1256" y="327" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1581431582287" />
-    <state x="1120" y="256" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1581252430066">
+    <state x="1120" y="256" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1581973871455">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1120" y="256" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581252430066" />
-    <state x="790" y="115" key="CommitChangelistDialog2" timestamp="1581665522658">
+    <state x="1120" y="256" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581973871455" />
+    <state x="790" y="115" key="CommitChangelistDialog2" timestamp="1581665611984">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="790" y="115" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1581665522658" />
-    <state x="1011" y="100" width="816" height="847" key="DirDiffDialog" timestamp="1581587461934">
+    <state x="790" y="115" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1581665611984" />
+    <state x="1011" y="100" width="816" height="847" key="DirDiffDialog" timestamp="1581860917083">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1011" y="100" width="816" height="847" key="DirDiffDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581587461934" />
+    <state x="1011" y="100" width="816" height="847" key="DirDiffDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581860917083" />
     <state x="1220" y="279" key="FileChooserDialogImpl" timestamp="1581000251688">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1220" y="279" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1581000251688" />
-    <state x="1363" y="448" key="NewPhpFileDialog" timestamp="1581165279286">
+    <state x="1363" y="448" key="NewPhpFileDialog" timestamp="1582302308548">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1363" y="448" key="NewPhpFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581165279286" />
-    <state x="922" y="163" key="SettingsEditor" timestamp="1581664591732">
+    <state x="1363" y="448" key="NewPhpFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582302308548" />
+    <state x="891" y="159" key="SettingsEditor" timestamp="1581666559721">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="922" y="163" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1581664591732" />
+    <state x="891" y="159" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1581666559721" />
+    <state x="1089" y="254" key="Vcs.Push.Dialog.v2" timestamp="1582475302681">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1089" y="254" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1582475302681" />
     <state x="661" y="345" key="com.intellij.ide.util.TipDialog" timestamp="1580908975166">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -281,9 +327,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1295" y="417" key="publish.login/0.0.1920.1040@0.0.1920.1040" timestamp="1579875499905" />
-    <state x="1170" y="230" width="672" height="678" key="search.everywhere.popup" timestamp="1581432538642">
+    <state x="1170" y="230" width="672" height="678" key="search.everywhere.popup" timestamp="1581875577729">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1170" y="230" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1581432538642" />
+    <state x="1170" y="230" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1581875577729" />
   </component>
 </project>

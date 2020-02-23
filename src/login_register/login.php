@@ -10,11 +10,7 @@ if (isset($_SESSION['nickname']) && ($time - $_SESSION['nickname']) > $timeout_d
     $_SESSION['nickname'] = $time;
 }
 
-//infos about the Server
-$servername = "192.168.56.10";
-$serverUsername = "root";
-$serverPassword = "fuckoff";
-$DBName = "loginData";
+include "dbInfo.php";
 
 //posting the sent infos about the user
 $email = $_POST['email'];

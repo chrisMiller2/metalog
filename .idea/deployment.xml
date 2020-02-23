@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" autoUpload="Always" serverName="loganalyser.mik.net" showNewOnSourceInSync="false">
+  <component name="PublishConfigData" autoUpload="Always" serverName="loganalyser.debian.net" showNewOnSourceInSync="false">
     <serverData>
-      <paths name="loganalyser.mik.net">
+      <paths name="loganalyser.debian.net">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/var/www/faildomain.com/" local="$PROJECT_DIR$/" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="loganalyser.ubuntu.net">
         <serverdata>
           <mappings>
             <mapping deploy="/var/www/faildomain.com/" local="$PROJECT_DIR$/" web="/" />

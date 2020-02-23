@@ -1,11 +1,7 @@
 <?php
 
 //infos about the Server
-$servername = "192.168.56.10";
-$serverUsername = "root";
-$serverPassword = "fuckoff";
-$DBName = "loginData";
-
+include "dbInfo.php";
 
 //posting the sent infos about the user
 $email = $_POST['email'];
@@ -18,7 +14,7 @@ $filteredEmail = filter_var($email, FILTER_VALIDATE_EMAIL);
 //connection
 $con = new mysqli($servername, $serverUsername, $serverPassword, $DBName);
 if ($con->connect_error) {
-    die("Connection failed" . $con->connect_error);
+    die("Connection failed: " . $con->connect_error . mysqli_error());
 }
 
 //insert user data

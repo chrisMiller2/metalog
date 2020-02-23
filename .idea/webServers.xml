@@ -2,8 +2,16 @@
 <project version="4">
   <component name="WebServers">
     <option name="servers">
-      <webServer id="7f06cc58-c197-4b62-8d4a-dd3a4899e881" name="loganalyser.mik.net" url="http://192.168.56.10">
+      <webServer id="7f06cc58-c197-4b62-8d4a-dd3a4899e881" name="loganalyser.ubuntu.net" url="http://192.168.56.10">
         <fileTransfer host="192.168.56.10" port="22" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+      <webServer id="adb66451-7b72-4983-89a1-a89538eee58b" name="loganalyser.debian.net" url="http://192.168.56.101">
+        <fileTransfer host="192.168.56.101" port="22" accessType="SFTP">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
           </advancedOptions>

@@ -138,11 +138,8 @@ class MySQLFileData
 
 //load selected option
 if (isset($_POST['select'])) {
-    //connect to database
-    $servername = "192.168.56.10";
-    $serverUsername = "root";
-    $serverPassword = "fuckoff";
-    $DBName = "loginData";
+//infos about the Server
+    include "../dbInfo.php";
 
 //connection
     $con = new mysqli($servername, $serverUsername, $serverPassword, $DBName);
@@ -191,8 +188,9 @@ if (isset($_POST['select'])) {
                 $_SESSION['customLog'] = $_POST['select2'];
             }
             echo $_SESSION['customLog'];
+            $customLogFile = $_SESSION['customLog'];
             print_r($_SESSION);
-            readLinesFromLog("/var/www/faildomain.com/src/login_register/mainPage/logs/", $con);
+            readLinesFromLog("/var/www/faildomain.com/src/login_register/mainPage/logs/".$customLogFile, $con);
             break;
     }
 }

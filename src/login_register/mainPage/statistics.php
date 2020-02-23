@@ -1,10 +1,7 @@
 <?php
 
-//connect to database
-$servername = "192.168.56.10";
-$serverUsername = "root";
-$serverPassword = "fuckoff";
-$DBName = "loginData";
+//infos about the Server
+include "../dbInfo.php";
 
 //connection
 $con = new mysqli($servername, $serverUsername, $serverPassword, $DBName);

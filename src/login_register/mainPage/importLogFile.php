@@ -17,7 +17,7 @@ if (isset($_FILES['myfile'])) {
     }
     //ERROR size
     if ($file_size > 2097152) {
-        $errors[] = 'File size must be exactly 2 MB';
+        $errors[] = 'File size must be less than 2 MB';
     }
 
     //if no errors occurred
@@ -25,6 +25,7 @@ if (isset($_FILES['myfile'])) {
         $dest = '/var/www/faildomain.com/src/login_register/mainPage/logs/';
         move_uploaded_file($file_tmp, $dest . $file_name);
         echo "<script>alert('You have successfully uploaded the file!');</script>";
+        echo $file_tmp . " " .$dest . $file_name;
     } else {
         print_r($errors);
         print_r($_FILES);
