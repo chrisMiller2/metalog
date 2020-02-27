@@ -2,15 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ae899390-2983-46d6-a30b-61b97734a05f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/login_register/mainPage/dropDownList.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/login_register/mainPage/selectLogs.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/Main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/Main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/Template/headerAdminTemplate.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/Template/headerAdminTemplate.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/adminIndex.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/adminIndex.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/images/backgroundImage.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/listCustomLogs.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/listCustomLogs.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/log-CenterAdmin.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/log-CenterAdmin.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/readlog.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/readlog.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/searchLog.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/searchLog.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/selectLogs.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/selectLogs.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/statistics.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/statistics.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -225,7 +225,8 @@
       <workItem from="1582745609435" duration="14000" />
       <workItem from="1582746020071" duration="193000" />
       <workItem from="1582791592165" duration="284000" />
-      <workItem from="1582799610065" duration="1060000" />
+      <workItem from="1582799610065" duration="7653000" />
+      <workItem from="1582814049929" duration="7019000" />
     </task>
     <task id="LOCAL-00001" summary="New structure">
       <created>1581665524514</created>
@@ -255,7 +256,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582478363273</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="DB, Search, Modularity done">
+      <created>1582800955611</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1582800955611</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -280,7 +288,8 @@
     <MESSAGE value="New structure" />
     <MESSAGE value="CSS aligned" />
     <MESSAGE value="New design" />
-    <option name="LAST_COMMIT_MESSAGE" value="New design" />
+    <MESSAGE value="DB, Search, Modularity done" />
+    <option name="LAST_COMMIT_MESSAGE" value="DB, Search, Modularity done" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1032" y="182" key="#Deployment" timestamp="1581864317979">
@@ -291,6 +300,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1032" y="182" key="#Notifications/0.0.1920.1040@0.0.1920.1040" timestamp="1581067009603" />
+    <state x="1104" y="182" key="#SQL_Dialects" timestamp="1582801097067">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1104" y="182" key="#SQL_Dialects/0.0.1920.1040@0.0.1920.1040" timestamp="1582801097067" />
     <state x="1256" y="327" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1581431582287">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -299,10 +312,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1120" y="256" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581973871455" />
-    <state x="790" y="115" key="CommitChangelistDialog2" timestamp="1582478361535">
+    <state x="790" y="115" key="CommitChangelistDialog2" timestamp="1582800953579">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="790" y="115" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1582478361535" />
+    <state x="790" y="115" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1582800953579" />
     <state x="1011" y="100" width="816" height="847" key="DirDiffDialog" timestamp="1582631606349">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -311,18 +324,18 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1220" y="279" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1581000251688" />
-    <state x="1363" y="448" key="NewPhpFileDialog" timestamp="1582655750705">
+    <state x="1363" y="448" key="NewPhpFileDialog" timestamp="1582818887689">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1363" y="448" key="NewPhpFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582655750705" />
+    <state x="1363" y="448" key="NewPhpFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582818887689" />
     <state x="891" y="159" key="SettingsEditor" timestamp="1581666559721">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="891" y="159" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1581666559721" />
-    <state x="1089" y="254" key="Vcs.Push.Dialog.v2" timestamp="1582800822875">
+    <state x="1089" y="254" key="Vcs.Push.Dialog.v2" timestamp="1582800958904">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1089" y="254" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1582800822875" />
+    <state x="1089" y="254" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1582800958904" />
     <state x="661" y="345" key="com.intellij.ide.util.TipDialog" timestamp="1580908975166">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

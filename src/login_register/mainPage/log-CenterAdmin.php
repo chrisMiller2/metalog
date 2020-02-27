@@ -15,12 +15,32 @@ require_once('Template/headerAdminTemplate.php'); ?>
                                 <!--search-->
                                 <form action="" method="post">
                                     <div>
-                                        <select name="searchSelect">
+                                        <select name="searchSelect" onchange="customlogList(this);">
                                             <?php include_once "dropDownList.php"?>
                                         </select>
                                     </div>
-                                    <input type="submit" id="searchListButton" name="listbutton" value="Search"/>
+                                    <!--                                custom list-->
+                                    <script>
+                                        function customlogList(that) {
+                                            if (that.value == "custom_log") {
+                                                document.getElementById("customSelect").style.display = "block";
+                                                document.getElementById("customSelectHiddenButton").style.display = "none";
+                                            } else {
+                                                document.getElementById("customSelect").style.display = "none";
+                                                document.getElementById("customSelectHiddenButton").style.display = "block";
+                                            }
+                                        }
+                                    </script>
+                                    <div id="customSelect" style="display: none;">
+                                        <?php $_SESSION['customButtons'] = "logcenter"; require "listCustomLogs.php" ?>
+                                    </div>
+                                    <div id="customSelectHiddenButton">
+                                        <input class="button" type="submit" id="searchListButton" name="searchButton" value="Search"/>
+                                        <input class="button" type="submit" name="histogramButton" value="Histogram"/>
+                                    </div>
                                     <?php include "selectLogs.php";?>
+
+
                                 </form>
                                 <script>
                                     function searchFunction() {
@@ -50,17 +70,13 @@ require_once('Template/headerAdminTemplate.php'); ?>
             <span style="color: #ffffff">
                 <table style="color: #ffffff">
                     <tr>
-                        <td><p><h2>Histogram</h2></p>
-                            <p>After you selected and read the file you chose on the main page,
-                            you must choose the same log file to be analysed and to print out
-                            its histogram</p>
+                        <td>
+                            <p><h2>Charts</h2></p>
                         </td>
                     </tr>
                     <tr>
                         <td>
 
-                            <!--                statistics-->
-                            <?php include_once('statistics.php'); ?>
                         </td>
                     </tr>
                 </table>

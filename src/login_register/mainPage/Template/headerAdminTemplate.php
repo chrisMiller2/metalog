@@ -18,7 +18,6 @@ session_start();?>
         <li class="menu"><a href="log-CenterAdmin.php"><h2>LOG-CENTER</h2></a></li>
 
         <!--nickname-->
-
         <li class="menu" id="menuRight">
             <div class="dropdown">
                 <div class="img-with-text">
@@ -33,7 +32,7 @@ session_start();?>
         </li>
 
         <!--session time-->
-        <li class="menu"><h2>time:
-                <?php //require_once('../sessionTimeOut.php'); ?></h2></li>
+<!--        <li class="menu"><h2>time:-->
+<!--                --><?php //require_once('../sessionTimeOut.php'); ?><!--</h2></li>-->
     </ul>
 </div>

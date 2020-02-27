@@ -135,6 +135,58 @@ class MySQLFileData
     }
 }
 
+class CustomFileData
+{
+    private $time, $service, $message;
+
+    public function getTime()
+    {
+        return $this->time;
+    }
+
+    public function setTime($time)
+    {
+        $this->time = $time;
+    }
+
+    public function getService()
+    {
+        return $this->service;
+    }
+
+    public function setService($service)
+    {
+        $this->service = $service;
+    }
+
+    public function getMessage()
+    {
+        return $this->message;
+    }
+
+    public function setMessage($message)
+    {
+        $this->message = $message;
+    }
+
+    public static $customlogCount = 0;
+
+    public function __construct($time, $service, $message)
+    {
+        $this->time = $time;
+        $this->service = $service;
+        $this->message = $message;
+        CustomFileData::$customlogCount++;
+        return true;
+    }
+
+    public function getDescription()
+    {
+
+        echo $this->time . " " . $this->service . " " . $this->message;
+    }
+}
+
 
 //load selected option
 include_once("selectLogs.php");
@@ -182,13 +234,12 @@ function readLinesFromLog($fileName, $con)
     $syslogServiceRegex = "/(?<=\:\d{2}\s).+?(?=\:)/i";
     $syslogMessageRegex = "/(?<=\:\s).*$/i";
 
-//
+//mysql_error regex MAYBE TIME & MESSAGE
     $mysqlTimeRegex = "/^\d+-\d{2}-\d{2}\s+\d+:\d+:\d+/i";
-    $mysqlServiceRegex = "/(?<=\:\d{2}\s).+?(?=\:)/i";
+    $mysqlServiceRegex = "/(?<=\:\d{2}\s).+?\s(\w+)?(?=\:|\s)/i";
     $mysqlMessageRegex = "/(?<=\:\s).*$/i";
 
 
-//    $filePath = "logs/upload_test.txt";
     $file = fopen($fileName, "r");
     if ($file) {
         if (filesize($fileName) > 0) {
@@ -215,7 +266,7 @@ function readLinesFromLog($fileName, $con)
 
                     //get objects
                     $oneColonLine->getDescription();
-                } else if ($fileName == '/var/log/syslog' || $fileName ==  '/var/www/faildomain.com/src/login_register/mainPage/logs/upload_test.txt') {
+                } else if ($fileName == '/var/log/syslog') {
                     $syslogTimeData = GetRegexMatches($syslogTimeRegex, $line);
                     $syslogServiceData = GetRegexMatches($syslogServiceRegex, $line);
                     $syslogMessageData = GetRegexMatches($syslogMessageRegex, $line);
@@ -281,6 +332,22 @@ function readLinesFromLog($fileName, $con)
 
                     //get objects
                     $mysqlLine->getDescription();
+                }else if($fileName ==  '/var/www/faildomain.com/src/login_register/mainPage/logs/'.$_SESSION['customLog']){
+                    $customTimeData = GetRegexMatches($syslogTimeRegex, $line);
+                    $customServiceData = GetRegexMatches($syslogServiceRegex, $line);
+                    $customMessageData = GetRegexMatches($syslogMessageRegex, $line);
+
+                    //create objects
+                    $customLine = new SyslogFileData($customTimeData,
+                        $customServiceData, $customMessageData);
+
+                    //insert into database
+                    $insertCustomSQL = "INSERT INTO Custom_log(time, service, message)
+                            VALUES ('$customTimeData','$customServiceData', '$customMessageData')";
+                    mysqli_query($con, $insertCustomSQL);
+
+                    //get objects
+                    $customLine->getDescription();
                 }
                 echo "\n";
             }

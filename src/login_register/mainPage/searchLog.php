@@ -1,6 +1,9 @@
 <?php
 session_start();
-echo '<p style="text-indent: 100px">To close the search input, click the "Search" button again!</p>';
+
+//instructions
+echo '<p style="width: 1080px">To close the search input, click the "Search" button again!</p>';
+
 echo "<br><input id=\"searchInput\" onkeyup=\"searchFunction()\" type=\"search\" placeholder=\"Search...\"
                                        name=\"search\">";
 echo "<ul id=\"searchUL\">";

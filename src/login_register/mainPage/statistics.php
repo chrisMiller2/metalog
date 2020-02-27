@@ -1,29 +1,10 @@
 <?php
 session_start();
+$title = $_SESSION['title'];
 
-//infos about the Server
-include "../dbInfo.php";
-
-//connection
-$con = new mysqli($servername, $serverUsername, $serverPassword, $DBName);
-if ($con->connect_error) {
-    die("Connection failed: " . $con->connect_error);
-}?>
-
-<form action="" method="post">
-        <div>
-            <select name="histogramSelect">
-<?php include "dropDownList.php";?>
-
-</select></div>
-<input class="button" type="submit" name="selectButton" value="Histogram"></form>
-
-<?php
-//load selected option
-include_once("selectLogs.php");
-
-// I WANT THIS SHIT OPTIONAL
-$selectSQL = "SELECT time FROM Syslog";
+//instructions
+echo '<p style="width: 1080px">To close the search input, click the "Histogram" button again!';
+echo '<br>The Histogram of '. $title . '</p>';
 
 $dateTimeSeconds = array();
 $dateTime = array();

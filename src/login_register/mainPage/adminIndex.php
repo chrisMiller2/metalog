@@ -8,7 +8,7 @@ require_once('Template/headerAdminTemplate.php');?>
                     <!--                read log file-->
                     <td valign="top">
                          <span style="color: #ffffff">
-                            <textarea readonly cols="100" rows="100"><?php require_once('readlog.php'); ?></textarea>
+                            <textarea readonly cols="100" rows="80"><?php require_once('readlog.php'); ?></textarea>
                          </span>
                     </td>
                     <!--                 line-->
@@ -19,10 +19,21 @@ require_once('Template/headerAdminTemplate.php');?>
                         <div class="custom-select">
                             <span style="color: #ffffff">
                                 <!--                import file-->
-                                Import files (supported formats: .txt, .log)<br>
+                                Import files<br>
                                 <form action="importLogFile.php" method="post" enctype="multipart/form-data">
                                     <input class="browse_button" type="file" name="myfile" id="myfile" /><br>
                                     <input class="button" type="submit" value="upload" onclick="load()">
+                                    <script type="text/javascript">
+                                        function AlertIt() {
+                                            var answer = confirm ("supported formats: .txt, .log\n" +
+                                                "The structure of the file must be like this:\n" +
+                                                "\"TIME SERVICE: MESSAGE\"\n" +
+                                                "Example:\n" +
+                                                "Feb 21 06:44:49 debian systemd[1]: Started Daily man-db regeneration.");
+
+                                        }
+                                    </script>
+                                    <a href="javascript:AlertIt();" id="instructions">Instructions</a>
                                 </form>
                                 <!--                        <script>-->
                                 <!--                            function load() {-->
@@ -34,7 +45,7 @@ require_once('Template/headerAdminTemplate.php');?>
                                 <!--                        <div class="loader" id="loader"></div>-->
 
                                 <!--                dropdown list-->
-                                These logs are stored within: /var/log/<br>
+                                Important logs to monitor:<br>
                                 <form action="" method="post">
                                     <div>
                                         <select name="select" onchange="customlogList(this);">
@@ -54,7 +65,7 @@ require_once('Template/headerAdminTemplate.php');?>
                                             }
                                         </script>
                                         <div id="customSelect" style="display: none;">
-                                            <?php require_once("listCustomLogs.php")?>
+                                            <?php $_SESSION['customButtons'] = "index"; require "listCustomLogs.php" ?>
                                         </div>
 
                                     </div>

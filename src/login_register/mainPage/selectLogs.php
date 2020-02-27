@@ -61,18 +61,24 @@ if (isset($_POST['select'])) {
             readLinesFromLog('/var/log/auth.log', $con);
             break;
         case "custom_log":
+            //for reading in correct order
             if($_POST['select2'] != "null"){
                 $_SESSION['customLog'] = $_POST['select2'];
             }
-            echo $_SESSION['customLog'];
+
             $customLogFile = $_SESSION['customLog'];
-            print_r($_SESSION);
+
+            //refresh the Custom_log table each time it is run
+            $dropCustomTableSQL = "DROP TABLE IF EXISTS Custom_log";
+            $createCustomTableSQL = "CREATE TABLE Custom_log (time text, service text, message text)";
+            mysqli_query($con, $dropCustomTableSQL);
+            mysqli_query($con, $createCustomTableSQL);
             readLinesFromLog("/var/www/faildomain.com/src/login_register/mainPage/logs/".$customLogFile, $con);
             break;
     }
 }
 
-if (isset($_POST['listbutton'])) {
+if (isset($_POST['searchButton'])) {
     switch ($_POST['searchSelect']) {
         case 'syslog':
             $selectSQL = "SELECT time, service, message FROM Syslog";
@@ -94,25 +100,47 @@ if (isset($_POST['listbutton'])) {
             $statement = $con->query($selectSQL);
             include 'searchLog.php';
             break;
+        case "custom_log":
+            $selectSQL = "SELECT time, service, message FROM Custom_log";
+            $statement = $con->query($selectSQL);
+            include 'searchLog.php';
+            break;
     }
 }
 
-if (isset($_GET['histogramSelect'])){
-    switch ($_POST['histogramSelect']) {
+if (isset($_POST['histogramButton'])){
+    switch ($_POST['searchSelect']) {
         case 'syslog':
+            $title = "syslog:<br>";
+            $_SESSION['title'] = $title;
             $selectSQL = "SELECT time FROM Syslog";
+            include "statistics.php";
             break;
         case "mysql/error.log":
+            $title = "mysql/error.log:<br>";
+            $_SESSION['title'] = $title;
             $selectSQL = "SELECT time FROM Mysql_Error_log";
+            include "statistics.php";
             break;
         case "kern.log":
+            $title = "kern.log:<br>";
+            $_SESSION['title'] = $title;
             $selectSQL = "SELECT time FROM Kern_log";
+            include "statistics.php";
             break;
         case "auth.log":
+            $title = "auth.log:<br>";
+            $_SESSION['title'] = $title;
             $selectSQL = "SELECT time FROM Auth_log";
+            include "statistics.php";
+            break;
+        case "custom_log":
+            $title = $_SESSION['customLog'].":<br>";
+            $_SESSION['title'] = $title;
+            $selectSQL = "SELECT time FROM Custom_log";
+            include "statistics.php";
             break;
     }
-    include 'statistics.php';
 }
 
 
