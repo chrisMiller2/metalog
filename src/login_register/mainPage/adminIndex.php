@@ -38,13 +38,9 @@ require_once('Template/headerAdminTemplate.php');?>
                                 <form action="" method="post">
                                     <div>
                                         <select name="select" onchange="customlogList(this);">
-                                            <option value="" selected disabled hidden>logs</option>
-                                            <option value="syslog">syslog</option>
-                                            <option value="mysql/error.log">mysql/error.log</option>
-                                            <option value="kern.log">kern.log</option>
-                                            <option value="auth.log">auth.log</option>
-                                            <option value="custom_log">custom log</option>
+                                            <?php include_once "dropDownList.php"?>
                                         </select>
+
                                         <!--                                custom list-->
                                         <script>
                                             function customlogList(that) {
@@ -60,6 +56,7 @@ require_once('Template/headerAdminTemplate.php');?>
                                         <div id="customSelect" style="display: none;">
                                             <?php require_once("listCustomLogs.php")?>
                                         </div>
+
                                     </div>
                                     <div id="customSelectHiddenButton">
                                         <input class="button" type="submit" name="selectButton" value="Give me logs">

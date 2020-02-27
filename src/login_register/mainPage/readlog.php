@@ -137,63 +137,7 @@ class MySQLFileData
 
 
 //load selected option
-if (isset($_POST['select'])) {
-//infos about the Server
-    include "../dbInfo.php";
-
-//connection
-    $con = new mysqli($servername, $serverUsername, $serverPassword, $DBName);
-    if ($con->connect_error) {
-        die("Connection failed: " . $con->connect_error);
-    }
-
-    switch ($_POST['select']) {
-        case 'syslog':
-            //Have no permission to read
-//            chmod('/var/log/syslog', 0777);
-            shell_exec("chmod -R 775 /var/log");
-            shell_exec("chown -R christian:www-data /var/log");
-
-            $fileName = "syslog";
-            copyVarLogFileIntoFolder($fileName);
-            readLinesFromLog('/var/log/syslog', $con);
-            break;
-        case "mysql/error.log":
-            //Have no permission to read
-            chmod('/var/log/mysql/error.log', 0444);
-            shell_exec("chown -R christian:www-data /var/log/");
-
-            $fileName = "mysql/error.log";
-            copyVarLogFileIntoFolder($fileName);
-            readLinesFromLog('/var/log/mysql/error.log', $con);
-            break;
-        case "kern.log":
-            //Have no permission to read
-            chmod('/var/log/kern.log', 0444);
-
-            $fileName = "kern.log";
-            copyVarLogFileIntoFolder($fileName);
-            readLinesFromLog('/var/log/kern.log', $con);
-            break;
-        case "auth.log":
-            //Have no permission to read
-            chmod('/var/log/auth.log', 0444);
-
-            $fileName = "auth.log";
-            copyVarLogFileIntoFolder($fileName);
-            readLinesFromLog('/var/log/auth.log', $con);
-            break;
-        case "custom_log":
-            if($_POST['select2'] != "null"){
-                $_SESSION['customLog'] = $_POST['select2'];
-            }
-            echo $_SESSION['customLog'];
-            $customLogFile = $_SESSION['customLog'];
-            print_r($_SESSION);
-            readLinesFromLog("/var/www/faildomain.com/src/login_register/mainPage/logs/".$customLogFile, $con);
-            break;
-    }
-}
+include_once("selectLogs.php");
 
 //copy log file
 function copyVarLogFileIntoFolder($fileName){
@@ -238,34 +182,16 @@ function readLinesFromLog($fileName, $con)
     $syslogServiceRegex = "/(?<=\:\d{2}\s).+?(?=\:)/i";
     $syslogMessageRegex = "/(?<=\:\s).*$/i";
 
+//
+    $mysqlTimeRegex = "/^\d+-\d{2}-\d{2}\s+\d+:\d+:\d+/i";
+    $mysqlServiceRegex = "/(?<=\:\d{2}\s).+?(?=\:)/i";
+    $mysqlMessageRegex = "/(?<=\:\s).*$/i";
+
+
 //    $filePath = "logs/upload_test.txt";
     $file = fopen($fileName, "r");
     if ($file) {
         if (filesize($fileName) > 0) {
-            //TABLE MANAGEMENT
-            //refresh the Syslog table each time it is run
-            $dropSyslogTableSQL = "DROP TABLE IF EXISTS Syslog";
-            $createSyslogTableSQL = "CREATE TABLE Syslog (time text, service text, message text)";
-            mysqli_query($con, $dropSyslogTableSQL);
-            mysqli_query($con, $createSyslogTableSQL);
-
-            //refresh the Kern.log table each time it is run
-            $dropKernlogTableSQL = "DROP TABLE IF EXISTS Kern_log";
-            $createKernlogTableSQL = "CREATE TABLE Kern_log (time text, service text, message text)";
-            mysqli_query($con, $dropKernlogTableSQL);
-            mysqli_query($con, $createKernlogTableSQL);
-
-            //refresh the Auth.log table each time it is run
-            $dropAuthlogTableSQL = "DROP TABLE IF EXISTS Auth_log";
-            $createAuthlogTableSQL = "CREATE TABLE Auth_log (time text, service text, session text, message text)";
-            mysqli_query($con, $dropAuthlogTableSQL);
-            mysqli_query($con, $createAuthlogTableSQL);
-
-            //refresh the Mysql/Error.log table each time it is run
-            $dropMysqlErrorlogTableSQL = "DROP TABLE IF EXISTS Mysql_Error_log";
-            $createMysqlErrorlogTableSQL = "CREATE TABLE Mysql_Error_log (time text, service text, message text)";
-            mysqli_query($con, $dropMysqlErrorlogTableSQL);
-            mysqli_query($con, $createMysqlErrorlogTableSQL);
 
             //ANALISE ROWS
             while (($line = fgets($file)) !== false) {
@@ -329,7 +255,8 @@ function readLinesFromLog($fileName, $con)
                     $authMessageData = GetRegexMatches($messageRegex, $line);
 
                     //create objects
-                    $authLine = new AuthFileData($authTimeData, $authServiceData, $authSessionData, $authMessageData);
+                    $authLine = new AuthFileData($authTimeData, $authServiceData,
+                        $authSessionData, $authMessageData);
 
                     //insert into database
                     $insertAuthlogSQL = "INSERT INTO Auth_log(time, service, session, message)
@@ -339,9 +266,9 @@ function readLinesFromLog($fileName, $con)
                     //get objects
                     $authLine->getDescription();
                 } else if ($fileName == "/var/log/mysql/error.log") {
-                    $mysqlTimeData = GetRegexMatches($syslogTimeRegex, $line);
-                    $mysqlServiceData = GetRegexMatches($syslogServiceRegex, $line);
-                    $mysqlMessageData = GetRegexMatches($syslogMessageRegex, $line);
+                    $mysqlTimeData = GetRegexMatches($mysqlTimeRegex, $line);
+                    $mysqlServiceData = GetRegexMatches($mysqlServiceRegex, $line);
+                    $mysqlMessageData = GetRegexMatches($mysqlMessageRegex, $line);
 
                     //create objects
                     $mysqlLine = new MySQLFileData($mysqlTimeData,

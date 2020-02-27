@@ -2,12 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ae899390-2983-46d6-a30b-61b97734a05f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/login_register/mainPage/dropDownList.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/login_register/mainPage/selectLogs.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/Main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/Main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/Template/footerTemplate.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/Template/footerTemplate.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/adminIndex.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/adminIndex.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/importLogFile.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/importLogFile.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/listCustomLogs.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/listCustomLogs.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/images/backgroundImage.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/log-CenterAdmin.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/log-CenterAdmin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/readlog.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/readlog.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/searchLog.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/searchLog.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/statistics.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/statistics.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -213,7 +217,15 @@
       <workItem from="1582177876011" duration="268000" />
       <workItem from="1582299808187" duration="3135000" />
       <workItem from="1582467381469" duration="24000" />
-      <workItem from="1582470708425" duration="6101000" />
+      <workItem from="1582470708425" duration="8301000" />
+      <workItem from="1582533924593" duration="3808000" />
+      <workItem from="1582625129441" duration="5304000" />
+      <workItem from="1582647123896" duration="8737000" />
+      <workItem from="1582697440548" duration="1097000" />
+      <workItem from="1582745609435" duration="14000" />
+      <workItem from="1582746020071" duration="193000" />
+      <workItem from="1582791592165" duration="284000" />
+      <workItem from="1582799610065" duration="1060000" />
     </task>
     <task id="LOCAL-00001" summary="New structure">
       <created>1581665524514</created>
@@ -236,7 +248,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582475355652</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="New design">
+      <created>1582478363273</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1582478363273</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -260,7 +279,8 @@
     <MESSAGE value="20200214" />
     <MESSAGE value="New structure" />
     <MESSAGE value="CSS aligned" />
-    <option name="LAST_COMMIT_MESSAGE" value="CSS aligned" />
+    <MESSAGE value="New design" />
+    <option name="LAST_COMMIT_MESSAGE" value="New design" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1032" y="182" key="#Deployment" timestamp="1581864317979">
@@ -279,38 +299,38 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1120" y="256" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581973871455" />
-    <state x="790" y="115" key="CommitChangelistDialog2" timestamp="1582475353381">
+    <state x="790" y="115" key="CommitChangelistDialog2" timestamp="1582478361535">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="790" y="115" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1582475353381" />
-    <state x="1011" y="100" width="816" height="847" key="DirDiffDialog" timestamp="1581860917083">
+    <state x="790" y="115" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1582478361535" />
+    <state x="1011" y="100" width="816" height="847" key="DirDiffDialog" timestamp="1582631606349">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1011" y="100" width="816" height="847" key="DirDiffDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581860917083" />
+    <state x="1011" y="100" width="816" height="847" key="DirDiffDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582631606349" />
     <state x="1220" y="279" key="FileChooserDialogImpl" timestamp="1581000251688">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1220" y="279" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1581000251688" />
-    <state x="1363" y="448" key="NewPhpFileDialog" timestamp="1582302308548">
+    <state x="1363" y="448" key="NewPhpFileDialog" timestamp="1582655750705">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1363" y="448" key="NewPhpFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582302308548" />
+    <state x="1363" y="448" key="NewPhpFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582655750705" />
     <state x="891" y="159" key="SettingsEditor" timestamp="1581666559721">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="891" y="159" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1581666559721" />
-    <state x="1089" y="254" key="Vcs.Push.Dialog.v2" timestamp="1582475302681">
+    <state x="1089" y="254" key="Vcs.Push.Dialog.v2" timestamp="1582800822875">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1089" y="254" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1582475302681" />
+    <state x="1089" y="254" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1582800822875" />
     <state x="661" y="345" key="com.intellij.ide.util.TipDialog" timestamp="1580908975166">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="661" y="345" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1580908975166" />
-    <state x="1249" y="441" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1581358103957">
+    <state x="1249" y="441" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1582628992835">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1249" y="441" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1581358103957" />
+    <state x="1249" y="441" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1582628992835" />
     <state x="1401" y="333" key="ftp.server.browser" timestamp="1581000241451">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

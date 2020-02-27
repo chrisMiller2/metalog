@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once('Template/headerAdminTemplate.php'); ?>
 
 
@@ -10,20 +11,17 @@ require_once('Template/headerAdminTemplate.php'); ?>
                 <tr>
                     <td>
                         <span style="color: #ffffff"><h2>LOG-SEARCH</h2>
-                            <form action="log-CenterUser.php" method="get">
+                            <form action="log-CenterAdmin.php" method="post">
                                 <!--search-->
-                                <label class="switch">
-                                    <input type="checkbox" name="listcheck" value="List logs">
-                                    <span class="slider"></span>
-                                </label>
-                                <input type="submit" id="searchListButton" name="listbutton" value="Toggle"/>
-                                <?php
-                                if ($_GET) {
-                                    if (isset($_GET['listcheck']) && isset($_GET['listbutton'])) {
-                                        require_once('searchLog.php');
-                                    }
-                                }
-                                ?>
+                                <form action="" method="post">
+                                    <div>
+                                        <select name="searchSelect">
+                                            <?php include_once "dropDownList.php"?>
+                                        </select>
+                                    </div>
+                                    <input type="submit" id="searchListButton" name="listbutton" value="Search"/>
+                                    <?php include "selectLogs.php";?>
+                                </form>
                                 <script>
                                     function searchFunction() {
                                         var input, filter, ul, li, a, i, txtValue;
@@ -47,12 +45,20 @@ require_once('Template/headerAdminTemplate.php'); ?>
                     </td>
                 </tr>
             </table>
+
             <!--            Histogram-->
             <span style="color: #ffffff">
                 <table style="color: #ffffff">
-                    <tr><td><h2>Histogram</h2></td></tr>
+                    <tr>
+                        <td><p><h2>Histogram</h2></p>
+                            <p>After you selected and read the file you chose on the main page,
+                            you must choose the same log file to be analysed and to print out
+                            its histogram</p>
+                        </td>
+                    </tr>
                     <tr>
                         <td>
+
                             <!--                statistics-->
                             <?php include_once('statistics.php'); ?>
                         </td>
@@ -60,12 +66,63 @@ require_once('Template/headerAdminTemplate.php'); ?>
                 </table>
 
                 <!--                chart-->
+
+<!--                canvasjs_Chart-->
+                <script>
+                window.onload = function() {
+
+                    var dataPoints = [];
+
+                    var chart = new CanvasJS.Chart("chartContainer", {
+                        animationEnabled: true,
+                        theme: "light2",
+                        zoomEnabled: true,
+                        title: {
+                            text: "Log frequencies"
+                        },
+                        axisY: {
+                            title: "Frequency",
+                            titleFontSize: 24,
+                            prefix: "$"
+                        },
+                        data: [{
+                            type: "line",
+                            yValueFormatString: "$#,##0.00",
+                            dataPoints: dataPoints
+                        }]
+                    });
+
+                    function addData(data) {
+                        var dps = data.price_usd;
+                        for (var i = 0; i < dps.length; i++) {
+                            dataPoints.push({
+                                x: new Date(dps[i][0]),
+                                y: dps[i][1]
+                            });
+                        }
+                        chart.render();
+                    }
+
+                    $.getJSON("https://canvasjs.com/data/gallery/php/bitcoin-price.json", addData);
+
+                }
+                </script>
+                <div id="chartContainer" style="height: 370px; width: 100%;"></div>
+                <script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+                <script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
+
+
+<!--                google chart-->
+
                 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+                <?php $dateTimeCount= $_SESSION['dateTimeCount'];$dateTime = $_SESSION['dateTime'];?>
+
                 <script type="text/javascript">
                 google.charts.load('current', {packages: ['corechart', 'line']});
                 google.charts.setOnLoadCallback(drawBasic);
 
-                var array = <?php echo json_encode($dateTimeSeconds, JSON_PRETTY_PRINT); ?>;
+                var dateTime = <?php echo json_encode($dateTime, JSON_PRETTY_PRINT); ?>;
 
                 function timeConverter(UNIX_timestamp) {
                     var a = new Date(UNIX_timestamp * 1000);
@@ -84,17 +141,18 @@ require_once('Template/headerAdminTemplate.php'); ?>
 
                     var data = new google.visualization.DataTable();
                     data.addColumn('number', 'X');
-                    data.addColumn('number', 'Time');
+                    data.addColumn('number', 'Log');
 
                     var current = null;
                     var cnt = 0;
-                    for (var i = 0; i < array.length; i++) {
-                        if (array[i] != current) {
+                    for (var i = 0; i < dateTime.length; i++) {
+                        if (dateTime[i] != current) {
+                            current = dateTime[i];
                             if (cnt > 0) {
                                 var dateFormat = (timeConverter(current));
                                 data.addRows([[current, cnt]]);
                             }
-                            current = array[i];
+
                             cnt = 1;
                         } else {
                             cnt++;
@@ -122,10 +180,10 @@ require_once('Template/headerAdminTemplate.php'); ?>
 
                     var options = {
                         hAxis: {
-                            title: 'Time'
+                            title: 'Date'
                         },
                         vAxis: {
-                            title: 'Popularity'
+                            title: 'Frequency'
                         }
                     };
 
@@ -134,6 +192,9 @@ require_once('Template/headerAdminTemplate.php'); ?>
                     chart.draw(data, options);
                 }
                 </script>
+
+
+
                 <p id="p1"></p>
             <div class="grid-container">
             <div class="grid-100 grid-parent">

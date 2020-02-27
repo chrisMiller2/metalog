@@ -1,19 +1,6 @@
 <?php
-
-//infos about the Server
-include "../dbInfo.php";
-
-//connection
-$con = new mysqli($servername, $serverUsername, $serverPassword, $DBName);
-if ($con->connect_error) {
-    die("Connection failed: " . $con->connect_error);
-}
-
-//select query
-$selectSQL = "SELECT time, service, message FROM Syslog";
-$statement = $con->query($selectSQL);
-
-//executing query
+session_start();
+echo '<p style="text-indent: 100px">To close the search input, click the "Search" button again!</p>';
 echo "<br><input id=\"searchInput\" onkeyup=\"searchFunction()\" type=\"search\" placeholder=\"Search...\"
                                        name=\"search\">";
 echo "<ul id=\"searchUL\">";

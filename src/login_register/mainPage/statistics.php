@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 //infos about the Server
 include "../dbInfo.php";
@@ -7,12 +8,23 @@ include "../dbInfo.php";
 $con = new mysqli($servername, $serverUsername, $serverPassword, $DBName);
 if ($con->connect_error) {
     die("Connection failed: " . $con->connect_error);
-}
+}?>
 
-//sql query
+<form action="" method="post">
+        <div>
+            <select name="histogramSelect">
+<?php include "dropDownList.php";?>
+
+</select></div>
+<input class="button" type="submit" name="selectButton" value="Histogram"></form>
+
+<?php
+//load selected option
+include_once("selectLogs.php");
+
+// I WANT THIS SHIT OPTIONAL
 $selectSQL = "SELECT time FROM Syslog";
 
-//ERROR it selects one less row than it should
 $dateTimeSeconds = array();
 $dateTime = array();
 if ($result = mysqli_query($con, $selectSQL)) {
@@ -24,34 +36,23 @@ if ($result = mysqli_query($con, $selectSQL)) {
     }
 }
 
-//test to see if it selected the dates
-//                foreach ($dateTime as $item){
-//                    echo strtotime($item) . "\n";
-//                }
-
-//check if array counts are correct
-//                print_r(CountSameValues($dateTimeSeconds));
 echo "\n";
-//histogram
-$dateTimeCount = CountSameValues($dateTimeSeconds);
-Histogram($dateTimeCount);
 
-function CountSameValues($array)
-{
-    return (array_count_values($array));
-}
+//histogram
+$dateTimeCount = array_count_values($dateTimeSeconds);
+
+Histogram($dateTimeCount);
 
 function Histogram($array)
 {
     $uniqueArray = array();
-    $mark = '*';
     $sum = 0;
     foreach ($array as $key => $value) {
         $dateFormat = gmdate("M d H:i:s", $key);
         if (!in_array($dateFormat, $uniqueArray)) {
             echo "<br>" . $dateFormat;
             for($i = 0; $i < $value; $i++){
-                echo $mark;
+                echo '*';
                 $sum++;
             }
             $uniqueArray[] = $dateFormat;
@@ -60,19 +61,7 @@ function Histogram($array)
     echo "<br>SUM: " . $sum;
 }
 
-
 $con->close();
 
-//create array variable
-$values = [];
-
-//pushing some variables to the array so we can output something in this example.
-array_push($values, array("year" => "2013", "newbalance" => "50"));
-array_push($values, array("year" => "2014", "newbalance" => "90"));
-array_push($values, array("year" => "2015", "newbalance" => "120"));
-
-//counting the length of the array
-$countArrayLength = count($values);
-
-//passing the dates
-//$dateTimeSecondsJS = json_encode($dateTimeSeconds);
+$_SESSION['dateTimeCount'] = $dateTimeCount;
+$_SESSION['dateTime'] = $dateTime;
