@@ -21,7 +21,6 @@ if (isset($_POST['select'])) {
             mysqli_query($con, $dropSyslogTableSQL);
             mysqli_query($con, $createSyslogTableSQL);
 
-            copyVarLogFileIntoFolder($fileName);
             readLinesFromLog('/var/log/syslog', $con);
             break;
         case "mysql/error.log":
@@ -33,7 +32,6 @@ if (isset($_POST['select'])) {
             mysqli_query($con, $dropMysqlErrorlogTableSQL);
             mysqli_query($con, $createMysqlErrorlogTableSQL);
 
-            copyVarLogFileIntoFolder($fileName);
             readLinesFromLog('/var/log/mysql/error.log', $con);
             break;
         case "kern.log":
@@ -45,7 +43,6 @@ if (isset($_POST['select'])) {
             mysqli_query($con, $dropKernlogTableSQL);
             mysqli_query($con, $createKernlogTableSQL);
 
-            copyVarLogFileIntoFolder($fileName);
             readLinesFromLog('/var/log/kern.log', $con);
             break;
         case "auth.log":
@@ -57,7 +54,6 @@ if (isset($_POST['select'])) {
             mysqli_query($con, $dropAuthlogTableSQL);
             mysqli_query($con, $createAuthlogTableSQL);
 
-            copyVarLogFileIntoFolder($fileName);
             readLinesFromLog('/var/log/auth.log', $con);
             break;
         case "custom_log":

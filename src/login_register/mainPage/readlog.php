@@ -1,5 +1,6 @@
 <?php
 session_start();
+unset($_SESSION["counter"]);
 
 //object classes for the log file
 class SyslogFileData
@@ -58,11 +59,14 @@ class KernelFileData
 {
     private $time, $service, $message;
 
+    public static $kernelCount = 0;
+
     public function __construct($time, $service, $message)
     {
         $this->time = $time;
         $this->service = $service;
         $this->message = $message;
+        KernelFileData::$kernelCount++;
     }
 
     public function getDescription()
@@ -76,12 +80,15 @@ class AuthFileData
 {
     private $time, $service, $session, $message;
 
+    public static $authCount = 0;
+
     public function __construct($time, $service, $session, $message)
     {
         $this->time = $time;
         $this->service = $service;
         $this->session = $session;
         $this->message = $message;
+        AuthFileData::$authCount++;
     }
 
     public function getDescription()
@@ -100,6 +107,8 @@ class LogFileSemicolon
 {
     private $time, $service, $username, $tty, $password, $user, $command;
 
+    public static $semicolonCounter = 0;
+
     public function __construct($time, $service, $username, $tty, $password, $user, $command)
     {
         $this->time = $time;
@@ -109,6 +118,7 @@ class LogFileSemicolon
         $this->password = $password;
         $this->user = $user;
         $this->command = $command;
+        LogFileSemicolon::$semicolonCounter++;
     }
 
     public function getDescription()
@@ -121,11 +131,14 @@ class MySQLFileData
 {
     private $time, $service, $message;
 
+    public static $mysqlCounter = 0;
+
     public function __construct($time, $service, $message)
     {
         $this->time = $time;
         $this->service = $service;
         $this->message = $message;
+        MySQLFileData::$mysqlCounter++;
     }
 
     public function getDescription()
@@ -190,19 +203,6 @@ class CustomFileData
 
 //load selected option
 include_once("selectLogs.php");
-
-//copy log file
-function copyVarLogFileIntoFolder($fileName){
-    chmod("/var/log/auth.log", 0444);
-    chmod("/var/log/kern.log", 0444);
-    chmod("/var/log/mysql/error.log", 0444);
-    chmod("/var/log/syslog", 0444);
-
-    if(!copy("/var/log/$fileName", "system_logs/$fileName")){
-        echo "\nFailed to copy the " . $fileName . " into the folder.\nPossibly permission issue.\n";
-    }
-    chmod('system_logs/' . $fileName, 0777);
-}
 
 function GetRegexMatches($regexType, $line)
 {
@@ -338,7 +338,7 @@ function readLinesFromLog($fileName, $con)
                     $customMessageData = GetRegexMatches($syslogMessageRegex, $line);
 
                     //create objects
-                    $customLine = new SyslogFileData($customTimeData,
+                    $customLine = new CustomFileData($customTimeData,
                         $customServiceData, $customMessageData);
 
                     //insert into database
@@ -350,6 +350,24 @@ function readLinesFromLog($fileName, $con)
                     $customLine->getDescription();
                 }
                 echo "\n";
+            }
+
+            // get line count
+            if(SyslogFileData::$syslogCount>0){
+                $_SESSION['counter'] = 0;
+                $_SESSION['counter'] = SyslogFileData::$syslogCount;
+            }elseif(MySQLFileData::$mysqlCounter>0){
+                $_SESSION['counter'] = 0;
+                $_SESSION['counter'] = MySQLFileData::$mysqlCounter;
+            }elseif(KernelFileData::$kernelCount>0){
+                $_SESSION['counter'] = 0;
+                $_SESSION['counter'] = KernelFileData::$kernelCount;
+            }elseif(AuthFileData::$authCount>0){
+                $_SESSION['counter'] = 0;
+                $_SESSION['counter'] = AuthFileData::$authCount;
+            }elseif(CustomFileData::$customlogCount>0){
+                $_SESSION['counter'] = 0;
+                $_SESSION['counter'] = CustomFileData::$customlogCount;
             }
             $con->close();
             fclose($file);

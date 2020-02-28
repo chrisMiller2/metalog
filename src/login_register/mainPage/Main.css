@@ -91,10 +91,20 @@ li#menuRight {
     border-color: black;
 }
 
-div.custom-select{
+div.floating{
     position: -webkit-sticky;
     position: sticky;
     top: 0;
+}
+
+div.custom-select{
+    padding: 5px;
+    background-color: rgba(0, 139, 214, 0.5);
+    border: 2px dashed #008bd6;
+}
+
+div.counter{
+    margin-top: 5px;
     padding: 5px;
     background-color: rgba(0, 139, 214, 0.5);
     border: 2px dashed #008bd6;
