@@ -1,4 +1,6 @@
 <?php
+session_unset();
+session_destroy();
 session_start();
 
 $time = $_SERVER['REQUEST_TIME'];
@@ -35,13 +37,25 @@ if ($statement->num_rows > 0) {
             if (filter_var($email, FILTER_VALIDATE_EMAIL) && password_verify($password, $row['password'])) {
                 //checking user authentication
                 if ($row['isAdmin'] == 1) {
+                    $currentTime = date('H:i:s');
                     $_SESSION['nickname'] = $row['nickname'];
-                    $_SESSION['last_login_timestamp'] = time();
+                    $nickname = $_SESSION['nickname'];
+                    $type = "Admin";
+                    $date = date('Y-m-d');
+                    $insertLoginSQL =
+                        "INSERT INTO Status(ID, Username, Type, Login, Date) VALUES (DEFAULT, '$nickname', '$type', '$currentTime', '$date')";
+                    mysqli_query($con, $insertLoginSQL);
                     header("Location: \mainPage\adminIndex.php");
                     exit;
                 } else if ($row['isAdmin'] == 0) {
+                    $currentTime = date('H:i:s');
                     $_SESSION['nickname'] = $row['nickname'];
-                    $_SESSION['last_login_timestamp'] = time();
+                    $nickname = $_SESSION['nickname'];
+                    $type = "User";
+                    $date = date('Y-m-d');
+                    $insertLoginSQL =
+                        "INSERT INTO Status(ID, Username, Type, Login, Date) VALUES (DEFAULT, '$nickname', '$type', '$currentTime', '$date')";
+                    mysqli_query($con, $insertLoginSQL);
                     header("Location: \mainPage\userIndex.php");
                     exit;
                 }

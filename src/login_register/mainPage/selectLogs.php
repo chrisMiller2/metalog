@@ -14,6 +14,7 @@ if (isset($_POST['select'])) {
     switch ($_POST['select']) {
         case 'syslog':
             $fileName = "syslog";
+            $_SESSION['title'] = "Syslog";
 
             //refresh the Syslog table each time it is run
             $dropSyslogTableSQL = "DROP TABLE IF EXISTS Syslog";
@@ -24,6 +25,7 @@ if (isset($_POST['select'])) {
             readLinesFromLog('/var/log/syslog', $con);
             break;
         case "mysql/error.log":
+            $_SESSION['title'] = "mysql/error.log";
             $fileName = "mysql/error.log";
 
             //refresh the Mysql/Error.log table each time it is run
@@ -35,6 +37,7 @@ if (isset($_POST['select'])) {
             readLinesFromLog('/var/log/mysql/error.log', $con);
             break;
         case "kern.log":
+            $_SESSION['title'] = "kern.log";
             $fileName = "kern.log";
 
             //refresh the Kern.log table each time it is run
@@ -46,6 +49,7 @@ if (isset($_POST['select'])) {
             readLinesFromLog('/var/log/kern.log', $con);
             break;
         case "auth.log":
+            $_SESSION['title'] = "auth.log";
             $fileName = "auth.log";
 
             //refresh the Auth.log table each time it is run
@@ -55,6 +59,18 @@ if (isset($_POST['select'])) {
             mysqli_query($con, $createAuthlogTableSQL);
 
             readLinesFromLog('/var/log/auth.log', $con);
+        break;
+        case "ufw.log":
+            $_SESSION['title'] = "ufw.log";
+            $fileName = "ufw.log";
+
+            //refresh the Auth.log table each time it is run
+            $dropUfwlogTableSQL = "DROP TABLE IF EXISTS Ufw_log";
+            $createUfwlogTableSQL = "CREATE TABLE Ufw_log (time text, service text, message text)";
+            mysqli_query($con, $dropUfwlogTableSQL);
+            mysqli_query($con, $createUfwlogTableSQL);
+
+            readLinesFromLog('/var/log/ufw.log', $con);
             break;
         case "custom_log":
             //for reading in correct order
@@ -62,6 +78,7 @@ if (isset($_POST['select'])) {
                 $_SESSION['customLog'] = $_POST['select2'];
             }
 
+            $_SESSION['title'] = $_SESSION['customLog'];
             $customLogFile = $_SESSION['customLog'];
 
             //refresh the Custom_log table each time it is run
@@ -93,6 +110,11 @@ if (isset($_POST['searchButton'])) {
             break;
         case "auth.log":
             $selectSQL = "SELECT time, service, message FROM Auth_log";
+            $statement = $con->query($selectSQL);
+            include 'searchLog.php';
+            break;
+        case 'ufw.log':
+            $selectSQL = "SELECT time, service, message FROM Ufw_log";
             $statement = $con->query($selectSQL);
             include 'searchLog.php';
             break;
@@ -128,6 +150,12 @@ if (isset($_POST['histogramButton'])){
             $title = "auth.log:<br>";
             $_SESSION['title'] = $title;
             $selectSQL = "SELECT time FROM Auth_log";
+            include "statistics.php";
+            break;
+        case 'ufw.log':
+            $title = "ufw.log:<br>";
+            $_SESSION['title'] = $title;
+            $selectSQL = "SELECT time FROM Ufw_log";
             include "statistics.php";
             break;
         case "custom_log":

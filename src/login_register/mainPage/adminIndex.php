@@ -81,13 +81,73 @@ require_once('Template/headerAdminTemplate.php');?>
                             </div>
 <!--                            count log lines-->
                             <div class="counter">
+                                File:
+                                <?php echo $_SESSION['title']?>
+                                <br>
                                 Lines read:
                                 <?php echo $_SESSION['counter']; ?>
+                            </div>
+                            <div class="severity">
+                                <span style="color: red">
+                                    Error: <?php echo $_SESSION["error"]; ?>
+                                </span>
+                                <br>
+                                <span style="color: darkorange">
+                                Warnings: <?php echo $_SESSION['warn']; ?>
+                                </span>
+                                <br>
+                                Debug: <?php echo $_SESSION['debug']; ?>
+                                <br>
+                                Notice: <?php echo $_SESSION['notice']; ?>
+                            </div>
+                            <div class="activity">
+                                Username: <?php echo $_SESSION['nickname']; ?>
+                                <br>
+                                IP: <?php $ip = $_SERVER['REMOTE_ADDR']?:($_SERVER['HTTP_X_FORWARDED_FOR']?:$_SERVER['HTTP_CLIENT_IP']);
+                                echo $ip; ?>
+                                <br>
+                                Host address: <?php echo $_SERVER['SERVER_NAME']; ?>
+                                <br>
+                                Last activity: <?php
+                                $currentTime = date('Y-m-d H:i:s');
+                                echo $currentTime ?>
                             </div>
                         </div>
                     </td>
                 </tr>
             </table>
+            <h2>Activity checker</h2>
+            <?php
+            //infos about the Server
+            include "../dbInfo.php";
+            $result = mysqli_query($con,"SELECT * FROM Status");
+            echo "<table border='1' id='activityTable'>
+                <tr>
+                    <th>ID</th>
+                    <th>Username</th>
+                    <th>Type</th>
+                    <th>Login</th>
+                    <th>Logout</th>
+                    <th>Date</th>
+                    <th>DELETE</th>
+                </tr>";
+
+                while($row = mysqli_fetch_array($result))
+                {
+                echo "<tr>";
+                    echo "<td>" . $row['ID'] . "</td>";
+                    echo "<td>" . $row['Username'] . "</td>";
+                    echo "<td>" . $row['Type'] . "</td>";
+                    echo "<td>" . $row['Login'] . "</td>";
+                    echo "<td>" . $row['Logout'] . "</td>";
+                    echo "<td>" . $row['Date'] . "</td>";
+                    echo "<td><a href=\"deleteActivityRecord.php?id=".$row['ID']."\">Delete</a></td>";
+                echo "</tr>";
+                }
+                echo "</table>";
+
+                mysqli_close($con);
+            ?>
         </div>
     </div>
 

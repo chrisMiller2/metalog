@@ -2,16 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ae899390-2983-46d6-a30b-61b97734a05f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/login_register/mainPage/charts.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/login_register/mainPage/deleteActivityRecord.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/login_register/dbInfo.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/dbInfo.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/login_register/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/login_register/logout.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/logout.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/Main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/Main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/Template/headerAdminTemplate.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/Template/headerAdminTemplate.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/Template/headerUserTemplate.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/Template/headerUserTemplate.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/adminIndex.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/adminIndex.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/listCustomLogs.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/listCustomLogs.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/dropDownList.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/dropDownList.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/log-CenterAdmin.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/log-CenterAdmin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/log-CenterUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/log-CenterUser.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/notLoggedIn.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/readlog.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/readlog.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/searchLog.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/searchLog.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/selectLogs.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/selectLogs.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/system_logs/auth.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/system_logs/kern.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/system_logs/syslog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/statistics.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/statistics.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/userIndex.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/userIndex.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,25 +75,26 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/login_register/mainPage" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Christian Miller\Desktop\szakdolgozat\src\login_register\mainPage" />
+      <recent name="C:\Users\HP EliteBook 8760w\Desktop\szakdolgozat\src\mainPage\images" />
+      <recent name="C:\Users\HP EliteBook 8760w\Desktop\szakdolgozat\src\mainPage" />
+      <recent name="C:\Users\HP EliteBook 8760w\Desktop\szakdolgozat" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Christian Miller\Desktop\szakdolgozat\src\login_register\mainPage\images" />
       <recent name="C:\Users\Christian Miller\Desktop\szakdolgozat\src\login_register" />
       <recent name="C:\Users\Christian Miller\Desktop\szakdolgozat\src\login_register\mainPage\Template" />
       <recent name="C:\Users\Christian Miller\Desktop\szakdolgozat\src\mainPage\images" />
       <recent name="C:\Users\Christian Miller\Desktop\szakdolgozat\src\mainPage\logs" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\HP EliteBook 8760w\Desktop\szakdolgozat\src\mainPage\images" />
-      <recent name="C:\Users\HP EliteBook 8760w\Desktop\szakdolgozat\src\mainPage" />
-      <recent name="C:\Users\HP EliteBook 8760w\Desktop\szakdolgozat" />
     </key>
   </component>
   <component name="RunManager" selected="PHP Script.userIndex.php">
@@ -228,7 +238,27 @@
       <workItem from="1582799610065" duration="7653000" />
       <workItem from="1582814049929" duration="7019000" />
       <workItem from="1582821226528" duration="51000" />
-      <workItem from="1582881047845" duration="5945000" />
+      <workItem from="1582881047845" duration="6339000" />
+      <workItem from="1582905542033" duration="186000" />
+      <workItem from="1582971256295" duration="1415000" />
+      <workItem from="1583049321226" duration="15368000" />
+      <workItem from="1583396399977" duration="6140000" />
+      <workItem from="1583408177848" duration="2976000" />
+      <workItem from="1583482500122" duration="599000" />
+      <workItem from="1583492968547" duration="4031000" />
+      <workItem from="1583591976542" duration="2142000" />
+      <workItem from="1584168848862" duration="61000" />
+      <workItem from="1584169158055" duration="909000" />
+      <workItem from="1584203638331" duration="3589000" />
+      <workItem from="1584278208025" duration="8256000" />
+      <workItem from="1584446402887" duration="590000" />
+      <workItem from="1584455063577" duration="309000" />
+      <workItem from="1584698331107" duration="592000" />
+      <workItem from="1585041082861" duration="530000" />
+      <workItem from="1585041684480" duration="7662000" />
+      <workItem from="1585123836632" duration="591000" />
+      <workItem from="1585212183857" duration="16427000" />
+      <workItem from="1585234907333" duration="5557000" />
     </task>
     <task id="LOCAL-00001" summary="New structure">
       <created>1581665524514</created>
@@ -272,7 +302,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582821266593</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="line counter, sticky divs">
+      <created>1582897184887</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1582897184887</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -299,7 +336,8 @@
     <MESSAGE value="New design" />
     <MESSAGE value="DB, Search, Modularity done" />
     <MESSAGE value="Custom logs fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Custom logs fixed" />
+    <MESSAGE value="line counter, sticky divs" />
+    <option name="LAST_COMMIT_MESSAGE" value="line counter, sticky divs" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1032" y="182" key="#Deployment" timestamp="1581864317979">
@@ -318,42 +356,42 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1256" y="327" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1581431582287" />
-    <state x="1120" y="256" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1581973871455">
+    <state x="1120" y="256" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1585041596683">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1120" y="256" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581973871455" />
-    <state x="790" y="115" key="CommitChangelistDialog2" timestamp="1582821264952">
+    <state x="1120" y="256" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585041596683" />
+    <state x="790" y="115" key="CommitChangelistDialog2" timestamp="1582897182810">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="790" y="115" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1582821264952" />
-    <state x="1011" y="100" width="816" height="847" key="DirDiffDialog" timestamp="1582631606349">
+    <state x="790" y="115" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1582897182810" />
+    <state x="1011" y="100" width="816" height="847" key="DirDiffDialog" timestamp="1585045726238">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1011" y="100" width="816" height="847" key="DirDiffDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582631606349" />
+    <state x="1011" y="100" width="816" height="847" key="DirDiffDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585045726238" />
     <state x="1220" y="279" key="FileChooserDialogImpl" timestamp="1581000251688">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1220" y="279" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1581000251688" />
-    <state x="1363" y="448" key="NewPhpFileDialog" timestamp="1582818887689">
+    <state x="1363" y="448" key="NewPhpFileDialog" timestamp="1585238673242">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1363" y="448" key="NewPhpFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582818887689" />
-    <state x="891" y="159" key="SettingsEditor" timestamp="1581666559721">
+    <state x="1363" y="448" key="NewPhpFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585238673242" />
+    <state x="891" y="159" key="SettingsEditor" timestamp="1583498492640">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="891" y="159" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1581666559721" />
-    <state x="1089" y="254" key="Vcs.Push.Dialog.v2" timestamp="1582821268913">
+    <state x="891" y="159" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1583498492640" />
+    <state x="1089" y="254" key="Vcs.Push.Dialog.v2" timestamp="1582897220182">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1089" y="254" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1582821268913" />
+    <state x="1089" y="254" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1582897220182" />
     <state x="661" y="345" key="com.intellij.ide.util.TipDialog" timestamp="1580908975166">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="661" y="345" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1580908975166" />
-    <state x="1249" y="441" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1582628992835">
+    <state x="1249" y="441" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585224081528">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1249" y="441" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1582628992835" />
+    <state x="1249" y="441" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1585224081528" />
     <state x="1401" y="333" key="ftp.server.browser" timestamp="1581000241451">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -366,6 +404,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1295" y="417" key="publish.login/0.0.1920.1040@0.0.1920.1040" timestamp="1579875499905" />
+    <state x="1209" y="244" key="run.anything.popup" timestamp="1585046548885">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1209" y="244" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1585046548885" />
     <state x="1170" y="230" width="672" height="678" key="search.everywhere.popup" timestamp="1581875577729">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

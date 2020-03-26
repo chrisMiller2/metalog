@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once('Template/headerUserTemplate.php'); ?>
 
 
@@ -10,90 +11,110 @@ require_once('Template/headerUserTemplate.php'); ?>
                 <tr>
                     <td>
                         <span style="color: #ffffff"><h2>LOG-SEARCH</h2>
-                            <form action="log-CenterUser.php" method="get">
+                            <form action="log-CenterUser.php" method="post">
                                 <!--search-->
-                                <label class="switch">
-                                    <input type="checkbox" name="listcheck" value="List logs">
-                                    <span class="slider"></span>
-                                </label>
-                                <input type="submit" id="searchListButton" name="listbutton" value="Toggle"/>
-                                <?php
-                                if ($_GET) {
-                                    if (isset($_GET['listcheck']) && isset($_GET['listbutton'])) {
-                                        require_once('searchLog.php');
-                                    }
-                                }
-                                ?>
-                                <script>
-                                    function searchFunction() {
-                                        var input, filter, ul, li, a, i, txtValue;
-                                        input = document.getElementById("searchInput");
-                                        filter = input.value.toUpperCase();
-                                        ul = document.getElementById("searchUL");
-                                        li = ul.getElementsByTagName("li");
-                                        for (i = 0; i < li.length; i++) {
-                                            a = li[i].getElementsByTagName("a")[0];
-                                            txtValue = a.textContent || a.innerText;
-                                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                                                li[i].style.display = "";
+                                <form action="" method="post">
+                                    <div>
+                                        <select name="searchSelect" onchange="customlogList(this);">
+                                            <?php include_once "dropDownList.php"?>
+                                        </select>
+                                    </div>
+                                    <!--                                custom list-->
+                                    <script>
+                                        function customlogList(that) {
+                                            if (that.value == "custom_log") {
+                                                document.getElementById("customSelect").style.display = "block";
+                                                document.getElementById("customSelectHiddenButton").style.display = "none";
                                             } else {
-                                                li[i].style.display = "none";
+                                                document.getElementById("customSelect").style.display = "none";
+                                                document.getElementById("customSelectHiddenButton").style.display = "block";
                                             }
                                         }
-                                    }
-                                </script>
+                                    </script>
+                                    <div id="customSelect" style="display: none;">
+                                        <?php $_SESSION['customButtons'] = "logcenter"; require "listCustomLogs.php" ?>
+                                    </div>
+                                    <div id="customSelectHiddenButton">
+                                        <input class="button" type="submit" id="searchListButton" name="searchButton" value="Search"/>
+                                        <input class="button" type="submit" name="histogramButton" value="Histogram"/>
+                                    </div>
+                                    <?php include "selectLogs.php";?>
+                                </form>
                             </form>
                         </span>
                     </td>
                 </tr>
             </table>
-<!--            Histogram-->
+
+            <!--            Histogram-->
             <span style="color: #ffffff">
                 <table style="color: #ffffff">
-                    <tr><td><h2>Histogram</h2></td></tr>
                     <tr>
                         <td>
-                            <!--                statistics-->
-                            <?php include_once('statistics.php'); ?>
+                            <p><h2>Charts</h2></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+<!--                            --><?php //include "charts.php" ?>
                         </td>
                     </tr>
                 </table>
 
-<!--                chart-->
-                <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-                <script type="text/javascript">
-                google.load("visualization", "1", {packages: ["corechart"]});
-                google.setOnLoadCallback(drawChart);
+                <!--                chart-->
 
-                function drawChart() {
+                <!--               canvasjs_Chart-->
+                <!--                <script>-->
+                <!--                window.onload = function() {-->
+                <!---->
+                <!--                    var dataPoints = [];-->
+                <!---->
+                <!--                    var chart = new CanvasJS.Chart("chartContainer", {-->
+                <!--                        animationEnabled: true,-->
+                <!--                        theme: "light2",-->
+                <!--                        zoomEnabled: true,-->
+                <!--                        title: {-->
+                <!--                            text: "Log frequencies"-->
+                <!--                        },-->
+                <!--                        axisY: {-->
+                <!--                            title: "Frequency",-->
+                <!--                            titleFontSize: 24,-->
+                <!--                            prefix: "$"-->
+                <!--                        },-->
+                <!--                        data: [{-->
+                <!--                            type: "line",-->
+                <!--                            yValueFormatString: "$#,##0.00",-->
+                <!--                            dataPoints: dataPoints-->
+                <!--                        }]-->
+                <!--                    });-->
+                <!---->
+                <!--                    function addData(data) {-->
+                <!--                        var dps = data.price_usd;-->
+                <!--                        for (var i = 0; i < dps.length; i++) {-->
+                <!--                            dataPoints.push({-->
+                <!--                                x: new Date(dps[i][0]),-->
+                <!--                                y: dps[i][1]-->
+                <!--                            });-->
+                <!--                        }-->
+                <!--                        chart.render();-->
+                <!--                    }-->
+                <!---->
+                <!--                    $.getJSON("https://canvasjs.com/data/gallery/php/bitcoin-price.json", addData);-->
+                <!---->
+                <!--                }-->
+                <!--                </script>-->
+                <!--                <div id="chartContainer" style="height: 370px; width: 100%;"></div>-->
+                <!--                <script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>-->
+                <!--                <script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>-->
 
-                    var data = new google.visualization.DataTable();
-                    data.addColumn('string', 'Year');
-                    data.addColumn('number', 'Balance');
 
-                    data.addRows([
 
-                        <?php
-                        for ($i = 0; $i < $countArrayLength; $i++) {
-                            echo "['" . $values[$i]['year'] . "'," . $values[$i]['newbalance'] . "],";
-                        }
-                        ?>
-                    ]);
 
-                    var options = {
-                        title: 'My Savings',
-                        curveType: 'function',
-                        legend: {position: 'bottom'}
-                    };
 
-                    var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
-                    chart.draw(data, options);
-                }
-                </script>
-
+                <p id="p1"></p>
             <div class="grid-container">
             <div class="grid-100 grid-parent">
-                <div id="curve_chart" style="width: 100%; height: auto"></div>
+                <div id="chart_div" style="width: 100%; height: auto"></div>
             </div>
 
             </div>

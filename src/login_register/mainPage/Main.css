@@ -1,5 +1,6 @@
 body, html {
-    height: 100%;
+    padding:0;
+    height:100%;
     margin: 0;
     color: white;
     font-family: "Lucida Sans Typewriter", serif;
@@ -8,6 +9,9 @@ body, html {
 
 .footer{
     text-indent: 22px;
+    position:fixed;
+    bottom:5px;
+    left:0;
 }
 
 /*lines*/
@@ -47,6 +51,37 @@ li#menuRight {
     display: block;
     right: 5px;
 }
+
+#refresh{
+height: 68px;
+    position: relative;
+}
+
+
+/*activity table*/
+#activityTable{
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 50px;
+}
+#activityTable th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #008bd6;
+    color: white;
+}
+#activityTable td, #activityTable th {
+    border: 1px solid #000000;
+    padding: 8px;
+    text-decoration: none;
+}
+#activityTable tr:nth-child(even){background-color: #666666;}
+#activityTable tr:nth-child(odd){background-color: #7a7a7a;}
+#activityTable tr:hover {background-color: #545454;}
+
+
 
 /*buttons*/
 .browse_button{
@@ -104,6 +139,20 @@ div.custom-select{
 }
 
 div.counter{
+    margin-top: 5px;
+    padding: 5px;
+    background-color: rgba(0, 139, 214, 0.5);
+    border: 2px dashed #008bd6;
+}
+
+div.severity{
+    margin-top: 5px;
+    padding: 5px;
+    background-color: rgba(0, 139, 214, 0.5);
+    border: 2px dashed #008bd6;
+}
+
+div.activity{
     margin-top: 5px;
     padding: 5px;
     background-color: rgba(0, 139, 214, 0.5);
@@ -261,6 +310,17 @@ li a:hover {
     transition: .4s;
 }
 
+input[type=text] {
+    width: 100%;
+    font-weight: bold;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid #008bd6;
+    border-radius: 4px;
+}
+
 input:checked + .slider {
     background-color: #008bd6;
 }
@@ -274,3 +334,4 @@ input:checked + .slider:before {
     -ms-transform: translateX(26px);
     transform: translateX(26px);
 }
+

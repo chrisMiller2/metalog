@@ -17,19 +17,20 @@ session_start();?>
 
             <li class="menu"><a href="log-CenterUser.php"><h2>LOG-CENTER</h2></a></li>
 
-            <!--nickname-->
+            <li class="menu"><a href="" onclick="window.location.reload()"><img id="refresh" src="https://img.icons8.com/officel/2x/refresh.png" alt="refresh"></a></li>
 
+
+            <!--nickname-->
             <li class="menu" id="menuRight">
-            <div class="dropdown">
-                <div class="img-with-text">
-<!--                    <img src="../images/usericon.jpg" alt="icon">-->
-                    <a href=""><h2><?php echo $_SESSION['nickname'];?></h2></a>
+                <div class="dropdown">
+                    <div class="img-with-text">
+                        <!--                    <img src="../images/usericon.jpg" alt="icon">-->
+                        <a href=""><h2><?php echo $_SESSION['nickname'];?></h2></a>
+                    </div>
+                    <div class="dropdown-content">
+                        <a href="../../logout.php">Logout</a>
+                    </div>
                 </div>
-                <div class="dropdown-content">
-<!--                    <a href="">Link 1</a>-->
-                    <a href="../../login.html">Logout</a>
-                </div>
-            </div>
             </li>
 
             <!--session time-->
