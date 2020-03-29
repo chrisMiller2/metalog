@@ -11,5 +11,4 @@ $deleteSQL = "DELETE FROM Status WHERE id='".$id."'";
 mysqli_query($con,$deleteSQL);
 mysqli_close($con);
 
-
 header("Location: adminIndex.php");

@@ -28,6 +28,7 @@ session_start();?>
                     <a href=""><h2><?php echo $_SESSION['nickname'];?></h2></a>
                 </div>
                 <div class="dropdown-content">
+                    <a href="changeNickname.php">Change nickname</a>
                     <a href="../../logout.php">Logout</a>
                 </div>
             </div>

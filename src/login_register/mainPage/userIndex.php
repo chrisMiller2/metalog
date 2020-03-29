@@ -8,7 +8,7 @@ require_once('Template/headerUserTemplate.php');?>
                     <!--                read log file-->
                     <td valign="top">
                          <span style="color: #ffffff">
-                            <textarea readonly cols="100" rows="80"><?php require_once('readlog.php'); ?></textarea>
+                            <textarea id="textarea" readonly cols="100" rows="80"><?php require_once('readlog.php'); ?></textarea>
                          </span>
                     </td>
                     <!--                 line-->

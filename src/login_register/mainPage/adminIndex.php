@@ -8,7 +8,7 @@ require_once('Template/headerAdminTemplate.php');?>
                     <!--                read log file-->
                     <td valign="top">
                          <span style="color: #ffffff">
-                            <textarea readonly cols="100" rows="80"><?php require_once('readlog.php'); ?></textarea>
+                            <textarea id="textarea" readonly cols="100" rows="80"><?php require_once('readlog.php'); ?></textarea>
                          </span>
                     </td>
                     <!--                 line-->
@@ -81,11 +81,13 @@ require_once('Template/headerAdminTemplate.php');?>
                             </div>
 <!--                            count log lines-->
                             <div class="counter">
-                                File:
-                                <?php echo $_SESSION['title']?>
+                                File: <?php echo $_SESSION['title']; ?>
                                 <br>
                                 Lines read:
                                 <?php echo $_SESSION['counter']; ?>
+                                <br>
+                                Today's log count:
+                                <?php echo $_SESSION['today_new_logs']; ?>
                             </div>
                             <div class="severity">
                                 <span style="color: red">
@@ -141,7 +143,7 @@ require_once('Template/headerAdminTemplate.php');?>
                     echo "<td>" . $row['Login'] . "</td>";
                     echo "<td>" . $row['Logout'] . "</td>";
                     echo "<td>" . $row['Date'] . "</td>";
-                    echo "<td><a href=\"deleteActivityRecord.php?id=".$row['ID']."\">Delete</a></td>";
+                    echo "<td><a href=\"deleteActivityRecord.php?id=".$row['ID']."\">DELETE</a></td>";
                 echo "</tr>";
                 }
                 echo "</table>";

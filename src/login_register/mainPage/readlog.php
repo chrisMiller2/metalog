@@ -6,6 +6,7 @@ unset($_SESSION["warn"]);
 unset($_SESSION["error"]);
 unset($_SESSION["debug"]);
 unset($_SESSION["notice"]);
+unset($_SESSION["today_new_logs"]);
 
 //object classes for the log file
 class SyslogFileData
@@ -302,6 +303,15 @@ function readLinesFromLog($fileName, $con)
     $ufwMessageSeverity = array();
     $customMessageSeverity = array();
 
+//times
+    $syslogTimeArray = array();
+    $mysqlTimeArray = array();
+    $kernelTimeArray = array();
+    $authTimeArray = array();
+    $ufwTimeArray = array();
+    $customTimeArray = array();
+
+
     $file = fopen($fileName, "r");
 
 
@@ -343,6 +353,9 @@ function readLinesFromLog($fileName, $con)
                     //severity
                     $syslogMessageSeverity[] = $syslogMessageData;
 
+                    //time
+                    $syslogTimeArray[] = $syslogTimeData;
+
                     //insert into database
                     $insertSyslogSQL = "INSERT INTO Syslog(time, service, message)
                             VALUES ('$syslogTimeData','$syslogServiceData', '$syslogMessageData')";
@@ -362,10 +375,13 @@ function readLinesFromLog($fileName, $con)
                     //severity
                     $kernMessageSeverity[] = $kernelMessageData;
 
+                    //time
+                    $kernelTimeArray[] = $kernelTimeData;
+
                     //insert into database
-                    $insertKernlogSQL = "INSERT INTO Kern_log(time, service, message)
+                    $insertKernelLogSQL = "INSERT INTO Kern_log(time, service, message)
                             VALUES ('$kernelTimeData','$kernelServiceData', '$kernelMessageData')";
-                    mysqli_query($con, $insertKernlogSQL);
+                    mysqli_query($con, $insertKernelLogSQL);
 
                     //get objects
                     $kernelLine->getDescription();
@@ -381,6 +397,9 @@ function readLinesFromLog($fileName, $con)
 
                     //severity
                     $authMessageSeverity[] = $authMessageData;
+
+                    //time
+                    $authTimeArray[] = $authTimeData;
 
                     //insert into database
                     $insertAuthlogSQL = "INSERT INTO Auth_log(time, service, session, message)
@@ -401,6 +420,9 @@ function readLinesFromLog($fileName, $con)
                     //severity
                     $mysqlMessageSeverity[] = $mysqlMessageData;
 
+                    //time
+                    $mysqlTimeArray[] = $mysqlTimeData;
+
                     //insert into database
                     $insertMysqlErrorlogSQL = "INSERT INTO Mysql_Error_log(time, service, message)
                             VALUES ('$mysqlTimeData','$mysqlServiceData', '$mysqlMessageData')";
@@ -414,11 +436,14 @@ function readLinesFromLog($fileName, $con)
                     $ufwMessageData = GetRegexMatches($syslogMessageRegex, $line);
 
                     //create objects
-                    $ufwlogLine = new SyslogFileData($ufwTimeData,
+                    $ufwLogLine = new SyslogFileData($ufwTimeData,
                         $ufwServiceData, $ufwMessageData);
 
                     //severity
-                    $syslogMessageSeverity[] = $ufwMessageData;
+                    $ufwMessageSeverity[] = $ufwMessageData;
+
+                    //time
+                    $ufwTimeArray[] = $ufwTimeData;
 
                     //insert into database
                     $insertUfwSQL = "INSERT INTO Ufw_log(time, service, message)
@@ -426,7 +451,7 @@ function readLinesFromLog($fileName, $con)
                     mysqli_query($con, $insertUfwSQL);
 
                     //get objects
-                    $ufwlogLine->getDescription();
+                    $ufwLogLine->getDescription();
                 } else if($fileName ==  '/var/www/faildomain.com/src/login_register/mainPage/logs/'.$_SESSION['customLog']){
                     $customTimeData = GetRegexMatches($syslogTimeRegex, $line);
                     $customServiceData = GetRegexMatches($syslogServiceRegex, $line);
@@ -438,6 +463,9 @@ function readLinesFromLog($fileName, $con)
 
                     //severity
                     $customMessageSeverity[] = $customMessageData;
+
+                    //time
+                    $customTimeArray[] = $customTimeData;
 
                     //insert into database
                     $insertCustomSQL = "INSERT INTO Custom_log(time, service, message)
@@ -456,44 +484,50 @@ function readLinesFromLog($fileName, $con)
             $_SESSION["error"] = 0;
             $_SESSION["debug"] = 0;
             $_SESSION["notice"] = 0;
+            $_SESSION["today_new_logs"] = 0;
 
             //if log reading has been run
             if(SyslogFileData::$syslogCount>0){
-                $_SESSION['error'] = errorSeverity($syslogMessageSeverity);
-                $_SESSION['warn'] = warningSeverity($syslogMessageSeverity);
-                $_SESSION['debug'] = debugSeverity($syslogMessageSeverity);
-                $_SESSION['notice'] = noticeSeverity($syslogMessageSeverity);
+                $_SESSION['error'] = ErrorSeverity($syslogMessageSeverity);
+                $_SESSION['warn'] = WarningSeverity($syslogMessageSeverity);
+                $_SESSION['debug'] = DebugSeverity($syslogMessageSeverity);
+                $_SESSION['notice'] = NoticeSeverity($syslogMessageSeverity);
+                $_SESSION['today_new_logs'] = TodaysLogs($syslogTimeArray);
                 $_SESSION['counter'] = SyslogFileData::$syslogCount;
             }else if(MySQLFileData::$mysqlCounter>0){
-                $_SESSION['error'] = errorSeverity($mysqlMessageSeverity);
-                $_SESSION['warn'] = warningSeverity($mysqlMessageSeverity);
-                $_SESSION['debug'] = debugSeverity($mysqlMessageSeverity);
-                $_SESSION['notice'] = noticeSeverity($mysqlMessageSeverity);
+                $_SESSION['error'] = ErrorSeverity($mysqlMessageSeverity);
+                $_SESSION['warn'] = WarningSeverity($mysqlMessageSeverity);
+                $_SESSION['debug'] = DebugSeverity($mysqlMessageSeverity);
+                $_SESSION['notice'] = NoticeSeverity($mysqlMessageSeverity);
+                $_SESSION['today_new_logs'] = TodaysLogs($mysqlTimeArray);
                 $_SESSION['counter'] = MySQLFileData::$mysqlCounter;
             }elseif(KernelFileData::$kernelCount>0){
-                $_SESSION['error'] = errorSeverity($kernMessageSeverity);
-                $_SESSION['warn'] = warningSeverity($kernMessageSeverity);
-                $_SESSION['debug'] = debugSeverity($kernMessageSeverity);
-                $_SESSION['notice'] = noticeSeverity($kernMessageSeverity);
+                $_SESSION['error'] = ErrorSeverity($kernMessageSeverity);
+                $_SESSION['warn'] = WarningSeverity($kernMessageSeverity);
+                $_SESSION['debug'] = DebugSeverity($kernMessageSeverity);
+                $_SESSION['notice'] = NoticeSeverity($kernMessageSeverity);
+                $_SESSION['today_new_logs'] = TodaysLogs($kernelTimeArray);
                 $_SESSION['counter'] = KernelFileData::$kernelCount;
             }elseif(AuthFileData::$authCount>0){
-                $_SESSION['error'] = errorSeverity($authMessageSeverity);
-                $_SESSION['warn'] = warningSeverity($authMessageSeverity);
-                $_SESSION['debug'] = debugSeverity($authMessageSeverity);
-                $_SESSION['notice'] = noticeSeverity($authMessageSeverity);
+                $_SESSION['error'] = ErrorSeverity($authMessageSeverity);
+                $_SESSION['warn'] = WarningSeverity($authMessageSeverity);
+                $_SESSION['debug'] = DebugSeverity($authMessageSeverity);
+                $_SESSION['notice'] = NoticeSeverity($authMessageSeverity);
+                $_SESSION['today_new_logs'] = TodaysLogs($authTimeArray);
                 $_SESSION['counter'] = AuthFileData::$authCount;
             }else if(UfwFileData::$ufwlogCount>0){
-                $_SESSION['error'] = errorSeverity($ufwMessageSeverity);
-                $_SESSION['warn'] = warningSeverity($ufwMessageSeverity);
-                $_SESSION['debug'] = debugSeverity($ufwMessageSeverity);
-                $_SESSION['notice'] = noticeSeverity($ufwMessageSeverity);
+                $_SESSION['error'] = ErrorSeverity($ufwMessageSeverity);
+                $_SESSION['warn'] = WarningSeverity($ufwMessageSeverity);
+                $_SESSION['debug'] = DebugSeverity($ufwMessageSeverity);
+                $_SESSION['notice'] = NoticeSeverity($ufwMessageSeverity);
+                $_SESSION['today_new_logs'] = TodaysLogs($ufwTimeArray);
                 $_SESSION['counter'] = UfwFileData::$ufwlogCount;
-            }
-            elseif(CustomFileData::$customlogCount>0){
-                $_SESSION['error'] = errorSeverity($customMessageSeverity);
-                $_SESSION['warn'] = warningSeverity($customMessageSeverity);
-                $_SESSION['debug'] = debugSeverity($customMessageSeverity);
-                $_SESSION['notice'] = noticeSeverity($customMessageSeverity);
+            }elseif(CustomFileData::$customlogCount>0){
+                $_SESSION['error'] = ErrorSeverity($customMessageSeverity);
+                $_SESSION['warn'] = WarningSeverity($customMessageSeverity);
+                $_SESSION['debug'] = DebugSeverity($customMessageSeverity);
+                $_SESSION['notice'] = NoticeSeverity($customMessageSeverity);
+                $_SESSION['today_new_logs'] = TodaysLogs($customTimeArray);
                 $_SESSION['counter'] = CustomFileData::$customlogCount;
             }
 
@@ -506,7 +540,7 @@ function readLinesFromLog($fileName, $con)
         echo "The filepath is incorrect! " . $fileName . " not found";
     }
 }
-function debugSeverity($array){
+function DebugSeverity($array){
     $warning1 = "debug";
     $warning2 = "DEBUG";
     $debugCount = 0;
@@ -514,37 +548,23 @@ function debugSeverity($array){
         if (strpos($item, $warning1) !== false) {
             $debugCount++;
         }
-        if (strpos($item, $warning2) !== false) {
+        elseif (strpos($item, $warning2) !== false) {
             $debugCount++;
         }
     }
     return $debugCount;
 }
-
-function errorSeverity($array){
+function ErrorSeverity($array){
     $warning1 = "error";
-    $warning2 = "ERROR";
-    $warning3 = "Error";
     $errorCount = 0;
     foreach ($array as $item) {
         if (strpos($item, $warning1) !== false) {
             $errorCount++;
         }
-        if (strpos($item, $warning2) !== false) {
-            $errorCount++;
-        }
-        if (strpos($item, $warning3) !== false) {
-            $errorCount++;
-        }
-    }
-    if($errorCount > 0)
-    {
-        echo "<p></p>";
     }
     return $errorCount;
 }
-
-function warningSeverity($array){
+function WarningSeverity($array){
 
     $warning1 = "Warning";
     $warning2 = "WARNING";
@@ -553,14 +573,13 @@ function warningSeverity($array){
         if (strpos($item, $warning1) !== false) {
             $warningCount++;
         }
-        if (strpos($item, $warning2) !== false) {
+        elseif (strpos($item, $warning2) !== false) {
             $warningCount++;
         }
     }
     return $warningCount;
 }
-
-function noticeSeverity($array){
+function NoticeSeverity($array){
     $warning1 = "notice";
     $warning2 = "NOTICE";
     $noticeCount = 0;
@@ -568,9 +587,24 @@ function noticeSeverity($array){
         if (strpos($item, $warning1) !== false) {
             $noticeCount++;
         }
-        if (strpos($item, $warning2) !== false) {
+        elseif (strpos($item, $warning2) !== false) {
             $noticeCount++;
         }
     }
     return $noticeCount;
+}
+function TodaysLogs($array){
+    //Mar 29 || 2020-03-29
+    $currentTime1 = date('M d');
+    $currentTime2 = date('Y-m-d');
+    $todayCount = 0;
+    foreach ($array as $item) {
+        if (strpos($item, $currentTime1) !== false) {
+            $todayCount++;
+        }
+        elseif (strpos($item, $currentTime2) !== false) {
+            $todayCount++;
+        }
+    }
+    return $todayCount;
 }
