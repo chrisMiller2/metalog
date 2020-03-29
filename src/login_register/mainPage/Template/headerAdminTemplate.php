@@ -29,6 +29,7 @@ session_start();?>
                 </div>
                 <div class="dropdown-content">
                     <a href="changeNickname.php">Change nickname</a>
+                    <a href="changePassword.php">Change password</a>
                     <a href="../../logout.php">Logout</a>
                 </div>
             </div>

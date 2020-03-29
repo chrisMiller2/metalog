@@ -34,7 +34,7 @@ $con->close();
         <div class="changeNick">
             <form method="post">
                 <h2>Current Nickname: <?php echo $currentNick?></h2>
-                <h2>New Nickname: <input id="shortInput" name="newNick"></h2>
+                <h2>New Nickname: <input class="shortInput" name="newNick"></h2>
                 <input type="submit" name="changeNick" class="button" value="Change Nickname" style="vertical-align: middle"><br>
             </form>
         </div>

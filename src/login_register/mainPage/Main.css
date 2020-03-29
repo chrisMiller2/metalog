@@ -322,7 +322,7 @@ input[type=text] {
     border-radius: 4px;
 }
 
-#shortInput{
+input.shortInput{
     width: 33%;
     font-weight: bold;
     padding: 12px 20px;
