@@ -26,6 +26,8 @@ if(isset($_POST['changePass'])){
         mysqli_close($con);
         //refreshes the site
         echo "<meta http-equiv='refresh' content='0'>";
+    }else{
+        echo "<script>alert(\"The passwords don't match!\");</script>";
     }
 
 }
@@ -37,8 +39,30 @@ $con->close();
         <div class="heroText">
             <div class="changeNick">
                 <form method="post">
-                    <h2>New Password: <input class="shortInput" type="password" name="newPa1"></h2>
-                    <h2>Confirm Password: <input class="shortInput" type="password" name="newPa2"></h2>
+                    <h2>New Password: <input class="shortInput" id="pw" type="password" name="newPa1"></h2>
+                    <h2>Confirm Password: <input class="shortInput" id="pw2" type="password" name="newPa2"></h2>
+                    <link rel="stylesheet" type="text/css" href="checkbox.css">
+                    <label class="password" for="show">Show password
+                        <input type="checkbox" onclick="passwordVisibility()" id="show">
+                        <script>
+                            function passwordVisibility() {
+                                var pass = document.getElementById("pw");
+                                if(pass.type === "password"){
+                                    pass.type = "text";
+                                }else{
+                                    pass.type = "password";
+                                }
+                                var passConf = document.getElementById("pw2");
+                                if(passConf.type === "password"){
+                                    passConf.type = "text";
+                                }else{
+                                    passConf.type = "password";
+                                }
+                            }
+                        </script>
+                        <span class="checkmark"></span>
+                    </label>
+                    <br><br>
                     <input type="submit" name="changePass" class="button" value="Change Password" style="vertical-align: middle"><br>
                 </form>
             </div>

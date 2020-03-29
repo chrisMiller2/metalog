@@ -153,11 +153,14 @@ div.severity{
 }
 
 div.activity{
+    font-family: "Century Gothic", serif;
     margin-top: 5px;
     padding: 5px;
     background-color: rgba(0, 139, 214, 0.5);
     border: 2px dashed #008bd6;
 }
+
+
 
 /*select*/
 select {

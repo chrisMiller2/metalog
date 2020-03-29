@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ae899390-2983-46d6-a30b-61b97734a05f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/login_register/mainPage/changePassword.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/login_register/mainPage/checkbox.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/login_register/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/login.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/Main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/Main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/Template/headerAdminTemplate.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/Template/headerAdminTemplate.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/Template/headerUserTemplate.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/Template/headerUserTemplate.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/changeNickname.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/changeNickname.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/changePassword.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/changePassword.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +35,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -64,6 +62,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/login_register/mainPage" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -249,7 +248,7 @@
       <workItem from="1585234907333" duration="5786000" />
       <workItem from="1585293767351" duration="3319000" />
       <workItem from="1585324424302" duration="234000" />
-      <workItem from="1585489940283" duration="11530000" />
+      <workItem from="1585489940283" duration="12517000" />
     </task>
     <task id="LOCAL-00001" summary="New structure">
       <created>1581665524514</created>
@@ -314,7 +313,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585499988165</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="change password">
+      <created>1585501546993</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1585501546993</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -344,7 +350,8 @@
     <MESSAGE value="line counter, sticky divs" />
     <MESSAGE value="Activities, ufw.log added, refresh" />
     <MESSAGE value="Today's logs, change nickname" />
-    <option name="LAST_COMMIT_MESSAGE" value="Today's logs, change nickname" />
+    <MESSAGE value="change password" />
+    <option name="LAST_COMMIT_MESSAGE" value="change password" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1032" y="182" key="#Deployment" timestamp="1581864317979">
@@ -367,10 +374,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1120" y="256" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585041596683" />
-    <state x="770" y="59" key="CommitChangelistDialog2" timestamp="1585499987124">
+    <state x="770" y="59" key="CommitChangelistDialog2" timestamp="1585501546053">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="770" y="59" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1585499987124" />
+    <state x="770" y="59" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1585501546053" />
     <state x="1011" y="100" width="816" height="847" key="DirDiffDialog" timestamp="1585045726238">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -387,10 +394,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="891" y="159" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1583498492640" />
-    <state x="1089" y="254" key="Vcs.Push.Dialog.v2" timestamp="1585499993180">
+    <state x="1089" y="254" key="Vcs.Push.Dialog.v2" timestamp="1585501551192">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1089" y="254" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1585499993180" />
+    <state x="1089" y="254" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1585501551192" />
     <state x="661" y="345" key="com.intellij.ide.util.TipDialog" timestamp="1580908975166">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
