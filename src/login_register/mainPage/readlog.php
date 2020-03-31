@@ -402,7 +402,7 @@ function readLinesFromLog($fileName, $con)
                     $authTimeArray[] = $authTimeData;
 
                     //insert into database
-                    $insertAuthlogSQL = "INSERT INTO Auth_log(time, service, session, message)
+                    $insertAuthlogSQL = "INSERT INTO Auth_log(time, service, message)
                             VALUES ('$authTimeData','$authServiceData', '$authMessageData')";
                     mysqli_query($con, $insertAuthlogSQL);
 

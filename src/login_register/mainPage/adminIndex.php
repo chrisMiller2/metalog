@@ -123,6 +123,17 @@ require_once('Template/headerAdminTemplate.php');?>
             //infos about the Server
             include "../dbInfo.php";
             $result = mysqli_query($con,"SELECT * FROM Status");
+            echo '<form method="post">';
+            echo '<input type="submit" name="deleteRows" class="button" value="Delete all activity" style="vertical-align: middle"><br>';
+            echo '</form>';
+            if(isset($_POST['deleteRows'])){
+                $dropStatusTableSQL =
+                    "DELETE FROM Status WHERE ID IS NOT NULL";
+                mysqli_query($con, $dropStatusTableSQL);
+                mysqli_close($con);
+                //refreshes the site
+                echo "<meta http-equiv='refresh' content='0'>";
+            }
             echo "<table border='1' id='activityTable'>
                 <tr>
                     <th>ID</th>

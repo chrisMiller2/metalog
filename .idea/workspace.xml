@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ae899390-2983-46d6-a30b-61b97734a05f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/login_register/mainPage/checkbox.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/Main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/Main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/changePassword.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/changePassword.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/login_register/logout.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/logout.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/adminIndex.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/adminIndex.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/log-CenterAdmin.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/log-CenterAdmin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/readlog.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/readlog.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/statistics.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/statistics.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,11 +79,11 @@
       <recent name="C:\Users\HP EliteBook 8760w\Desktop\szakdolgozat" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Christian Miller\Desktop\szakdolgozat\src\login_register\mainPage" />
       <recent name="C:\Users\Christian Miller\Desktop\szakdolgozat\src\login_register\mainPage\images" />
       <recent name="C:\Users\Christian Miller\Desktop\szakdolgozat\src\login_register" />
       <recent name="C:\Users\Christian Miller\Desktop\szakdolgozat\src\login_register\mainPage\Template" />
       <recent name="C:\Users\Christian Miller\Desktop\szakdolgozat\src\mainPage\images" />
-      <recent name="C:\Users\Christian Miller\Desktop\szakdolgozat\src\mainPage\logs" />
     </key>
   </component>
   <component name="RunManager" selected="PHP Script.userIndex.php">
@@ -248,7 +250,12 @@
       <workItem from="1585234907333" duration="5786000" />
       <workItem from="1585293767351" duration="3319000" />
       <workItem from="1585324424302" duration="234000" />
-      <workItem from="1585489940283" duration="12517000" />
+      <workItem from="1585489940283" duration="12668000" />
+      <workItem from="1585553669255" duration="66000" />
+      <workItem from="1585570449921" duration="599000" />
+      <workItem from="1585581601012" duration="542000" />
+      <workItem from="1585582367467" duration="622000" />
+      <workItem from="1585648321931" duration="7113000" />
     </task>
     <task id="LOCAL-00001" summary="New structure">
       <created>1581665524514</created>
@@ -320,7 +327,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585501546993</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="change password">
+      <created>1585502563647</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1585502563647</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -374,10 +388,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1120" y="256" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585041596683" />
-    <state x="770" y="59" key="CommitChangelistDialog2" timestamp="1585501546053">
+    <state x="770" y="59" key="CommitChangelistDialog2" timestamp="1585502562826">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="770" y="59" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1585501546053" />
+    <state x="770" y="59" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1585502562826" />
     <state x="1011" y="100" width="816" height="847" key="DirDiffDialog" timestamp="1585045726238">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -394,18 +408,18 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="891" y="159" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1583498492640" />
-    <state x="1089" y="254" key="Vcs.Push.Dialog.v2" timestamp="1585501551192">
+    <state x="1089" y="254" key="Vcs.Push.Dialog.v2" timestamp="1585502569234">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1089" y="254" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1585501551192" />
+    <state x="1089" y="254" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1585502569234" />
     <state x="661" y="345" key="com.intellij.ide.util.TipDialog" timestamp="1580908975166">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="661" y="345" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1580908975166" />
-    <state x="1249" y="441" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585224081528">
+    <state x="1249" y="441" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585651378487">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1249" y="441" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1585224081528" />
+    <state x="1249" y="441" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1585651378487" />
     <state x="1401" y="333" key="ftp.server.browser" timestamp="1581000241451">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
