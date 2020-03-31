@@ -161,6 +161,51 @@ require_once('Template/headerAdminTemplate.php');?>
 
                 mysqli_close($con);
             ?>
+<!--            Usertype activity chart-->
+            <?php
+            //infos about the Server
+            include "../dbInfo.php";
+            $getUserTypeSQL = "SELECT Type FROM Status";
+            $result = $con->query($getUserTypeSQL);
+
+            $userTypeArray = array();
+            while($row = $result->fetch_assoc()) {
+                $userTypeArray[] = $row['Type'];
+            }
+            $uniqueTypeCount = array_count_values($userTypeArray);
+            $uniqueTypes = array_keys($uniqueTypeCount);
+            //rearrange the array
+            $count = array_values($uniqueTypeCount);
+            ?>
+            <table width="800px" align="center">
+                <tr>
+                    <td>
+                        <canvas id="typeChart" width="400" height="400"></canvas>
+                        <script src="Chart.js"></script>
+                        <script>
+                            let userCount = <?php echo json_encode($count); ?>;
+                            let userType = <?php echo json_encode($uniqueTypes); ?>;
+                            new Chart(document.getElementById("typeChart"), {
+                                type: "doughnut",
+                                data: {
+                                    labels: userType,
+                                    datasets:[{
+                                        borderColor: "rgb(0, 107, 165)",
+                                        backgroundColor: ["rgba(145, 145, 145)", "rgba(0, 139, 214)"],
+                                        hoverBorderColor: "rgb(0,0,0)",
+                                        hoverBackgroundColor: ["rgba(145, 145, 145, 0.75)", "rgba(0, 139, 214, 0.75)"],
+                                        borderWidth: 2,
+                                        data: userCount,
+                                        fill: true
+                                    }]},
+                                options:{
+                                    cutoutPercentage: 50
+                                }});
+                        </script>
+                    </td>
+                </tr>
+            </table>
+
         </div>
     </div>
 
