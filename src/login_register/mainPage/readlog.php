@@ -595,14 +595,18 @@ function NoticeSeverity($array){
 }
 function TodaysLogs($array){
     //Mar 29 || 2020-03-29
-    $currentTime1 = date('M d');
+    $currentTime1 = date('M j');
     $currentTime2 = date('Y-m-d');
+    $currentTime3 = date('M  j');
     $todayCount = 0;
     foreach ($array as $item) {
         if (strpos($item, $currentTime1) !== false) {
             $todayCount++;
         }
         elseif (strpos($item, $currentTime2) !== false) {
+            $todayCount++;
+        }
+        elseif (strpos($item, $currentTime3) !== false) {
             $todayCount++;
         }
     }
