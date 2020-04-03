@@ -145,6 +145,13 @@ div.counter{
     border: 2px dashed #008bd6;
 }
 
+div.usage{
+    margin-top: 5px;
+    padding: 5px;
+    background-color: rgba(0, 139, 214, 0.5);
+    border: 2px dashed #008bd6;
+}
+
 div.severity{
     margin-top: 5px;
     padding: 5px;

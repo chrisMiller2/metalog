@@ -89,6 +89,64 @@ require_once('Template/headerAdminTemplate.php');?>
                                 Today's log count:
                                 <?php echo $_SESSION['today_new_logs']; ?>
                             </div>
+
+<!--                            get server usage-->
+                            <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.0/jquery.min.js"></script>
+                            <script type="text/javascript">
+                                var auto_refresh_cpu = setInterval(
+                                    function () {
+                                        $('#CPUusageID').load('usages/cpuUsage.php').fadeIn("slow");
+                                    }, 1000);
+                                var auto_refresh_ram = setInterval(
+                                    function () {
+                                        $('#RAMusageID').load('usages/ramUsage.php').fadeIn("slow");
+                                    }, 1000);
+                            </script>
+                            <div class="usage">
+                                CPU Usage:
+                                <div  id="CPUusageID"></div>
+                                RAM Usage:
+                                <div  id="RAMusageID"></div>
+                                Disk Usage:
+                                <style type='text/css'>
+                                    .progress {
+                                        border: 2px solid #008bd6;
+                                        height: 32px;
+                                        width: 540px;
+                                        margin: 30px auto;
+                                    }
+                                    .progress .prgbar {
+                                        background: #008bd6;
+                                        width: <?php include "usages/diskUsage.php"; ?>%;
+                                        position: relative;
+                                        height: 32px;
+                                        z-index: 999;
+                                    }
+                                    .progress .prgtext {
+                                        color: #ffffff;
+                                        text-align: center;
+                                        font-size: 13px;
+                                        padding: 9px 0 0;
+                                        width: 540px;
+                                        position: absolute;
+                                        z-index: 1000;
+                                    }
+                                    .progress .prginfo {
+                                        margin: 3px 0;
+                                    }
+                                </style>
+                                <div class='progress'>
+                                    <div class='prgtext'><?php echo $dp; ?>% Disk Used</div>
+                                    <div class='prgbar'></div>
+                                    <div class='prginfo'>
+                                        <span style='float: left;'><?php echo "$du of $dt used"; ?></span>
+                                        <span style='float: right;'><?php echo "$df of $dt free"; ?></span>
+                                        <span style='clear: both;'></span>
+                                    </div>
+                                </div>
+                            </div>
+
+<!--                            log severities-->
                             <div class="severity">
                                 <span style="color: red">
                                     Error: <?php echo $_SESSION["error"]; ?>
@@ -102,6 +160,8 @@ require_once('Template/headerAdminTemplate.php');?>
                                 <br>
                                 Notice: <?php echo $_SESSION['notice']; ?>
                             </div>
+
+<!--                            infos about the user and server-->
                             <div class="activity">
                                 Username: <?php echo $_SESSION['nickname']; ?>
                                 <br>
@@ -118,6 +178,113 @@ require_once('Template/headerAdminTemplate.php');?>
                     </td>
                 </tr>
             </table>
+            <h2>Network usage:</h2>
+            <script type="text/javascript" src="usages/js/jquery-1.4.2.min.js"></script>
+            <script type="text/javascript" src="usages/js/jquery.flot.js"></script>
+
+            <script id="source" language="javascript" type="text/javascript">
+                $(document).ready(function() {
+                    var options = {
+                        lines: { show: true },
+                        points: { show: true },
+                        xaxis: { mode: "time" }
+                    };
+                    var data = [];
+                    var placeholder = $("#networkTraffic");
+                    $.plot(placeholder, data, options);
+                    var iteration = 0;
+
+                    function fetchData() {
+                        ++iteration;
+                        function onDataReceived(series) {
+                            // we get all the data in one go, if we only got partial
+                            // data, we could merge it with what we already got
+                            data = [ series ];
+
+                            $.plot($("#networkTraffic"), data, options);
+                            fetchData();
+                        }
+
+                        $.ajax({
+                            url: "usages/networkData_enp0s8.php",
+                            method: 'GET',
+                            dataType: 'json',
+                            success: onDataReceived
+                        });
+                    }
+                    setTimeout(fetchData, 1000);
+                });
+            </script>
+            <script id="source2" language="javascript" type="text/javascript">
+                $(document).ready(function() {
+                    var options = {
+                        lines: { show: true },
+                        points: { show: true },
+                        xaxis: { mode: "time" }
+                    };
+                    var data = [];
+                    var placeholder = $("#networkTraffic2");
+                    $.plot(placeholder, data, options);
+                    var iteration = 0;
+
+                    function fetchData() {
+                        ++iteration;
+                        function onDataReceived(series) {
+                            // we get all the data in one go, if we only got partial
+                            // data, we could merge it with what we already got
+                            data = [ series ];
+
+                            $.plot($("#networkTraffic2"), data, options);
+                            fetchData();
+                        }
+
+                        $.ajax({
+                            url: "usages/networkData_enp0s3.php",
+                            method: 'GET',
+                            dataType: 'json',
+                            success: onDataReceived
+                        });
+                    }
+                    setTimeout(fetchData, 1000);
+                });
+            </script>
+            <script id="source3" language="javascript" type="text/javascript">
+                $(document).ready(function() {
+                    var options = {
+                        lines: { show: true },
+                        points: { show: true },
+                        xaxis: { mode: "time" }
+                    };
+                    var data = [];
+                    var placeholder = $("#networkTraffic3");
+                    $.plot(placeholder, data, options);
+                    var iteration = 0;
+
+                    function fetchData() {
+                        ++iteration;
+                        function onDataReceived(series) {
+                            // we get all the data in one go, if we only got partial
+                            // data, we could merge it with what we already got
+                            data = [ series ];
+
+                            $.plot($("#networkTraffic3"), data, options);
+                            fetchData();
+                        }
+
+                        $.ajax({
+                            url: "usages/networkData_lo.php",
+                            method: 'GET',
+                            dataType: 'json',
+                            success: onDataReceived
+                        });
+                    }
+                    setTimeout(fetchData, 1000);
+                });
+            </script>
+            <div id="networkTraffic" style="width:1600px;height:400px;"></div>
+            <div id="networkTraffic2" style="width:1600px;height:400px;"></div>
+            <div id="networkTraffic3" style="width:1600px;height:400px;"></div>
+
             <h2>Activity checker</h2>
             <?php
             //infos about the Server
