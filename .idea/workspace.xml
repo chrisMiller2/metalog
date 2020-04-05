@@ -1,20 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ae899390-2983-46d6-a30b-61b97734a05f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/login_register/mainPage/usages/cpuUsage.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/login_register/mainPage/usages/diskUsage.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/login_register/mainPage/usages/js/jquery-1.4.2.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/login_register/mainPage/usages/js/jquery.flot.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/login_register/mainPage/usages/networkData_enp0s3.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/login_register/mainPage/usages/networkData_enp0s8.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/login_register/mainPage/usages/networkData_lo.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/login_register/mainPage/usages/ramUsage.php" afterDir="false" />
+    <list default="true" id="ae899390-2983-46d6-a30b-61b97734a05f" name="Default Changelist" comment="monitoring">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/Main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/Main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/Template/headerAdminTemplate.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/Template/headerAdminTemplate.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/Template/headerUserTemplate.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/Template/headerUserTemplate.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/about.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/about.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/adminIndex.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/adminIndex.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/dropDownList.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/dropDownList.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/readlog.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/readlog.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/selectLogs.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/selectLogs.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/statistics.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/statistics.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/usages/ramUsage.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/usages/ramUsage.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/userIndex.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/userIndex.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/login_register/startup.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/startup.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -267,7 +265,8 @@
       <workItem from="1585659435304" duration="929000" />
       <workItem from="1585730899456" duration="2522000" />
       <workItem from="1585812353080" duration="4965000" />
-      <workItem from="1585901655658" duration="11891000" />
+      <workItem from="1585901655658" duration="11943000" />
+      <workItem from="1586071270860" duration="5761000" />
     </task>
     <task id="LOCAL-00001" summary="New structure">
       <created>1581665524514</created>
@@ -367,7 +366,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585816030052</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="monitoring">
+      <created>1585919229158</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1585919229158</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -401,7 +407,8 @@
     <MESSAGE value="histogram" />
     <MESSAGE value="activity chart" />
     <MESSAGE value="today's log bugfix and password verification fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="today's log bugfix and password verification fix" />
+    <MESSAGE value="monitoring" />
+    <option name="LAST_COMMIT_MESSAGE" value="monitoring" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1032" y="182" key="#Deployment" timestamp="1581864317979">
@@ -424,10 +431,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1120" y="256" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585732197434" />
-    <state x="770" y="59" key="CommitChangelistDialog2" timestamp="1585816028450">
+    <state x="770" y="59" key="CommitChangelistDialog2" timestamp="1586074617052">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="770" y="59" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1585816028450" />
+    <state x="770" y="59" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1586074617052" />
     <state x="1011" y="100" width="816" height="847" key="DirDiffDialog" timestamp="1585818120658">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -444,10 +451,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="891" y="159" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1583498492640" />
-    <state x="1089" y="254" key="Vcs.Push.Dialog.v2" timestamp="1585816038000">
+    <state x="1089" y="254" key="Vcs.Push.Dialog.v2" timestamp="1585919236684">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1089" y="254" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1585816038000" />
+    <state x="1089" y="254" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1585919236684" />
     <state x="661" y="345" key="com.intellij.ide.util.TipDialog" timestamp="1580908975166">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

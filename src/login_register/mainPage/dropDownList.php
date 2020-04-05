@@ -4,4 +4,5 @@
 <option value="kern.log">kern.log</option>
 <option value="auth.log">auth.log</option>
 <option value="ufw.log">ufw.log</option>
+<option value="messages">messages</option>
 <option value="custom_log">custom log</option>

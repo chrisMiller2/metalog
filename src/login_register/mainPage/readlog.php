@@ -199,6 +199,58 @@ class UfwFileData
     }
 }
 
+class MessagesFileData
+{
+    private $time, $service, $message;
+
+    public function getTime()
+    {
+        return $this->time;
+    }
+
+    public function setTime($time)
+    {
+        $this->time = $time;
+    }
+
+    public function getService()
+    {
+        return $this->service;
+    }
+
+    public function setService($service)
+    {
+        $this->service = $service;
+    }
+
+    public function getMessage()
+    {
+        return $this->message;
+    }
+
+    public function setMessage($message)
+    {
+        $this->message = $message;
+    }
+
+    public static $messagesCount = 0;
+
+    public function __construct($time, $service, $message)
+    {
+        $this->time = $time;
+        $this->service = $service;
+        $this->message = $message;
+        MessagesFileData::$messagesCount++;
+        return true;
+    }
+
+    public function getDescription()
+    {
+
+        echo $this->time . " " . $this->service . " " . $this->message;
+    }
+}
+
 class CustomFileData
 {
     private $time, $service, $message;
@@ -280,7 +332,7 @@ function readLinesFromLog($fileName, $con)
     $userRegex = "/\w{4}\=\w+/i";
     $commandRegex = "/\w{4,}\=\/.*/i";
 
-//syslog regex ALSO USED AS UFW LOG
+//syslog regex, UFW LOG, MESSAGES
     $syslogTimeRegex = "/^\w{3}\s+\d+\s\d{2}:\d{2}:\d{2}/i";
     $syslogServiceRegex = "/(?<=\:\d{2}\s).+?(?=\:)/i";
     $syslogMessageRegex = "/(?<=\:\s).*$/i";
@@ -301,6 +353,7 @@ function readLinesFromLog($fileName, $con)
     $kernMessageSeverity = array();
     $authMessageSeverity = array();
     $ufwMessageSeverity = array();
+    $messagesMessageSeverity = array();
     $customMessageSeverity = array();
 
 //times
@@ -309,6 +362,7 @@ function readLinesFromLog($fileName, $con)
     $kernelTimeArray = array();
     $authTimeArray = array();
     $ufwTimeArray = array();
+    $messagesTimeArray = array();
     $customTimeArray = array();
 
 
@@ -452,7 +506,29 @@ function readLinesFromLog($fileName, $con)
 
                     //get objects
                     $ufwLogLine->getDescription();
-                } else if($fileName ==  '/var/www/faildomain.com/src/login_register/mainPage/logs/'.$_SESSION['customLog']){
+                } else if ($fileName == '/var/log/messages') {
+                    $messagesTimeData = GetRegexMatches($syslogTimeRegex, $line);
+                    $messagesServiceData = GetRegexMatches($syslogServiceRegex, $line);
+                    $messagesMessageData = GetRegexMatches($syslogMessageRegex, $line);
+
+                    //create objects
+                    $messagesLine = new MessagesFileData($messagesTimeData,
+                        $messagesServiceData, $messagesMessageData);
+
+                    //severity
+                    $messagesMessageSeverity[] = $messagesMessageData;
+
+                    //time
+                    $messagesTimeArray[] = $messagesTimeData;
+
+                    //insert into database
+                    $insertMessagesSQL = "INSERT INTO Messages(time, service, message)
+                            VALUES ('$messagesTimeData','$messagesServiceData', '$messagesMessageData')";
+                    mysqli_query($con, $insertMessagesSQL);
+
+                    //get objects
+                    $messagesLine->getDescription();
+                }else if($fileName ==  '/var/www/faildomain.com/src/login_register/mainPage/logs/'.$_SESSION['customLog']){
                     $customTimeData = GetRegexMatches($syslogTimeRegex, $line);
                     $customServiceData = GetRegexMatches($syslogServiceRegex, $line);
                     $customMessageData = GetRegexMatches($syslogMessageRegex, $line);
@@ -522,6 +598,13 @@ function readLinesFromLog($fileName, $con)
                 $_SESSION['notice'] = NoticeSeverity($ufwMessageSeverity);
                 $_SESSION['today_new_logs'] = TodaysLogs($ufwTimeArray);
                 $_SESSION['counter'] = UfwFileData::$ufwlogCount;
+            }else if(MessagesFileData::$messagesCount>0){
+                $_SESSION['error'] = ErrorSeverity($messagesMessageSeverity);
+                $_SESSION['warn'] = WarningSeverity($messagesMessageSeverity);
+                $_SESSION['debug'] = DebugSeverity($messagesMessageSeverity);
+                $_SESSION['notice'] = NoticeSeverity($messagesMessageSeverity);
+                $_SESSION['today_new_logs'] = TodaysLogs($messagesTimeArray);
+                $_SESSION['counter'] = MessagesFileData::$messagesCount;
             }elseif(CustomFileData::$customlogCount>0){
                 $_SESSION['error'] = ErrorSeverity($customMessageSeverity);
                 $_SESSION['warn'] = WarningSeverity($customMessageSeverity);

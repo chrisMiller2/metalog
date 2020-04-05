@@ -34,9 +34,5 @@ session_start();?>
                 </div>
             </div>
         </li>
-
-        <!--session time-->
-<!--        <li class="menu"><h2>time:-->
-<!--                --><?php //require_once('../sessionTimeOut.php'); ?><!--</h2></li>-->
     </ul>
 </div>

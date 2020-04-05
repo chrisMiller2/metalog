@@ -1,5 +1,7 @@
 <?php
-require_once('Template/headerUserTemplate.php');?>
+require_once('Template/headerUserTemplate.php');
+$_SESSION['userType'] = 'User';
+?>
 
     <div class="heroImage">
         <div class="heroText">
@@ -18,36 +20,8 @@ require_once('Template/headerUserTemplate.php');?>
                     <!--                right panel-->
                     <td valign="top">
                         <div class="floating">
-                            <!--                            import log-->
                             <div class="custom-select">
                                 <span style="color: #ffffff">
-
-                                    Import files<br>
-                                    <form action="importLogFile.php" method="post" enctype="multipart/form-data">
-                                        <input class="browse_button" type="file" name="myfile" id="myfile" /><br>
-                                        <input class="button" type="submit" value="upload" onclick="load()">
-                                        <!--                                    instructions-->
-                                        <script type="text/javascript">
-                                            function AlertIt() {
-                                                var answer = confirm ("supported formats: .txt, .log\n" +
-                                                    "The structure of the file must be like this:\n" +
-                                                    "\"TIME SERVICE: MESSAGE\"\n" +
-                                                    "Example:\n" +
-                                                    "Feb 21 06:44:49 debian systemd[1]: Started Daily man-db regeneration.");
-
-                                            }
-                                        </script>
-                                        <a href="javascript:AlertIt();" id="instructions">Instructions</a>
-                                    </form>
-                                    <!--                        <script>-->
-                                    <!--                            function load() {-->
-                                    <!--                                var s = document.getElementById("loader").style;-->
-                                    <!--                                s.animationName = 'loadingIcon';-->
-                                    <!--                                s.animationDuration = '3s';-->
-                                    <!--                            }-->
-                                    <!--                        </script>-->
-                                    <!--                        <div class="loader" id="loader"></div>-->
-
                                     <!--                dropdown list-->
                                     Important logs to monitor:<br>
                                     <form action="" method="post">
@@ -177,7 +151,7 @@ libs/jquery/1.3.0/jquery.min.js"></script>
                     </td>
                 </tr>
             </table>
-            <h2>Network usage:</h2>
+            <h2>Network usage</h2>
             <script type="text/javascript" src="usages/js/jquery-1.4.2.min.js"></script>
             <script type="text/javascript" src="usages/js/jquery.flot.js"></script>
 

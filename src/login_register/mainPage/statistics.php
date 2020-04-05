@@ -13,7 +13,7 @@ if ($result = mysqli_query($con, $selectSQL)) {
     if (mysqli_num_rows($result) > 0) {
         while ($row = mysqli_fetch_array($result)) {
             $dateTime[] = $row['time'];
-            $dateTimeSeconds[] = strtotime($row['time']);
+            $dateTimeSeconds[] = strtotime($row['time'])+7200; //adding 2 hours to each time
         }
     }
 }
@@ -42,21 +42,6 @@ function Dates($array)
 
 $con->close();
 
-$split = Split_date($dateTime);
-
-function Split_date($array){
-    $splitDate = array();
-    foreach ($array as $item){
-        $splitDate = date_parse_from_format
-        ('M d H:i:s', $item);
-    }
-
-    $month[] = $splitDate['month'];
-    $day[] = $splitDate['day'];
-    $hour[] = $splitDate['hour'];
-    $min[] = $splitDate['minute'];
-    $sec[] = $splitDate['second'];
-}
 $dates = Dates($dateTimeCount);
 //rearrange the array
 $count = array_values($dateTimeCount);

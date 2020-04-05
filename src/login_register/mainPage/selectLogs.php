@@ -72,6 +72,18 @@ if (isset($_POST['select'])) {
 
             readLinesFromLog('/var/log/ufw.log', $con);
             break;
+        case 'messages':
+            $fileName = "messages";
+            $_SESSION['title'] = "Messages";
+
+            //refresh the Syslog table each time it is run
+            $dropMessagesTableSQL = "DROP TABLE IF EXISTS Messages";
+            $createMessagesTableSQL = "CREATE TABLE Messages (time text, service text, message text)";
+            mysqli_query($con, $dropMessagesTableSQL);
+            mysqli_query($con, $createMessagesTableSQL);
+
+            readLinesFromLog('/var/log/messages', $con);
+            break;
         case "custom_log":
             //for reading in correct order
             if($_POST['select2'] != "null"){
@@ -118,6 +130,11 @@ if (isset($_POST['searchButton'])) {
             $statement = $con->query($selectSQL);
             include 'searchLog.php';
             break;
+        case 'messages':
+            $selectSQL = "SELECT time, service, message FROM Messages";
+            $statement = $con->query($selectSQL);
+            include 'searchLog.php';
+            break;
         case "custom_log":
             $selectSQL = "SELECT time, service, message FROM Custom_log";
             $statement = $con->query($selectSQL);
@@ -156,6 +173,12 @@ if (isset($_POST['histogramButton'])){
             $title = "ufw.log:<br>";
             $_SESSION['title'] = $title;
             $selectSQL = "SELECT time FROM Ufw_log";
+            include "statistics.php";
+            break;
+        case 'messages':
+            $title = "messages:<br>";
+            $_SESSION['title'] = $title;
+            $selectSQL = "SELECT time FROM Messages";
             include "statistics.php";
             break;
         case "custom_log":

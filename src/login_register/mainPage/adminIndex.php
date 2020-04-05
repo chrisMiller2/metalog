@@ -1,5 +1,7 @@
 <?php
-require_once('Template/headerAdminTemplate.php');?>
+require_once('Template/headerAdminTemplate.php');
+$_SESSION['userType'] = 'Admin';
+?>
 
     <div class="heroImage">
         <div class="heroText">
@@ -178,7 +180,7 @@ require_once('Template/headerAdminTemplate.php');?>
                     </td>
                 </tr>
             </table>
-            <h2>Network usage:</h2>
+            <h2>Network usage</h2>
             <script type="text/javascript" src="usages/js/jquery-1.4.2.min.js"></script>
             <script type="text/javascript" src="usages/js/jquery.flot.js"></script>
 
