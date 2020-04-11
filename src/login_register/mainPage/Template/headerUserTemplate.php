@@ -13,7 +13,7 @@ session_start();?>
         <ul id="menu">
             <li class="menu" id=main><a href="userIndex.php"><h2>MetaLog</h2></a></li>
 
-            <li class="menu"><a href="about.php"><h2>About</h2></a></li>
+            <li class="menu"><a href="aboutUser.php"><h2>About</h2></a></li>
 
             <li class="menu"><a href="log-CenterUser.php"><h2>LOG-CENTER</h2></a></li>
 

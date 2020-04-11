@@ -1,5 +1,8 @@
 <?php
-require_once('Template/headerAdminTemplate.php');
+if($_SESSION['userType'] = 'User')
+    require_once('Template/headerUserTemplate.php');
+else
+    require_once('Template/headerAdminTemplate.php');
 
 require "../dbInfo.php";
 

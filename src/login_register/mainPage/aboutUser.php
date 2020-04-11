@@ -1,15 +1,11 @@
 <?php
-if($_SESSION['userType'] = 'User')
     require_once('Template/headerUserTemplate.php');
-else
-    require_once('Template/headerAdminTemplate.php');
 ?>
 
     <div class="heroImage">
         <div class="heroText">
             This is a university thesis project developed by Krisztián Molnár.
             MetaLog uses Ubuntu and custom set log files to be analysed.
-
             <h1>How to use</h1>
             <p>
                 On the 'MetaLog' page, choose the log files you wish to read.

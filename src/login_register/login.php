@@ -40,6 +40,7 @@ if ($statement->num_rows > 0) {
                     $currentTime = date('H:i:s');
                     $_SESSION['nickname'] = $row['nickname'];
                     $_SESSION['email'] = $row['email'];
+                    $_SESSION['userType'] = 'Admin';
                     $nickname = $_SESSION['nickname'];
                     $type = "Admin";
                     $date = date('Y-m-d');
@@ -52,6 +53,7 @@ if ($statement->num_rows > 0) {
                     $currentTime = date('H:i:s');
                     $_SESSION['nickname'] = $row['nickname'];
                     $_SESSION['email'] = $row['email'];
+                    $_SESSION['userType'] = 'User';
                     $nickname = $_SESSION['nickname'];
                     $type = "User";
                     $date = date('Y-m-d');

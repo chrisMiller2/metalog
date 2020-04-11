@@ -14,14 +14,9 @@ body, html {
     left:0;
 }
 
-/*lines*/
-hr {
-    border-top: 2px dashed gray;
-}
-
 .verticalLine {
     border-left: 6px solid #008bd6;
-    height: 1225px;
+    height: 729px;
 }
 
 /*dropdown menu start*/
@@ -61,8 +56,8 @@ li#menuRight {
 /*activity table*/
 #activityTable{
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    float: left;
     border-collapse: collapse;
-    width: 100%;
     margin-bottom: 50px;
 }
 #activityTable th {
@@ -81,6 +76,9 @@ li#menuRight {
 #activityTable tr:nth-child(odd){background-color: #7a7a7a;}
 #activityTable tr:hover {background-color: #545454;}
 
+#activityScaleTable{
+    float: right;
+}
 
 
 /*buttons*/
@@ -132,40 +130,79 @@ div.floating{
     top: 0;
 }
 
+#log_info_wrapper_bottom{
+    display: flex;
+}
+
 div.custom-select{
     padding: 5px;
     background-color: rgba(0, 139, 214, 0.5);
     border: 2px dashed #008bd6;
+    margin-right:5px;
 }
 
 div.counter{
-    margin-top: 5px;
+    flex: 1;
     padding: 5px;
     background-color: rgba(0, 139, 214, 0.5);
     border: 2px dashed #008bd6;
-}
-
-div.usage{
-    margin-top: 5px;
-    padding: 5px;
-    background-color: rgba(0, 139, 214, 0.5);
-    border: 2px dashed #008bd6;
+    margin-right:5px;
 }
 
 div.severity{
-    margin-top: 5px;
     padding: 5px;
     background-color: rgba(0, 139, 214, 0.5);
     border: 2px dashed #008bd6;
+    margin-right:5px;
 }
 
 div.activity{
     font-family: "Century Gothic", serif;
-    margin-top: 5px;
     padding: 5px;
     background-color: rgba(0, 139, 214, 0.5);
     border: 2px dashed #008bd6;
 }
+
+
+div.import{
+    width: 250px;
+    padding: 5px;
+    margin-right: 5px;
+    background-color: rgba(0, 139, 214, 0.5);
+    border: 2px dashed #008bd6;
+}
+
+/*import*/
+input.browse_button{
+    font-size: 15px;
+}
+
+.upload_button {
+    vertical-align: middle;
+    display: inline-block;
+    border: none;
+    color: black;
+    background-color: white;
+    text-align: center;
+    font-size: 20px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    overflow: hidden;
+}
+
+.upload_button:hover {
+    background-color: black;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.5),0 17px 50px 0 rgba(0,0,0,0.19);
+    color: white;
+}
+
+div.usage {
+    flex: 1;
+    padding: 5px;
+    background-color: rgba(0, 139, 214, 0.5);
+    border: 2px dashed #008bd6;
+}
+
 
 
 
