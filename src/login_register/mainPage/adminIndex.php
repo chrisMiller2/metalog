@@ -214,7 +214,7 @@ require_once('Template/headerAdminTemplate.php');
                         </div>
                     </td>
                 </tr>
-                <tr>
+                <tr style="table-layout:fixed">
                     <td>
                         <div id="log_info_wrapper_bottom">
                             <div class="custom-select">
@@ -255,7 +255,7 @@ require_once('Template/headerAdminTemplate.php');
                             <div class="counter">
                                 <span style="font-weight: bold">
                                     File:
-                                </span><?php echo $_SESSION['title']; ?>
+                                </span><?php echo mb_strimwidth($_SESSION['title'], 0, 17, "..."); ?>
                                 <br>
                                 <span style="font-weight: bold">
                                     Lines read:

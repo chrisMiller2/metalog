@@ -6,33 +6,58 @@ session_start();?>
     <meta charset="UTF-8">
     <title>MetaLog</title>
     <link rel="stylesheet" href="Main.css">
-    <link rel=" shortcut icon" href="../images/favicon.png" type="img/png" />
+    <link rel="icon" href="../images/favicon.png" sizes="16x16" type="image/png" />
+    <script type="text/javascript">
+        function checkTime(i) {
+            if (i < 10) {
+                i = "0" + i;
+            }
+            return i;
+        }
+
+        function startTime() {
+            var today = new Date();
+            var h = today.getHours();
+            var m = today.getMinutes();
+            var s = today.getSeconds();
+            // add a zero in front of numbers<10
+            h = checkTime(h);
+            m = checkTime(m);
+            s = checkTime(s);
+            document.getElementById('time').innerHTML = h + ":" + m + ":" + s;
+            t = setTimeout(function() {
+                startTime()
+            }, 500);
+        }
+        startTime();
+    </script>
 </head>
-<body>
-    <div class="menu" id="reload">
-        <ul id="menu">
-            <li class="menu" id=main><a href="userIndex.php"><h2>MetaLog</h2></a></li>
+<body onload="startTime()">
+<div class="menu" id="reload">
+    <ul id="menu">
+        <li class="menu" id=main><a href="userIndex.php"><h2>MetaLog</h2></a></li>
 
-            <li class="menu"><a href="aboutUser.php"><h2>About</h2></a></li>
+        <li class="menu"><a href="aboutUser.php"><h2>About</h2></a></li>
 
-            <li class="menu"><a href="log-CenterUser.php"><h2>LOG-CENTER</h2></a></li>
+        <li class="menu"><a href="log-CenterUser.php"><h2>LOG-CENTER</h2></a></li>
 
-            <li class="menu"><a href="" onclick="window.location.reload()"><img id="refresh" src="https://img.icons8.com/officel/2x/refresh.png" alt="refresh"></a></li>
+        <li class="menu"><a href="" onclick="window.location.reload()"><img id="refresh" src="https://img.icons8.com/officel/2x/refresh.png" alt="refresh"></a></li>
 
 
-            <!--nickname-->
-            <li class="menu" id="menuRight">
-                <div class="dropdown">
-                    <div class="img-with-text">
-                        <!--                    <img src="../images/usericon.jpg" alt="icon">-->
-                        <a href=""><h2><?php echo $_SESSION['nickname'];?></h2></a>
-                    </div>
-                    <div class="dropdown-content">
-                        <a href="changeNickname.php">Change nickname</a>
-                        <a href="changePassword.php">Change password</a>
-                        <a href="../../logout.php">Logout</a>
-                    </div>
+        <!--nickname-->
+        <li class="menu" id="menuRight">
+            <div class="dropdown">
+                <div class="img-with-text">
+                    <!--                    <img src="../images/usericon.jpg" alt="icon">-->
+                    <a href=""><h2><?php echo $_SESSION['nickname'];?></h2></a>
                 </div>
-            </li>
-        </ul>
-    </div>
+                <div class="dropdown-content">
+                    <a href="changeNickname.php">Change nickname</a>
+                    <a href="changePassword.php">Change password</a>
+                    <a href="../../logout.php">Logout</a>
+                </div>
+            </div>
+        <li class="menu" id="menuRight"><a href="#"><h2><div id="time"></div></h2></a></li>
+        </li>
+    </ul>
+</div>

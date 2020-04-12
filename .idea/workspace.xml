@@ -2,20 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ae899390-2983-46d6-a30b-61b97734a05f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/login_register/mainPage/aboutUser.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/login_register/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/login.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/Main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/Main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/Template/headerAdminTemplate.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/Template/headerAdminTemplate.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/Template/headerUserTemplate.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/Template/headerUserTemplate.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/about.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/aboutAdmin.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/adminIndex.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/adminIndex.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/changeNickname.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/changeNickname.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/changePassword.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/changePassword.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/importLogFile.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/importLogFile.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/log-CenterUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/log-CenterUser.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/userIndex.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/userIndex.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +68,7 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -275,7 +266,8 @@
       <workItem from="1586506608087" duration="9445000" />
       <workItem from="1586531683714" duration="8472000" />
       <workItem from="1586587238675" duration="4245000" />
-      <workItem from="1586612824218" duration="1681000" />
+      <workItem from="1586612824218" duration="5698000" />
+      <workItem from="1586673226445" duration="2821000" />
     </task>
     <task id="LOCAL-00001" summary="New structure">
       <created>1581665524514</created>
@@ -389,7 +381,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586077173279</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="dashboard, import fix">
+      <created>1586615406344</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1586615406344</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -425,7 +424,8 @@
     <MESSAGE value="today's log bugfix and password verification fix" />
     <MESSAGE value="monitoring" />
     <MESSAGE value="messages, fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="messages, fix" />
+    <MESSAGE value="dashboard, import fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="dashboard, import fix" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1032" y="182" key="#Deployment" timestamp="1581864317979">
@@ -448,10 +448,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1120" y="256" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585732197434" />
-    <state x="770" y="59" key="CommitChangelistDialog2" timestamp="1586077170012">
+    <state x="770" y="59" key="CommitChangelistDialog2" timestamp="1586615403849">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="770" y="59" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1586077170012" />
+    <state x="770" y="59" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1586615403849" />
     <state x="1011" y="100" width="816" height="847" key="DirDiffDialog" timestamp="1586615277663">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -464,14 +464,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1363" y="448" key="NewPhpFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585909956645" />
-    <state x="891" y="159" key="SettingsEditor" timestamp="1583498492640">
+    <state x="891" y="159" key="SettingsEditor" timestamp="1586673927946">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="891" y="159" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1583498492640" />
-    <state x="1089" y="254" key="Vcs.Push.Dialog.v2" timestamp="1586077180208">
+    <state x="891" y="159" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1586673927946" />
+    <state x="1089" y="254" key="Vcs.Push.Dialog.v2" timestamp="1586615417081">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1089" y="254" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1586077180208" />
+    <state x="1089" y="254" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1586615417081" />
     <state x="661" y="345" key="com.intellij.ide.util.TipDialog" timestamp="1580908975166">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
