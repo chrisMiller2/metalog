@@ -202,7 +202,9 @@ div.usage {
     border: 2px dashed #008bd6;
 }
 
-
+#activityCheck{
+    display: inline-block;
+}
 
 
 /*select*/

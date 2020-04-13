@@ -1,10 +1,8 @@
 <?php
-session_start();
+session_unset();
+session_destroy();
 
 $url = "login.html";
-if(isset($_GET["session_expired"])) {
-    $url .= "?session_expired=" . $_GET["session_expired"];
-}
 
 include "dbInfo.php";
 $currentTime = date('H:i:s');
@@ -15,7 +13,4 @@ $updateLogoutSQL =
 mysqli_query($con, $updateLogoutSQL);
 mysqli_close($con);
 
-//echo 'You have been inactive, so we logged you
-//out because it is fun to see you leave bye';
-//echo '<a href="login.html">Return to the login page</a>';
 header("Location:$url");

@@ -10,17 +10,33 @@
 <script src="startup.js"></script>
 <body>
 <div class="login">
-    <form action="login.php" method="post" id="startupForm">
-        EMAIL: <input type="text" name="email"><br>
-        PASSWORD: <input type="password" name="password" id="pw">
-        <label class="password" for="show">Show password
-            <input type="checkbox" onclick="passwordVisibility()" id="show">
-            <span class="checkmark"></span>
-        </label>
-        <br><br>
-        <button type="submit" class="button" style="vertical-align: middle">Login</button><br>
-        <input type="button" class="button" onclick="window.location.href='register.html'" value="Register">
-    </form>
+
+<!--    title-->
+    <span class="loginTitle">
+        <h1>Let's log<span class="loginTitleIn">[in]</span></h1>
+    </span>
+
+<!--    login form-->
+    <div id="startDiv">
+        <form action="login.php" method="post" id="startupForm">
+            EMAIL: <input type="text" name="email"><br>
+            PASSWORD: <input type="password" name="password" id="pw">
+            <label class="password" for="show">Show password
+                <input type="checkbox" onclick="passwordVisibility()" id="show">
+                <span class="checkmark"></span>
+            </label>
+            <br><br>
+            <button type="submit" class="button" style="vertical-align: middle">Login</button><br>
+            <input type="button" class="button" onclick="window.location.href='register.html'" value="Register">
+        </form>
+        <ul class="loginListID">
+            <li>Analyse logs the easiest way possible</li>
+            <li>Real time network interface monitoring</li>
+            <li>Search in logs</li>
+            <li>Get histogram for each read logs</li>
+            <li>User friendly and now with <span class="dark">dark theme</span></li>
+        </ul>
+    </div>
 </div>
 </body>
 </html>

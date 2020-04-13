@@ -1,5 +1,12 @@
 <?php
-    require_once('Template/headerUserTemplate.php');
+require_once('Template/headerUserTemplate.php');
+
+if ($_SESSION['last_activity'] < time() - $_SESSION['expire_time']) {
+    header("Location: \..\logout.php");
+}
+else {
+    $_SESSION['last_activity'] = time();
+}
 ?>
 
     <div class="heroImage">

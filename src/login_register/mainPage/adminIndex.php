@@ -1,5 +1,8 @@
 <?php
 require_once('Template/headerAdminTemplate.php');
+
+$_SESSION['last_activity'] = time();
+$_SESSION['expire_time'] = 90; //expire time in seconds
 ?>
 
     <div class="heroImage">
@@ -52,11 +55,11 @@ require_once('Template/headerAdminTemplate.php');
                                     var auto_refresh_cpu = setInterval(
                                         function () {
                                             $('#CPUusageID').load('usages/cpuUsage.php').fadeIn("slow");
-                                        }, 1000);
-                                    var auto_refresh_ram = setInterval(
+                                        }, 1000;var auto_refresh_ram = setInterval(
                                         function () {
                                             $('#RAMusageID').load('usages/ramUsage.php').fadeIn("slow");
-                                        }, 1000);
+                                        }, 1000);)
+
                                 </script>
                                 <div class="usage">
                                     CPU Usage:

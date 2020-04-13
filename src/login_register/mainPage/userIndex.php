@@ -1,5 +1,8 @@
 <?php
 require_once('Template/headerUserTemplate.php');
+
+$_SESSION['last_activity'] = time();
+$_SESSION['expire_time'] = 90; //expire time in seconds
 ?>
 
     <div class="heroImage">

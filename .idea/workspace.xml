@@ -2,9 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ae899390-2983-46d6-a30b-61b97734a05f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/login_register/mainPage/countDownTimer.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/login_register/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/login_register/logout.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/logout.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/Main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/Main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/Template/headerAdminTemplate.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/Template/headerAdminTemplate.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/Template/headerUserTemplate.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/Template/headerUserTemplate.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/aboutAdmin.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/aboutAdmin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/aboutUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/aboutUser.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/adminIndex.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/adminIndex.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/changeNickname.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/changeNickname.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/changePassword.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/changePassword.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/log-CenterAdmin.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/log-CenterAdmin.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/log-CenterUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/log-CenterUser.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/userIndex.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/userIndex.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/login_register/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/login_register/startup.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/startup.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,19 +84,19 @@
     <property name="settings.editor.selected.configurable" value="project.propDebugger" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Christian Miller\Desktop\szakdolgozat\src\login_register\mainPage" />
+      <recent name="C:\Users\Christian Miller\Desktop\szakdolgozat\src\login_register\mainPage\Template" />
+      <recent name="C:\Users\Christian Miller\Desktop\szakdolgozat\src\login_register\mainPage\usages" />
+      <recent name="C:\Users\Christian Miller\Desktop\szakdolgozat\src\login_register\mainPage\images" />
+      <recent name="C:\Users\Christian Miller\Desktop\szakdolgozat\src\login_register" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Christian Miller\Desktop\szakdolgozat\src\login_register\mainPage" />
       <recent name="C:\Users\Christian Miller\Desktop\szakdolgozat\src\login_register\mainPage\usages" />
       <recent name="C:\Users\HP EliteBook 8760w\Desktop\szakdolgozat\src\mainPage\images" />
       <recent name="C:\Users\HP EliteBook 8760w\Desktop\szakdolgozat\src\mainPage" />
       <recent name="C:\Users\HP EliteBook 8760w\Desktop\szakdolgozat" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Christian Miller\Desktop\szakdolgozat\src\login_register\mainPage\usages" />
-      <recent name="C:\Users\Christian Miller\Desktop\szakdolgozat\src\login_register\mainPage" />
-      <recent name="C:\Users\Christian Miller\Desktop\szakdolgozat\src\login_register\mainPage\images" />
-      <recent name="C:\Users\Christian Miller\Desktop\szakdolgozat\src\login_register" />
-      <recent name="C:\Users\Christian Miller\Desktop\szakdolgozat\src\login_register\mainPage\Template" />
     </key>
   </component>
   <component name="RunManager" selected="PHP Script.userIndex.php">
@@ -267,7 +281,10 @@
       <workItem from="1586587238675" duration="4245000" />
       <workItem from="1586612824218" duration="5698000" />
       <workItem from="1586673226445" duration="5481000" />
-      <workItem from="1586680494703" duration="5311000" />
+      <workItem from="1586680494703" duration="9604000" />
+      <workItem from="1586705490157" duration="4333000" />
+      <workItem from="1586759795437" duration="9481000" />
+      <workItem from="1586789190109" duration="573000" />
     </task>
     <task id="LOCAL-00001" summary="New structure">
       <created>1581665524514</created>
@@ -395,7 +412,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586676114059</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="screenshot">
+      <created>1586686003925</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1586686003925</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -433,7 +457,8 @@
     <MESSAGE value="messages, fix" />
     <MESSAGE value="dashboard, import fix" />
     <MESSAGE value="display time" />
-    <option name="LAST_COMMIT_MESSAGE" value="display time" />
+    <MESSAGE value="screenshot" />
+    <option name="LAST_COMMIT_MESSAGE" value="screenshot" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1032" y="182" key="#Deployment" timestamp="1581864317979">
@@ -456,10 +481,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1120" y="256" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585732197434" />
-    <state x="770" y="59" key="CommitChangelistDialog2" timestamp="1586676111606">
+    <state x="770" y="59" key="CommitChangelistDialog2" timestamp="1586686002396">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="770" y="59" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1586676111606" />
+    <state x="770" y="59" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1586686002396" />
     <state x="1011" y="100" width="816" height="847" key="DirDiffDialog" timestamp="1586676160827">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -468,26 +493,26 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1220" y="279" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1581000251688" />
-    <state x="1363" y="448" key="NewPhpFileDialog" timestamp="1585909956645">
+    <state x="1363" y="448" key="NewPhpFileDialog" timestamp="1586764274872">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1363" y="448" key="NewPhpFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585909956645" />
+    <state x="1363" y="448" key="NewPhpFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586764274872" />
     <state x="891" y="159" key="SettingsEditor" timestamp="1586678726564">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="891" y="159" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1586678726564" />
-    <state x="1089" y="254" key="Vcs.Push.Dialog.v2" timestamp="1586676121705">
+    <state x="1089" y="254" key="Vcs.Push.Dialog.v2" timestamp="1586686011583">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1089" y="254" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1586676121705" />
+    <state x="1089" y="254" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1586686011583" />
     <state x="661" y="345" key="com.intellij.ide.util.TipDialog" timestamp="1580908975166">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="661" y="345" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1580908975166" />
-    <state x="1249" y="441" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1586537742692">
+    <state x="1249" y="441" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1586708683482">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1249" y="441" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1586537742692" />
+    <state x="1249" y="441" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1586708683482" />
     <state x="1401" y="333" key="ftp.server.browser" timestamp="1581000241451">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -504,9 +529,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1209" y="244" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1585046548885" />
-    <state x="1170" y="230" width="672" height="678" key="search.everywhere.popup" timestamp="1581875577729">
+    <state x="1170" y="230" width="672" height="678" key="search.everywhere.popup" timestamp="1586686956038">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1170" y="230" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1581875577729" />
+    <state x="1170" y="230" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1586686956038" />
   </component>
 </project>

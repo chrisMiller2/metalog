@@ -57,7 +57,14 @@ session_start();?>
                     <a href="../../logout.php">Logout</a>
                 </div>
             </div>
-        <li class="menu" id="menuRight"><a href="#"><h2><div id="time"></div></h2></a></li>
+            <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.0/jquery.min.js"></script>
+            <script>
+                let timeout = setInterval(
+                    function () {
+                        $('#activityCheck').load('countDownTimer.php').fadeIn("slow");
+                    }, 1000);
+            </script>
+        <li class="menu" id="menuRight"><a href="#"><h2>Timeout: <div id="activityCheck"></div></h2></a></li>
         </li>
     </ul>
 </div>

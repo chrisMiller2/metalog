@@ -4,6 +4,13 @@ if($_SESSION['userType'] = 'User')
 else
     require_once('Template/headerAdminTemplate.php');
 
+if ($_SESSION['last_activity'] < time() - $_SESSION['expire_time']) {
+    header("Location: \..\logout.php");
+}
+else {
+    $_SESSION['last_activity'] = time();
+}
+
 require "../dbInfo.php";
 
 $sql = "SELECT * FROM loginData";

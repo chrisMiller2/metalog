@@ -7,6 +7,21 @@ ul{
     padding: 0px;
 }
 
+span.loginTitle{
+    text-align: center;
+    color: white;
+    font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
+}
+
+span.loginTitleIn{
+    animation: fadein 3s ease;
+}
+
+@keyframes fadein {
+    from { opacity: 0}
+    to   { opacity: 1}
+}
+
 #startupForm {
     background: linear-gradient(#eaeaea, #a0a0a0);
     margin: auto;
@@ -19,6 +34,33 @@ ul{
     text-align: center;
     font-family: "MS Reference Sans Serif", serif;
     font-size: 20px;
+}
+
+.loginListID{
+    padding-top: 50px;
+    font-family: "Century Gothic", serif;
+    line-height: 1.5;
+    color: #afafaf;
+    background: none;
+    text-align: center;
+    font-size: 40px;
+}
+
+.loginListID li{
+    -moz-transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+.loginListID li:hover{
+    background: #2b2b2b;
+    color: white;
+}
+
+.dark{
+    color: black;
+    font-weight: bold;
+    text-decoration: underline;
 }
 
 input[type=text] {
@@ -93,5 +135,4 @@ a:link, a:visited {
 a:hover, a:active {
     color: white;
     background-color: black;
-
 }

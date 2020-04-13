@@ -1,7 +1,13 @@
 <?php
-    require_once('Template/headerAdminTemplate.php');
-?>
+require_once('Template/headerAdminTemplate.php');
 
+if ($_SESSION['last_activity'] < time() - $_SESSION['expire_time']) {
+    header("Location: \..\logout.php");
+}
+else {
+    $_SESSION['last_activity'] = time();
+}
+?>
     <div class="heroImage">
         <div class="heroText">
             This is a university thesis project developed by Krisztián Molnár.
