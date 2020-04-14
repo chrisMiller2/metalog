@@ -14,6 +14,32 @@ body, html {
     left:0;
 }
 
+
+:root {
+    --mainColor: #008bd6;
+    --sideColor: #3abaff;
+}
+.documentation a {
+    background:
+            linear-gradient(
+                    to bottom, var(--mainColor) 0%,
+                    var(--sideColor) 100%
+            );
+    background-position: 0 100%;
+    background-repeat: repeat-x;
+    background-size: 4px 4px;
+    color: #fff;
+    font-size: 25px;
+    text-decoration: none;
+    transition: background-size .2s;
+}
+
+.documentation a:hover {
+    color: #000000;
+    background-size: 4px 50px;
+}
+
+
 .verticalLine {
     border-left: 6px solid #008bd6;
     height: 729px;
@@ -77,6 +103,12 @@ li#menuRight {
 
 #activityScaleTable{
     float: right;
+    width: 800px;
+    align: center;
+}
+
+#activityScaleTable th{
+    font-size: 25px;
 }
 
 
@@ -108,14 +140,6 @@ li#menuRight {
     color: white;
 }
 
-.loader {
-    border: 16px solid #f3f3f3; /* Light grey */
-    border-top: 16px solid #008bd6; /* Blue */
-    border-radius: 50%;
-    width: 120px;
-    height: 120px;
-    animation: spin 2s linear infinite;
-}
 
 .heroText {
     padding: 20px;

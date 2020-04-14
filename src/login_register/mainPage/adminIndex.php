@@ -1,8 +1,7 @@
 <?php
-require_once('Template/headerAdminTemplate.php');
+require_once('template/headerAdminTemplate.php');
 
 $_SESSION['last_activity'] = time();
-$_SESSION['expire_time'] = 90; //expire time in seconds
 ?>
 
     <div class="heroImage">
@@ -366,6 +365,7 @@ $_SESSION['expire_time'] = 90; //expire time in seconds
                 <?php
                 mysqli_close($con);
             ?>
+
 <!--            Usertype activity chart-->
             <?php
             //infos about the Server
@@ -382,7 +382,8 @@ $_SESSION['expire_time'] = 90; //expire time in seconds
             //rearrange the array
             $count = array_values($uniqueTypeCount);
             ?>
-            <table id="activityScaleTable" width="800px" align="center">
+            <table id="activityScaleTable">
+                <tr><th>Activity Chart</th></tr>
                 <tr>
                     <td>
                         <canvas id="typeChart" width="400" height="400"></canvas>
@@ -415,4 +416,4 @@ $_SESSION['expire_time'] = 90; //expire time in seconds
     </div>
 
 <?php
-require_once('Template/footerTemplate.php');
+require_once('template/footerTemplate.php');

@@ -1,5 +1,5 @@
 <?php
-require_once('Template/headerUserTemplate.php');
+require_once('template/headerUserTemplate.php');
 
 if ($_SESSION['last_activity'] < time() - $_SESSION['expire_time']) {
     header("Location: \..\logout.php");
@@ -53,8 +53,14 @@ else {
                     <td>Uploaded custom log entries that are not from Ubuntu</td>
                 </tr>
             </table>
+            <br>
+            <p>
+                <span class="documentation">
+                    <a href="documentation/szakdolgozat.docx">Documentation</a>
+                </span>
+            </p>
         </div>
     </div>
 
 <?php
-require_once('Template/footerTemplate.php');
+require_once('template/footerTemplate.php');

@@ -1,8 +1,8 @@
 <?php
 if($_SESSION['userType'] = 'User')
-    require_once('Template/headerUserTemplate.php');
+    require_once('template/headerUserTemplate.php');
 else
-    require_once('Template/headerAdminTemplate.php');
+    require_once('template/headerAdminTemplate.php');
 
 if ($_SESSION['last_activity'] < time() - $_SESSION['expire_time']) {
     header("Location: \..\logout.php");
@@ -86,4 +86,4 @@ $con->close();
         </div>
     </div>
 <?php
-require_once('Template/footerTemplate.php');
+require_once('template/footerTemplate.php');

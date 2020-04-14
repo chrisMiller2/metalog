@@ -8,11 +8,37 @@
     <title>Registration site</title>
 </head>
 <script src="startup.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('.passwordHelp').hide();
+        $('.showPaHelp').each(function() {
+            $(this).show(0).on('click', function(e) {
+                e.preventDefault();
+                $(this).next('.passwordHelp').slideToggle('fast', function() {
+                    $(this).prev().html($(this).is(':visible') ? 'Password Validation' : 'Password Validation');
+                });
+            });
+        });
+    });
+</script>
 <body>
 <div class="register">
     <form action="register.php" method="post" id="startupForm">
 
         EMAIL: <input type="text" name="email"><br>
+        <a href="#" class="showPaHelp">Password Validation</a>
+        <div class="passwordHelp">
+            <p>
+                <span style="color: red">Your password needs to</span>
+                <ul style="list-style-type: disc">
+                    <li style="float: left">be 8 characters long</li>
+                    <li style="float: left">contain special characters</li>
+                    <li style="float: left">contain uppercase letters</li>
+                    <li style="float: left; padding-bottom: 20px">contain lowercase letters</li>
+                </ul>
+            </p>
+        </div><br>
         PASSWORD: <input type="password" name="password" id="pw"><br>
         CONFIRM PASSWORD: <input type="password" name="confirmedpassword" id="pw2"><br>
 

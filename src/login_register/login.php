@@ -35,6 +35,7 @@ if ($statement->num_rows > 0) {
         if (isset($email, $password)) {
             //checking if input is empty
             if (filter_var($email, FILTER_VALIDATE_EMAIL) && password_verify($password, $row['password'])) {
+                $_SESSION['expire_time'] = 60*5; //expire time in seconds
                 //checking user authentication
                 if ($row['isAdmin'] == 1) {
                     $currentTime = date('H:i:s');

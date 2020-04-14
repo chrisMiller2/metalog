@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once('Template/headerAdminTemplate.php');
+require_once('template/headerAdminTemplate.php');
 
 if ($_SESSION['last_activity'] < time() - $_SESSION['expire_time']) {
     header("Location: \..\logout.php");
@@ -115,4 +115,4 @@ else {
         </div>
     </div>
 
-<?php require_once('Template/footerTemplate.php'); ?>
+<?php require_once('template/footerTemplate.php'); ?>
