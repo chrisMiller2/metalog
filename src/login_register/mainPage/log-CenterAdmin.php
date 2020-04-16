@@ -69,48 +69,53 @@ else {
                         exports.generate = generate;
                     })(window);
                 </script>
+                <script>
+                    function customlogList(that) {
+                        if (that.value == "custom_log") {
+                            document.getElementById("customSelect").style.display = "block";
+                            document.getElementById("customSelectHiddenButton").style.display = "none";
+                        } else {
+                            document.getElementById("customSelect").style.display = "none";
+                            document.getElementById("customSelectHiddenButton").style.display = "block";
+                        }
+                    }
+                </script>
 
-                <table>
+                <span style="color: #ffffff">
+                <table border="2px" class="logCenterTable">
                     <tr>
-                        <td>
-                            <span style="color: #ffffff"><h2>LOG-SEARCH</h2>
-                                <p>
-                                    <button class="button" onclick="generate()">Take a SHOT</button>
-                                </p>
-                                <form action="log-CenterAdmin.php" method="post">
-                                    <!--search-->
-                                    <form action="" method="post">
-                                        <div>
-                                            <select name="searchSelect" onchange="customlogList(this);">
-                                                <?php include_once "dropDownList.php"?>
-                                            </select>
-                                        </div>
-                                        <!--                                custom list-->
-                                        <script>
-                                            function customlogList(that) {
-                                                if (that.value == "custom_log") {
-                                                    document.getElementById("customSelect").style.display = "block";
-                                                    document.getElementById("customSelectHiddenButton").style.display = "none";
-                                                } else {
-                                                    document.getElementById("customSelect").style.display = "none";
-                                                    document.getElementById("customSelectHiddenButton").style.display = "block";
-                                                }
-                                            }
-                                        </script>
-                                        <div id="customSelect" style="display: none;">
-                                            <?php $_SESSION['customButtons'] = "logcenter"; require "listCustomLogs.php" ?>
-                                        </div>
-                                        <div id="customSelectHiddenButton">
-                                            <input class="button" type="submit" id="searchListButton" name="searchButton" value="Search"/>
-                                            <input class="button" type="submit" name="histogramButton" value="Histogram"/>
-                                        </div>
-                                        <?php include "selectLogs.php";?>
-                                    </form>
+                        <th colspan="3"><h2>LOG-SEARCH</h2></th>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <button class="button" onclick="generate()">Take a SHOT</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <form action="log-CenterAdmin.php" method="post">
+<!--                                    list-->
+                                <form action="" method="post">
+                                    <select name="searchSelect" onchange="customlogList(this);">
+                                        <?php include_once "dropDownList.php"?>
+                                    </select>
+<!--                                    custom list-->
+                                    <div id="customSelect" style="display: none;">
+                                        <?php $_SESSION['customButtons'] = "logcenter"; require "listCustomLogs.php" ?>
+                                    </div>
+<!--                                    buttons-->
+                                    <div id="customSelectHiddenButton">
+                                        <input class="button" type="submit" id="searchListButton" name="searchButton" value="Search"/>
+                                        <input class="button" type="submit" id="intervalListButton" name="intervalButton" value="Interval"/>
+                                        <input class="button" type="submit" name="histogramButton" value="Histogram"/>
+                                    </div>
+                                    <?php include "selectLogs.php";?>
                                 </form>
-                            </span>
+                            </form>
                         </td>
                     </tr>
                 </table>
+                </span>
             </div>
         </div>
     </div>

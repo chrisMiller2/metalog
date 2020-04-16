@@ -3,7 +3,7 @@ session_start();
 $title = $_SESSION['title'];
 
 //instructions
-echo '<p style="width: 1080px">To close the search input, click the "Histogram" button again!';
+echo '<p style="width: 1080px">To close the histogram panel, click the "Histogram" button again!';
 echo '<br>The Histogram of '. $title . '</p>';
 
 //get times

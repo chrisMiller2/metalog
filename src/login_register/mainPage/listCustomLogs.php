@@ -19,6 +19,7 @@ if ($_SESSION['customButtons'] == "logcenter")
 {
     echo '</select><br>
 <input class="button" type="submit" id="searchListButton" name="searchButton" value="Custom Search"/>
+<input class="button" type="submit" id="intervalListButton" name="intervalButton" value="Custom Interval"/>
 <input class="button" type="submit" name="histogramButton" value="Custom Histogram"/>';
 }else if ($_SESSION['customButtons'] == "index"){
     echo '</select><br>

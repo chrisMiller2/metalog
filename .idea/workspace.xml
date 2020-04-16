@@ -2,23 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ae899390-2983-46d6-a30b-61b97734a05f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/login_register/mainPage/intervalData.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/login_register/mainPage/intervalSearch.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/login_register/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/login_register/logout.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/logout.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/Main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/Main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/Template/footerTemplate.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/template/footerTemplate.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/Template/headerAdminTemplate.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/template/headerAdminTemplate.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/Template/headerUserTemplate.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/template/headerUserTemplate.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/aboutAdmin.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/aboutAdmin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/aboutUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/aboutUser.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/adminIndex.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/adminIndex.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/changeNickname.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/changeNickname.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/changePassword.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/changePassword.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/listCustomLogs.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/listCustomLogs.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/log-CenterAdmin.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/log-CenterAdmin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/log-CenterUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/log-CenterUser.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/userIndex.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/userIndex.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/searchLog.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/searchLog.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/selectLogs.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/selectLogs.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/statistics.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/statistics.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/login_register/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/login_register/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/register.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -285,7 +278,13 @@
       <workItem from="1586705490157" duration="4333000" />
       <workItem from="1586759795437" duration="9481000" />
       <workItem from="1586789190109" duration="3211000" />
-      <workItem from="1586850961455" duration="5115000" />
+      <workItem from="1586850961455" duration="5800000" />
+      <workItem from="1586948024005" duration="1601000" />
+      <workItem from="1586955916850" duration="2000" />
+      <workItem from="1586957485202" duration="11115000" />
+      <workItem from="1586975834060" duration="4848000" />
+      <workItem from="1587018631714" duration="12151000" />
+      <workItem from="1587045677051" duration="5883000" />
     </task>
     <task id="LOCAL-00001" summary="New structure">
       <created>1581665524514</created>
@@ -427,7 +426,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586789800224</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="bugfix, password validation">
+      <created>1586856238525</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1586856238525</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -467,7 +473,8 @@
     <MESSAGE value="display time" />
     <MESSAGE value="screenshot" />
     <MESSAGE value="timeout" />
-    <option name="LAST_COMMIT_MESSAGE" value="timeout" />
+    <MESSAGE value="bugfix, password validation" />
+    <option name="LAST_COMMIT_MESSAGE" value="bugfix, password validation" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1032" y="182" key="#Deployment" timestamp="1581864317979">
@@ -490,10 +497,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1120" y="256" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585732197434" />
-    <state x="770" y="59" key="CommitChangelistDialog2" timestamp="1586789796734">
+    <state x="770" y="59" key="CommitChangelistDialog2" timestamp="1586856234567">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="770" y="59" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1586789796734" />
+    <state x="770" y="59" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1586856234567" />
     <state x="1011" y="100" width="816" height="847" key="DirDiffDialog" timestamp="1586676160827">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -502,18 +509,18 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1220" y="279" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1581000251688" />
-    <state x="1363" y="448" key="NewPhpFileDialog" timestamp="1586790848830">
+    <state x="1363" y="448" key="NewPhpFileDialog" timestamp="1586963349354">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1363" y="448" key="NewPhpFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586790848830" />
+    <state x="1363" y="448" key="NewPhpFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586963349354" />
     <state x="891" y="159" key="SettingsEditor" timestamp="1586678726564">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="891" y="159" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1586678726564" />
-    <state x="1089" y="254" key="Vcs.Push.Dialog.v2" timestamp="1586789820245">
+    <state x="1089" y="254" key="Vcs.Push.Dialog.v2" timestamp="1586856246534">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1089" y="254" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1586789820245" />
+    <state x="1089" y="254" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1586856246534" />
     <state x="661" y="345" key="com.intellij.ide.util.TipDialog" timestamp="1580908975166">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -534,10 +541,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1295" y="417" key="publish.login/0.0.1920.1040@0.0.1920.1040" timestamp="1579875499905" />
-    <state x="1209" y="244" key="run.anything.popup" timestamp="1585046548885">
+    <state x="1209" y="244" key="run.anything.popup" timestamp="1587019957762">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1209" y="244" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1585046548885" />
+    <state x="1209" y="244" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1587019957762" />
     <state x="1170" y="230" width="672" height="678" key="search.everywhere.popup" timestamp="1586686956038">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

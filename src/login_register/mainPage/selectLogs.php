@@ -4,12 +4,6 @@ session_start();
 //infos about the Server
 include "../dbInfo.php";
 
-//connection
-$con = new mysqli($servername, $serverUsername, $serverPassword, $DBName);
-if ($con->connect_error) {
-    die("Connection failed: " . $con->connect_error);
-}
-
 if (isset($_POST['select'])) {
     switch ($_POST['select']) {
         case 'syslog':
@@ -139,6 +133,53 @@ if (isset($_POST['searchButton'])) {
             $selectSQL = "SELECT time, service, message FROM Custom_log";
             $statement = $con->query($selectSQL);
             include 'searchLog.php';
+            break;
+    }
+}
+
+if (isset($_POST['intervalButton'])) {
+    switch ($_POST['searchSelect']) {
+        case 'syslog':
+            $selectSQL = "SELECT time, service, message FROM Syslog";
+            $statement = $con->query($selectSQL);
+            $_SESSION['intervalDB'] = 'syslog';
+            include 'intervalSearch.php';
+            break;
+        case "mysql/error.log":
+            $selectSQL = "SELECT time, service, message FROM Mysql_Error_log";
+            $statement = $con->query($selectSQL);
+            $_SESSION['intervalDB'] = 'mysql/error.log';
+            include 'intervalSearch.php';
+            break;
+        case "kern.log":
+            $selectSQL = "SELECT time, service, message FROM Kern_log";
+            $statement = $con->query($selectSQL);
+            $_SESSION['intervalDB'] = 'kern.log';
+            include 'intervalSearch.php';
+            break;
+        case "auth.log":
+            $selectSQL = "SELECT time, service, message FROM Auth_log";
+            $statement = $con->query($selectSQL);
+            $_SESSION['intervalDB'] = 'auth.log';
+            include 'intervalSearch.php';
+            break;
+        case 'ufw.log':
+            $selectSQL = "SELECT time, service, message FROM Ufw_log";
+            $statement = $con->query($selectSQL);
+            $_SESSION['intervalDB'] = 'ufw.log';
+            include 'intervalSearch.php';
+            break;
+        case 'messages':
+            $selectSQL = "SELECT time, service, message FROM Messages";
+            $statement = $con->query($selectSQL);
+            $_SESSION['intervalDB'] = 'messages';
+            include 'intervalSearch.php';
+            break;
+        case "custom_log":
+            $selectSQL = "SELECT time, service, message FROM Custom_log";
+            $statement = $con->query($selectSQL);
+            $_SESSION['intervalDB'] = 'custom_log';
+            include 'intervalSearch.php';
             break;
     }
 }

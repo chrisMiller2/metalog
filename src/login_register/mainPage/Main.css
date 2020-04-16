@@ -15,6 +15,7 @@ body, html {
 }
 
 
+
 :root {
     --mainColor: #008bd6;
     --sideColor: #3abaff;
@@ -31,7 +32,7 @@ body, html {
     color: #fff;
     font-size: 25px;
     text-decoration: none;
-    transition: background-size .2s;
+    transition: background-size .5s;
 }
 
 .documentation a:hover {
@@ -392,6 +393,14 @@ input[type=text] {
     border: none;
     border-bottom: 2px solid #008bd6;
     border-radius: 4px;
+}
+
+input.novisibility{
+    font-size: 15px;
+}
+
+.logCenterTable{
+
 }
 
 input.shortInput{
