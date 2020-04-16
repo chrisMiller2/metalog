@@ -4,11 +4,13 @@ session_start();
 //infos about the Server
 include "../dbInfo.php";
 
-$firstValue= $_GET['first'];
-$secValue= $_GET['sec']+(24 * 60 * 60); //add a day to it
+$firstValue = $_POST['first'];
+$secValue = $_POST['sec'] + (24 * 60 * 60); //add a day to it
 
-echo "<button type='button' onclick='window.location.href=\"log-CenterAdmin.php\"'>Gimme your cursor</button>";
-switch ($_SESSION['intervalDB']){
+echo $firstValue . "-" . $secValue . "\n";
+
+
+switch ($_SESSION['intervalDB']) {
     case 'syslog':
         $selectSQL = "SELECT time, service, message FROM Syslog";
         listData($con, $selectSQL, $firstValue, $secValue);
@@ -38,17 +40,21 @@ switch ($_SESSION['intervalDB']){
         listData($con, $selectSQL, $firstValue, $secValue);
         break;
 }
+$con->close();
+
 function listData($con, $selectSQL, $firstValue, $secValue)
 {
     $statement = $con->query($selectSQL);
     echo "<ul id='searchUL'>";
 
     if ($statement->num_rows > 0) {
+
         while ($row = $statement->fetch_assoc()) {
-            //search by interval
             $convertedTimeFromDB = strtotime($row["time"]);
-            if (($convertedTimeFromDB >= $firstValue) && ($convertedTimeFromDB <= $secValue))
+            //FROM works but TO doesnt
+            if (($convertedTimeFromDB >= $firstValue) && ($convertedTimeFromDB <= $secValue)) {
                 echo "<li><a href='#'>" . $row["time"] . " : " . $row["service"] . " : " . $row["message"] . "</a></li>";
+            }
         }
     } else {
         echo "<textarea rows='1' readonly>0 results</textarea>";
@@ -57,4 +63,3 @@ function listData($con, $selectSQL, $firstValue, $secValue)
 }
 
 
-$con->close();

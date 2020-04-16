@@ -90,28 +90,33 @@ $dates = Dates($dateTimeCount);
     let phpFirstTimeSec;
     let phpLastTimeSec;
 
-    function onPress() {
-        //converts time to milliseconds, thus we need to divide to get seconds
-
-        phpFirstTimeSec = ((Date.parse(phpFirstTime)) / 1000);
-        phpLastTimeSec = ((Date.parse(phpLastTime)) / 1000);
-        console.log(phpFirstTimeSec + " - " + phpLastTimeSec);
 
 
-        var http = new XMLHttpRequest();
-        http.open("GET", "", true);
-        http.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-        var params = "first=" + phpFirstTimeSec;
-        http.send(params);
-        http.onload = function() {
-            window.location.href = "intervalData.php?first=" + phpFirstTimeSec + "&sec=" + phpLastTimeSec;
-        }
-    }
+
+    $(function () {
+        $(".sub").click(function (event) {
+            phpFirstTimeSec = ((Date.parse(phpFirstTime)) / 1000);
+            phpLastTimeSec = ((Date.parse(phpLastTime)) / 1000);
+
+            event.preventDefault();
+            var dataString = 'first=' + phpFirstTimeSec + '&sec=' + phpFirstTimeSec;
+            console.log(dataString);
+                $.ajax({
+                    type: "POST",
+                    url: "intervalData.php",
+                    data: {first: phpFirstTimeSec, sec: phpLastTimeSec},
+                    success: function (data) {
+                        $("#data").html(data);
+                    }
+                });
+
+        });
+    });
 </script>
-<form method="get" action="">
+<form method="post" action="intervalData.php">
     First: <input class="novisibility" name="firstName" for="amount" id="first" />
     Second: <input class="novisibility" name="secondName" for="amount" id="second" />
-    <input type="submit" name="submit" value="Filter" id="filterID" onclick="onPress();return false;">
+    <input type="submit" name="submit" class="sub" value="Filter" id="filterID">
 </form>
 
 
@@ -121,11 +126,7 @@ $dates = Dates($dateTimeCount);
 
 <div id="content"></div>
 
-<div id="showData"></div>
+<div id="data"></div>
 
 <p style="width: 1080px">To close the interval panel, click the "Interval" button again!</p>
 
-
-<?php
-    print_r($_POST);
-?>
