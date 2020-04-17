@@ -13,6 +13,18 @@ span.loginTitle{
     font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
 }
 
+span.metalog{
+    font-family: "Lucida Sans Typewriter", serif;
+    color: #6bcbff;
+    text-shadow: 0px 2px 3px #000;
+    font-size: 70px;
+    -webkit-transition: all 0.5s ease;
+}
+
+span.metalog:hover{
+    text-shadow: 2px 4px 10px #000;
+}
+
 span.loginTitleIn{
     animation: fadein 3s ease;
 }

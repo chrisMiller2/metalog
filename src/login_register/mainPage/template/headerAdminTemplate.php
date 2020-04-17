@@ -13,9 +13,9 @@ session_start();?>
     <ul id="menu">
         <li class="menu" id=main><a href="adminIndex.php"><h2>MetaLog</h2></a></li>
 
-        <li class="menu"><a href="aboutAdmin.php"><h2>About</h2></a></li>
+        <li class="menu"><a href="about.php"><h2>About</h2></a></li>
 
-        <li class="menu"><a href="log-CenterAdmin.php"><h2>LOG-CENTER</h2></a></li>
+        <li class="menu"><a href="log-Center.php"><h2>LOG-CENTER</h2></a></li>
 
         <li class="menu"><a href="" onclick="window.location.reload()"><img id="refresh" src="https://img.icons8.com/officel/2x/refresh.png" alt="refresh"></a></li>
 

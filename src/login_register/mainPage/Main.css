@@ -21,13 +21,8 @@ body, html {
     --sideColor: #3abaff;
 }
 .documentation a {
-    background:
-            linear-gradient(
-                    to bottom, var(--mainColor) 0%,
-                    var(--sideColor) 100%
-            );
-    background-position: 0 100%;
-    background-repeat: repeat-x;
+    background: linear-gradient(to bottom, var(--mainColor) 0%,
+    var(--sideColor) 100%) repeat-x 0 100%;
     background-size: 4px 4px;
     color: #fff;
     font-size: 25px;
@@ -400,7 +395,8 @@ input.novisibility{
 }
 
 .logCenterTable{
-
+    width: 75%;
+    margin: 0 auto;
 }
 
 input.shortInput{

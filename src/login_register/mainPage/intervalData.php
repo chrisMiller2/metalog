@@ -4,12 +4,11 @@ session_start();
 //infos about the Server
 include "../dbInfo.php";
 
+//getting values
 $firstValue = $_POST['first'];
 $secValue = $_POST['sec'] + (24 * 60 * 60); //add a day to it
 
-echo $firstValue . "-" . $secValue . "\n";
-
-
+//getting db data
 switch ($_SESSION['intervalDB']) {
     case 'syslog':
         $selectSQL = "SELECT time, service, message FROM Syslog";
@@ -51,7 +50,6 @@ function listData($con, $selectSQL, $firstValue, $secValue)
 
         while ($row = $statement->fetch_assoc()) {
             $convertedTimeFromDB = strtotime($row["time"]);
-            //FROM works but TO doesnt
             if (($convertedTimeFromDB >= $firstValue) && ($convertedTimeFromDB <= $secValue)) {
                 echo "<li><a href='#'>" . $row["time"] . " : " . $row["service"] . " : " . $row["message"] . "</a></li>";
             }

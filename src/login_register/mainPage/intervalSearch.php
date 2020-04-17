@@ -65,6 +65,8 @@ $dates = Dates($dateTimeCount);
     let times = <?php echo json_encode($dates); ?>;
     let phpFirstTime;
     let phpLastTime;
+    let phpFirstTimeSec;
+    let phpLastTimeSec;
     $(function() {
         $("#slider-range").slider({
             range: true,
@@ -85,12 +87,9 @@ $dates = Dates($dateTimeCount);
         //standard text
         $("#amount").val((new Date($("#slider-range").slider("values",0)*1000).toDateString()) +
             " - " + (new Date($("#slider-range").slider("values",1)*1000)).toDateString());
+        $("#first").val((new Date($("#slider-range").slider("values",0)*1000).toDateString()));
+        $("#second").val((new Date($("#slider-range").slider("values",1)*1000)).toDateString());
     });
-
-    let phpFirstTimeSec;
-    let phpLastTimeSec;
-
-
 
 
     $(function () {
@@ -113,6 +112,7 @@ $dates = Dates($dateTimeCount);
         });
     });
 </script>
+<p style="width: 1080px">To close the interval panel, click the "Interval" button again!</p>
 <form method="post" action="intervalData.php">
     First: <input class="novisibility" name="firstName" for="amount" id="first" />
     Second: <input class="novisibility" name="secondName" for="amount" id="second" />
@@ -124,9 +124,8 @@ $dates = Dates($dateTimeCount);
 <div id="slider-range"></div>
 <input type="text" id="amount"/>
 
-<div id="content"></div>
 
 <div id="data"></div>
 
-<p style="width: 1080px">To close the interval panel, click the "Interval" button again!</p>
+
 
