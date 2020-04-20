@@ -100,36 +100,53 @@ if (isset($_POST['select'])) {
 if (isset($_POST['searchButton'])) {
     switch ($_POST['searchSelect']) {
         case 'syslog':
+            $title = "syslog:<br>";
+            $_SESSION['title'] = $title;
             $selectSQL = "SELECT time, service, message FROM Syslog";
             $statement = $con->query($selectSQL);
             include 'searchLog.php';
             break;
         case "mysql/error.log":
+            $title = "mysql/error.log:<br>";
+            $_SESSION['title'] = $title;
             $selectSQL = "SELECT time, service, message FROM Mysql_Error_log";
             $statement = $con->query($selectSQL);
             include 'searchLog.php';
             break;
         case "kern.log":
+            $title = "kern.log:<br>";
+            $_SESSION['title'] = $title;
             $selectSQL = "SELECT time, service, message FROM Kern_log";
             $statement = $con->query($selectSQL);
             include 'searchLog.php';
             break;
         case "auth.log":
+            $title = "auth.log:<br>";
+            $_SESSION['title'] = $title;
             $selectSQL = "SELECT time, service, message FROM Auth_log";
             $statement = $con->query($selectSQL);
             include 'searchLog.php';
             break;
         case 'ufw.log':
+            $title = "ufw.log:<br>";
+            $_SESSION['title'] = $title;
             $selectSQL = "SELECT time, service, message FROM Ufw_log";
             $statement = $con->query($selectSQL);
             include 'searchLog.php';
             break;
         case 'messages':
+            $title = "messages:<br>";
+            $_SESSION['title'] = $title;
             $selectSQL = "SELECT time, service, message FROM Messages";
             $statement = $con->query($selectSQL);
             include 'searchLog.php';
             break;
         case "custom_log":
+            if($_POST['select2'] != "null"){
+                $_SESSION['customLog'] = $_POST['select2'];
+            }
+            $title = $_SESSION['customLog'].":<br>";
+            $_SESSION['title'] = $title;
             $selectSQL = "SELECT time, service, message FROM Custom_log";
             $statement = $con->query($selectSQL);
             include 'searchLog.php';
@@ -140,42 +157,59 @@ if (isset($_POST['searchButton'])) {
 if (isset($_POST['intervalButton'])) {
     switch ($_POST['searchSelect']) {
         case 'syslog':
+            $title = "syslog:<br>";
+            $_SESSION['title'] = $title;
             $selectSQL = "SELECT time, service, message FROM Syslog";
             $statement = $con->query($selectSQL);
             $_SESSION['intervalDB'] = 'syslog';
             include 'intervalSearch.php';
             break;
         case "mysql/error.log":
+            $title = "mysql/error.log:<br>";
+            $_SESSION['title'] = $title;
             $selectSQL = "SELECT time, service, message FROM Mysql_Error_log";
             $statement = $con->query($selectSQL);
             $_SESSION['intervalDB'] = 'mysql/error.log';
             include 'intervalSearch.php';
             break;
         case "kern.log":
+            $title = "kern.log:<br>";
+            $_SESSION['title'] = $title;
             $selectSQL = "SELECT time, service, message FROM Kern_log";
             $statement = $con->query($selectSQL);
             $_SESSION['intervalDB'] = 'kern.log';
             include 'intervalSearch.php';
             break;
         case "auth.log":
+            $title = "auth.log:<br>";
+            $_SESSION['title'] = $title;
             $selectSQL = "SELECT time, service, message FROM Auth_log";
             $statement = $con->query($selectSQL);
             $_SESSION['intervalDB'] = 'auth.log';
             include 'intervalSearch.php';
             break;
         case 'ufw.log':
+            $title = "ufw.log:<br>";
+            $_SESSION['title'] = $title;
             $selectSQL = "SELECT time, service, message FROM Ufw_log";
             $statement = $con->query($selectSQL);
             $_SESSION['intervalDB'] = 'ufw.log';
             include 'intervalSearch.php';
             break;
         case 'messages':
+            $title = "messages:<br>";
+            $_SESSION['title'] = $title;
             $selectSQL = "SELECT time, service, message FROM Messages";
             $statement = $con->query($selectSQL);
             $_SESSION['intervalDB'] = 'messages';
             include 'intervalSearch.php';
             break;
         case "custom_log":
+            if($_POST['select2'] != "null"){
+                $_SESSION['customLog'] = $_POST['select2'];
+            }
+            $title = $_SESSION['customLog'].":<br>";
+            $_SESSION['title'] = $title;
             $selectSQL = "SELECT time, service, message FROM Custom_log";
             $statement = $con->query($selectSQL);
             $_SESSION['intervalDB'] = 'custom_log';
@@ -223,6 +257,9 @@ if (isset($_POST['histogramButton'])){
             include "statistics.php";
             break;
         case "custom_log":
+            if($_POST['select2'] != "null"){
+                $_SESSION['customLog'] = $_POST['select2'];
+            }
             $title = $_SESSION['customLog'].":<br>";
             $_SESSION['title'] = $title;
             $selectSQL = "SELECT time FROM Custom_log";

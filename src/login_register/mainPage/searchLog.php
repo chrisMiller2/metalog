@@ -1,6 +1,6 @@
 <?php
 session_start();
-
+$title = $_SESSION['title'];
 ?>
 
 <script>
@@ -24,7 +24,8 @@ session_start();
 
 <?php
 //instructions
-echo '<p style="width: 1080px">To close the search panel, click the "Search" button again!</p>';
+echo '<p style="width: 1080px">To close the search panel, click the "Search" button again!';
+echo '<br>Searching in '. $title . '</p>';
 
 echo "<br><input id='searchInput' onkeyup='searchFunction()' 
 type='search' placeholder='Search...' name='search'>";

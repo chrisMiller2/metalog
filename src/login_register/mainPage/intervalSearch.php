@@ -108,7 +108,11 @@ $dates = Dates($dateTimeCount);
         });
     });
 </script>
-<p style="width: 1080px">To close the interval panel, click the "Interval" button again!</p>
+
+<?php $title = $_SESSION['title']; ?>
+<p style="width: 1080px">To close the interval panel, click the "Interval" button again!
+<?php echo '<br>Interval of '. $title . '</p>';?>
+
 <form method="post" action="intervalData.php">
     First: <input class="novisibility" name="firstName" for="amount" id="first" readonly="readonly" />
     Second: <input class="novisibility" name="secondName" for="amount" id="second" readonly="readonly" />

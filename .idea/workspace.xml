@@ -2,19 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ae899390-2983-46d6-a30b-61b97734a05f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/sshConfigs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/login_register/mainPage/documentation/szakdolgozat.docx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/login_register/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/Main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/Main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/adminIndex.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/adminIndex.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/intervalData.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/intervalData.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/intervalSearch.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/intervalSearch.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/log-Center.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/log-Center.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/statistics.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/statistics.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/template/headerUserTemplate.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/template/headerUserTemplate.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/userIndex.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/userIndex.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/login_register/startup.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/startup.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/searchLog.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/searchLog.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/selectLogs.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/selectLogs.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -277,7 +269,7 @@
       <workItem from="1587132368531" duration="4727000" />
       <workItem from="1587201270788" duration="7864000" />
       <workItem from="1587306806908" duration="1710000" />
-      <workItem from="1587364790748" duration="4693000" />
+      <workItem from="1587364790748" duration="6933000" />
     </task>
     <task id="LOCAL-00001" summary="New structure">
       <created>1581665524514</created>
@@ -447,7 +439,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587114172336</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="screenshot customization and bugfix">
+      <created>1587369865747</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1587369865747</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -490,7 +489,8 @@
     <MESSAGE value="interval search works but bad" />
     <MESSAGE value="interval search" />
     <MESSAGE value="authentication bugfix" />
-    <option name="LAST_COMMIT_MESSAGE" value="authentication bugfix" />
+    <MESSAGE value="screenshot customization and bugfix" />
+    <option name="LAST_COMMIT_MESSAGE" value="screenshot customization and bugfix" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1032" y="182" key="#Deployment" timestamp="1581864317979">
@@ -513,10 +513,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1120" y="256" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1587132200494" />
-    <state x="770" y="59" key="CommitChangelistDialog2" timestamp="1587114170644">
+    <state x="770" y="59" key="CommitChangelistDialog2" timestamp="1587369863139">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="770" y="59" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1587114170644" />
+    <state x="770" y="59" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1587369863139" />
     <state x="1011" y="100" width="816" height="847" key="DirDiffDialog" timestamp="1587154220337">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -533,10 +533,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="891" y="159" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1586678726564" />
-    <state x="1089" y="254" key="Vcs.Push.Dialog.v2" timestamp="1587114178001">
+    <state x="1089" y="254" key="Vcs.Push.Dialog.v2" timestamp="1587369874477">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1089" y="254" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1587114178001" />
+    <state x="1089" y="254" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1587369874477" />
     <state x="661" y="345" key="com.intellij.ide.util.TipDialog" timestamp="1580908975166">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
