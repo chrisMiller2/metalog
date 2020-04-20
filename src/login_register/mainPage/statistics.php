@@ -49,35 +49,27 @@ $count = array_values($dateTimeCount);
 <table>
     <tr>
         <td>
-            <canvas id="chartHistogram" width="1800" height="800"></canvas>
+            <canvas id="chartHistogram" width="1800px" height="800px"></canvas>
             <script src="Chart.js"></script>
             <script>
                 let histogram_Time = <?php echo json_encode($dates); ?>;
                 let counts = <?php echo json_encode($count); ?>;
                 new Chart(document.getElementById("chartHistogram"),
-                    {"type":
-                            "line",
-                        "data":
-                            {"labels":
-                                histogram_Time
-                                ,"datasets":[
-                                    {
-                                        "label":"Log happened",
-                                        "data": counts,
-                                        "fill":
-                                            false,"borderColor":
-                                            "rgb(0, 139, 214)",
-                                        "lineTension":
-                                            0.25}]},
-                        "options":{
+                    {"type": "line",
+                    "data": {
+                        "labels":
+                            histogram_Time,
+                        "datasets":[
+                            {
+                                "label": "Log happened",
+                                "data": counts,
+                                "fill": false,"borderColor":
+                                    "rgb(0, 139, 214)",
+                                    "lineTension": 0.25}]},
+                    "options":{
 
-                        }});
+                    }});
             </script>
-        </td>
-    </tr>
-    <tr>
-        <td>
-
         </td>
     </tr>
 </table>

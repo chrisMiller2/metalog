@@ -81,7 +81,6 @@ $dates = Dates($dateTimeCount);
                 //sending php
                 phpFirstTime = $("#first").val();
                 phpLastTime = $("#second").val();
-
             }
         });
         //standard text
@@ -98,24 +97,21 @@ $dates = Dates($dateTimeCount);
             phpLastTimeSec = ((Date.parse(phpLastTime)) / 1000);
 
             event.preventDefault();
-            var dataString = 'first=' + phpFirstTimeSec + '&sec=' + phpFirstTimeSec;
-            console.log(dataString);
-                $.ajax({
-                    type: "POST",
-                    url: "intervalData.php",
-                    data: {first: phpFirstTimeSec, sec: phpLastTimeSec},
-                    success: function (data) {
-                        $("#data").html(data);
-                    }
-                });
-
+            $.ajax({
+                type: "POST",
+                url: "intervalData.php",
+                data: {first: phpFirstTimeSec, sec: phpLastTimeSec},
+                success: function (data) {
+                    $("#data").html(data);
+                }
+            });
         });
     });
 </script>
 <p style="width: 1080px">To close the interval panel, click the "Interval" button again!</p>
 <form method="post" action="intervalData.php">
-    First: <input class="novisibility" name="firstName" for="amount" id="first" />
-    Second: <input class="novisibility" name="secondName" for="amount" id="second" />
+    First: <input class="novisibility" name="firstName" for="amount" id="first" readonly="readonly" />
+    Second: <input class="novisibility" name="secondName" for="amount" id="second" readonly="readonly" />
     <input type="submit" name="submit" class="sub" value="Filter" id="filterID">
 </form>
 

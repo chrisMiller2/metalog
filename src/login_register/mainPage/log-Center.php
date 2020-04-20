@@ -47,12 +47,15 @@ if ($_SESSION['last_activity'] < time() - $_SESSION['expire_time']) {
                             return nodeList;
                         }
 
+
                         function screenshotPage() {
-                            var wrapper = document.getElementById('screenShotDivID');
+                            let imageName = document.getElementById("imageNameID").value;
+                            let imageExt = document.getElementById("imageExtID").value;
+                            let wrapper = document.getElementById('screenShotDivID');
                             html2canvas(wrapper, {
                                 onrendered: function (canvas) {
                                     canvas.toBlob(function (blob) {
-                                        saveAs(blob, 'HelloThere.png');
+                                        saveAs(blob, imageName+'.'+imageExt);
                                     });
                                 }
                             });
@@ -87,19 +90,37 @@ if ($_SESSION['last_activity'] < time() - $_SESSION['expire_time']) {
                 </script>
 
                 <span style="color: #ffffff">
-            <table border="2px" class="logCenterTable">
+            <table class="logCenterTable">
+<!--                title-->
                 <tr>
-                    <th colspan="3"><h2>LOG-SEARCH</h2></th>
+                    <th colspan="3">
+                        <?php
+                        if(isset($_POST['searchButton']))
+                            echo "<h1><hr style='display:inline-block' width='25%'>LOG-SEARCH<hr style='display:inline-block' width='25%'></h1>";
+                        elseif(isset($_POST['intervalButton']))
+                            echo "<h1><hr style='display:inline-block' width='25%'>LOG-INTERVAL<hr style='display:inline-block' width='25%'></h1>";
+                        elseif(isset($_POST['histogramButton']))
+                            echo "<h1><hr style='display:inline-block' width='25%'>LOG-HISTOGRAM<hr style='display:inline-block' width='25%'></h1>";
+                        else
+                            echo "<h1><hr style='display:inline-block' width='25%'>LOG-CENTER<hr style='display:inline-block' width='25%'></h1>";
+                        ?>
+                    </th>
                 </tr>
+<!--                screenshot-->
                 <tr>
-                    <td colspan="3">
-                        <button class="button" onclick="generate()">Take a SHOT</button>
+                    <td colspan="3" align="center">
+                        <form method="post">
+                            <input placeholder="Image name" name="imageName" id="imageNameID" />
+                            <input placeholder="Image extension" size="13" name="imageExt" id="imageExtID" />
+                        </form>
+                        <button class="button" id="imageButton" onclick="generate()">Take a SHOT</button>
+                        <hr>
                     </td>
                 </tr>
+<!--                functions-->
                 <tr>
-                    <td colspan="3">
+                    <td colspan="3" align="center">
                         <form action="log-Center.php" method="post">
-<!--                                    list-->
                             <form action="" method="post">
                                 <select name="searchSelect" onchange="customlogList(this);">
                                     <?php include_once "dropDownList.php" ?>

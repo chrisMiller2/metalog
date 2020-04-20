@@ -11,7 +11,7 @@ $_SESSION['last_activity'] = time();
                     <!--                read log file-->
                     <td valign="top">
                          <span style="color: #ffffff">
-                            <textarea id="textarea" readonly cols="110" rows="40"><?php require_once('readlog.php'); ?></textarea>
+                            <textarea readonly cols="110" rows="40"><?php require_once('readlog.php'); ?></textarea>
                          </span>
                     </td>
 
@@ -233,7 +233,7 @@ $_SESSION['last_activity'] = time();
                             <div class="counter">
                                 <span style="font-weight: bold">
                                     File:
-                                </span><?php echo $_SESSION['title']; ?>
+                                </span><?php echo mb_strimwidth($_SESSION['title'], 0, 17, "..."); ?>
                                 <br>
                                 <span style="font-weight: bold">
                                     Lines read:

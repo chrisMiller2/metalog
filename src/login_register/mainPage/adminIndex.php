@@ -11,7 +11,7 @@ $_SESSION['last_activity'] = time();
                     <!--                read log file-->
                     <td valign="top">
                          <span style="color: #ffffff">
-                            <textarea id="textarea" readonly cols="110" rows="40"><?php require_once('readlog.php'); ?></textarea>
+                            <textarea readonly cols="110" rows="40"><?php require_once('readlog.php'); ?></textarea>
                          </span>
                     </td>
 

@@ -26,7 +26,7 @@ span.metalog:hover{
 }
 
 span.loginTitleIn{
-    animation: fadein 3s ease;
+    animation: fadein 5s ease;
 }
 
 @keyframes fadein {

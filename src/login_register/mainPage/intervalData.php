@@ -47,7 +47,6 @@ function listData($con, $selectSQL, $firstValue, $secValue)
     echo "<ul id='searchUL'>";
 
     if ($statement->num_rows > 0) {
-
         while ($row = $statement->fetch_assoc()) {
             $convertedTimeFromDB = strtotime($row["time"]);
             if (($convertedTimeFromDB >= $firstValue) && ($convertedTimeFromDB <= $secValue)) {
