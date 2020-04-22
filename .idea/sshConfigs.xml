@@ -4,7 +4,7 @@
     <configs>
       <sshConfig authType="PASSWORD" host="192.168.56.10" id="58a533a3-c196-4b04-a4e6-3595043354d4" port="22" customName="loganalyser.ubuntu.net" nameFormat="CUSTOM" username="christian" />
       <sshConfig authType="PASSWORD" host="192.168.56.101" id="bdb265a9-664e-4dca-b494-d1641c7f72ec" port="22" customName="loganalyser.debian.net" nameFormat="CUSTOM" username="christian" />
-      <sshConfig authType="PASSWORD" host="192.168.56.101" id="7b1256e9-00db-496e-90dc-a6cbde57facf" port="22" customName="loganalyser.debian.net" nameFormat="CUSTOM" username="christian" />
+      <sshConfig authType="PASSWORD" host="192.168.56.101" id="fc2c20ef-02c9-4a3e-9ed3-9668b4d97e77" port="22" customName="loganalyser.debian.net" nameFormat="CUSTOM" username="christian" />
     </configs>
   </component>
 </project>

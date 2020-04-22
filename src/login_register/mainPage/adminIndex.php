@@ -48,23 +48,23 @@ $_SESSION['last_activity'] = time();
                                     </span>
                                 </div>
 
-                        <!--                            get server usage-->
+                                <!--                            get server usage-->
                                 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.0/jquery.min.js"></script>
                                 <script type="text/javascript">
                                     var auto_refresh_cpu = setInterval(
                                         function () {
                                             $('#CPUusageID').load('usages/cpuUsage.php').fadeIn("slow");
-                                        }, 1000;var auto_refresh_ram = setInterval(
+                                        }, 1000);
+                                    var auto_refresh_ram = setInterval(
                                         function () {
                                             $('#RAMusageID').load('usages/ramUsage.php').fadeIn("slow");
-                                        }, 1000);)
-
+                                        }, 1000);
                                 </script>
                                 <div class="usage">
                                     CPU Usage:
-                                    <div  id="CPUusageID"></div>
+                                    <div id="CPUusageID"></div>
                                     RAM Usage:
-                                    <div  id="RAMusageID"></div>
+                                    <div id="RAMusageID"></div>
                                     Disk Usage:
                                     <style type='text/css'>
                                         .progress {
