@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ae899390-2983-46d6-a30b-61b97734a05f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/sshConfigs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sshConfigs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/adminIndex.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/adminIndex.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/documentation/szakdolgozat.docx" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/documentation/szakdolgozat.docx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/login_register/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/login_register/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/login_register/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/register.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -273,7 +271,7 @@
       <workItem from="1587376795777" duration="14000" />
       <workItem from="1587468949697" duration="1301000" />
       <workItem from="1587492128538" duration="597000" />
-      <workItem from="1587541941462" duration="429000" />
+      <workItem from="1587541941462" duration="2613000" />
     </task>
     <task id="LOCAL-00001" summary="New structure">
       <created>1581665524514</created>
@@ -457,7 +455,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587375330630</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="usage fix">
+      <created>1587542559480</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1587542559480</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -477,7 +482,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
-    <MESSAGE value="20200214" />
     <MESSAGE value="New structure" />
     <MESSAGE value="CSS aligned" />
     <MESSAGE value="New design" />
@@ -502,7 +506,8 @@
     <MESSAGE value="authentication bugfix" />
     <MESSAGE value="screenshot customization and bugfix" />
     <MESSAGE value="screenshot empty input and minor bugfixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="screenshot empty input and minor bugfixes" />
+    <MESSAGE value="usage fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="usage fix" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1032" y="182" key="#Deployment" timestamp="1581864317979">
@@ -525,10 +530,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1120" y="256" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1587132200494" />
-    <state x="770" y="59" key="CommitChangelistDialog2" timestamp="1587375329893">
+    <state x="770" y="59" key="CommitChangelistDialog2" timestamp="1587542556388">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="770" y="59" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1587375329893" />
+    <state x="770" y="59" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1587542556388" />
     <state x="1011" y="100" width="816" height="847" key="DirDiffDialog" timestamp="1587154220337">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

@@ -10,35 +10,42 @@ $confirmedPassword = $_POST['confirmedpassword'];
 $nickname = $_POST['nickname'];
 $encrypted = password_hash($password, PASSWORD_DEFAULT);
 $filteredEmail = filter_var($email, FILTER_VALIDATE_EMAIL);
-
-//connection
-$con = new mysqli($servername, $serverUsername, $serverPassword, $DBName);
-if ($con->connect_error) {
-    die("Connection failed: " . $con->connect_error . mysqli_error());
-}
+$error = array();
 
 //insert user data
 $insertUserSQL = "INSERT INTO loginData (email, password, isAdmin, nickname) VALUES
         ('$email', '$encrypted', 0, '$nickname')";
 
-$error = array();
+//select used emails
+$selectEmailSQL = "SELECT email FROM loginData WHERE email = '".$email."'";
+$statement = $con->query($selectEmailSQL);
 
-//insert into database
-if($email == $filteredEmail){
-    $error = valid_pass($password, $error);
-    if(empty($error)){
-        if ($password == $confirmedPassword) {
-            mysqli_query($con, $insertUserSQL);
-            echo "you have successfully registered as a user!<br>";
-            echo "<a href='login.html'>Return to the login page</a>";
-        } else {
-            echo "<script>alert('The passwords dont match!');window.location.href='register.html';</script>";
+//executing query
+if ($statement->num_rows > 0) {
+    while ($row = $statement->fetch_assoc()) {
+        //checking user validation
+        if ($row['email'] == $email) {
+            echo "<script>alert('Email already taken!');window.location.href='register.html';</script>";
+        }else{
+            //insert into database
+            if($email == $filteredEmail){
+                $error = valid_pass($password, $error);
+                if(empty($error)){
+                    if ($password == $confirmedPassword) {
+                        mysqli_query($con, $insertUserSQL);
+                        echo "you have successfully registered as a user!<br>";
+                        echo "<a href='login.html'>Return to the login page</a>";
+                    } else {
+                        echo "<script>alert('The passwords dont match!');window.location.href='register.html';</script>";
+                    }
+                }else{
+                    echo "<script>alert('".$error['cause']."');window.location.href='register.html';</script>";
+                }
+            }else{
+                echo "<script>alert('This is not a valid email!');window.location.href='register.html';</script>";
+            }
         }
-    }else{
-        echo "<script>alert('".$error['cause']."');window.location.href='register.html';</script>";
     }
-}else{
-    echo "<script>alert('This is not a valid email!');window.location.href='register.html';</script>";
 }
 
 function valid_pass($password, $error) {

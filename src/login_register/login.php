@@ -35,9 +35,9 @@ if ($statement->num_rows > 0) {
         if (isset($email, $password)) {
             //checking if input is empty
             if (filter_var($email, FILTER_VALIDATE_EMAIL) && password_verify($password, $row['password'])) {
-                $_SESSION['expire_time'] = 60*5; //expire time in seconds
                 //checking user authentication
                 if ($row['isAdmin'] == 1) {
+                    $_SESSION['expire_time'] = 60*5; //expire time in seconds
                     $currentTime = date('H:i:s');
                     $_SESSION['nickname'] = $row['nickname'];
                     $_SESSION['email'] = $row['email'];
@@ -51,6 +51,7 @@ if ($statement->num_rows > 0) {
                     header("Location: \mainPage\adminIndex.php");
                     exit;
                 } else if ($row['isAdmin'] == 0) {
+                    $_SESSION['expire_time'] = 60*5; //expire time in seconds
                     $currentTime = date('H:i:s');
                     $_SESSION['nickname'] = $row['nickname'];
                     $_SESSION['email'] = $row['email'];
