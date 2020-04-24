@@ -356,14 +356,14 @@ $_SESSION['last_activity'] = time();
 
                 echo "<tr>";
                     echo "<td>" . $row['ID'] . "</td>";
-                    echo "<td>" . $row['Username'] . "</td>";
+                    echo "<td>" . mb_strimwidth($row['Username'], 0, 12, "...") . "</td>";
                     echo "<td>" . $row['Type'] . "</td>";
                     echo "<td>" . $row['Login'] . "</td>";
                     echo "<td>" . $row['Logout'] . "</td>";
                     echo "<td>" . $row['Date'] . "</td>";
                     echo "<td><a href=\"deleteActivityRecord.php?id=".$row['ID']."\">DELETE</a></td>";
                     echo "</tr>";
-                }?>
+            }?>
             </div>
                 </table>
                 <?php

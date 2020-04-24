@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ae899390-2983-46d6-a30b-61b97734a05f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/login_register/customDbInfo.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/login_register/mainPage/deleteCustomLogs.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/adminIndex.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/adminIndex.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/readlog.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/readlog.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/deleteCustomLogs.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/deleteCustomLogs.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/selectLogs.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/selectLogs.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -277,7 +275,7 @@
       <workItem from="1587541941462" duration="4374000" />
       <workItem from="1587637226228" duration="4483000" />
       <workItem from="1587653653728" duration="3489000" />
-      <workItem from="1587713597302" duration="5201000" />
+      <workItem from="1587713597302" duration="16175000" />
     </task>
     <task id="LOCAL-00001" summary="New structure">
       <created>1581665524514</created>
@@ -489,7 +487,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587717826579</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="custom log in separate db">
+      <created>1587719018498</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1587719018498</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -509,7 +514,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
-    <MESSAGE value="DB, Search, Modularity done" />
     <MESSAGE value="Custom logs fixed" />
     <MESSAGE value="line counter, sticky divs" />
     <MESSAGE value="Activities, ufw.log added, refresh" />
@@ -534,7 +538,8 @@
     <MESSAGE value="one email registration" />
     <MESSAGE value="mysql/error.log improvement" />
     <MESSAGE value="custom log readability improved" />
-    <option name="LAST_COMMIT_MESSAGE" value="custom log readability improved" />
+    <MESSAGE value="custom log in separate db" />
+    <option name="LAST_COMMIT_MESSAGE" value="custom log in separate db" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1032" y="182" key="#Deployment" timestamp="1581864317979">
@@ -557,10 +562,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1120" y="256" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1587132200494" />
-    <state x="770" y="59" key="CommitChangelistDialog2" timestamp="1587717825507">
+    <state x="770" y="59" key="CommitChangelistDialog2" timestamp="1587719017427">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="770" y="59" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1587717825507" />
+    <state x="770" y="59" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1587719017427" />
     <state x="1011" y="100" width="816" height="847" key="DirDiffDialog" timestamp="1587154220337">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

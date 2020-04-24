@@ -90,7 +90,7 @@ if (isset($_POST['select'])) {
             include "../customDbInfo.php";
             //refresh the Custom_log table each time it is run
             $dropCustomTableSQL = "DROP TABLE IF EXISTS `".$customLogFile."`";
-            $createCustomTableSQL = "CREATE TABLE `".$customLogFile."` (time text, service text, message text)";
+            $createCustomTableSQL = "CREATE TABLE `".$customLogFile."` (id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY, time text, service text, message text)";
             mysqli_query($con, $dropCustomTableSQL);
             mysqli_query($con, $createCustomTableSQL);
             readLinesFromLog("/var/www/faildomain.com/src/login_register/mainPage/logs/".$customLogFile, $con);
@@ -151,9 +151,16 @@ if (isset($_POST['searchButton'])) {
             $_SESSION['title'] = $title;
 
             include "../customDbInfo.php";
+            $val = mysqli_query($con, "SELECT time, service, message FROM `".$_SESSION['customLog']."`");
+
+            if($val !== false){
             $selectSQL = "SELECT time, service, message FROM `".$_SESSION['customLog']."`";
-            $statement = $con->query($selectSQL);
-            include 'searchLog.php';
+                $statement = $con->query($selectSQL);
+                include 'searchLog.php';
+            }else{
+                echo "The table is not read";
+            }
+
             break;
     }
 }
@@ -216,10 +223,16 @@ if (isset($_POST['intervalButton'])) {
             $_SESSION['title'] = $title;
 
             include "../customDbInfo.php";
-            $selectSQL = "SELECT time, service, message FROM `".$_SESSION['customLog']."`";
-            $statement = $con->query($selectSQL);
-            $_SESSION['intervalDB'] = $_SESSION['customLog'];
-            include 'intervalSearch.php';
+            $val = mysqli_query($con, "SELECT time, service, message FROM `".$_SESSION['customLog']."`");
+
+            if($val !== false){
+                $selectSQL = "SELECT time, service, message FROM `".$_SESSION['customLog']."`";
+                $statement = $con->query($selectSQL);
+                $_SESSION['intervalDB'] = $_SESSION['customLog'];
+                include 'intervalSearch.php';
+            }else{
+                echo "The table is not read";
+            }
             break;
     }
 }
@@ -270,8 +283,14 @@ if (isset($_POST['histogramButton'])){
             $_SESSION['title'] = $title;
 
             include "../customDbInfo.php";
-            $selectSQL = "SELECT time FROM `".$_SESSION['customLog']."`";
-            include "statistics.php";
+            $val = mysqli_query($con, "SELECT time FROM `".$_SESSION['customLog']."`");
+
+            if($val !== false){
+                $selectSQL = "SELECT time FROM `".$_SESSION['customLog']."`";
+                include "statistics.php";
+            }else{
+                echo "The table is not read";
+            }
             break;
     }
 }
