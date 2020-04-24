@@ -544,7 +544,7 @@ function readLinesFromLog($fileName, $con)
                     $customTimeArray[] = $customTimeData;
 
                     //insert into database
-                    $insertCustomSQL = "INSERT INTO Custom_log(time, service, message)
+                    $insertCustomSQL = "INSERT INTO `".$_SESSION['customLog']."` (time, service, message)
                             VALUES ('$customTimeData','$customServiceData', '$customMessageData')";
                     mysqli_query($con, $insertCustomSQL);
 
