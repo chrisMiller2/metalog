@@ -45,6 +45,10 @@ $_SESSION['last_activity'] = time();
                                             </script>
                                             <a href="javascript:AlertIt();" id="instructions">Instructions</a>
                                         </form>
+                                        <form action="deleteCustomLogs.php" method="post" enctype="multipart/form-data">
+                                            Delete custom logs
+                                            <input class="upload_button" type="submit" value="Delete" onclick="load()">
+                                        </form>
                                     </span>
                                 </div>
 

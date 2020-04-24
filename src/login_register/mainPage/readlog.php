@@ -529,6 +529,7 @@ function readLinesFromLog($fileName, $con)
                     //get objects
                     $messagesLine->getDescription();
                 }else if($fileName ==  '/var/www/faildomain.com/src/login_register/mainPage/logs/'.$_SESSION['customLog']){
+                    include "../customDbInfo.php";
                     $customTimeData = GetRegexMatches($syslogTimeRegex, $line);
                     $customServiceData = GetRegexMatches($syslogServiceRegex, $line);
                     $customMessageData = GetRegexMatches($syslogMessageRegex, $line);
@@ -550,6 +551,7 @@ function readLinesFromLog($fileName, $con)
 
                     //get objects
                     $customLine->getDescription();
+                    mysqli_close($con);
                 }
                 echo "\n";
             }

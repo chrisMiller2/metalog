@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ae899390-2983-46d6-a30b-61b97734a05f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/login_register/customDbInfo.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/login_register/mainPage/deleteCustomLogs.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/adminIndex.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/adminIndex.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/readlog.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/readlog.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/selectLogs.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/selectLogs.php" afterDir="false" />
     </list>
@@ -274,7 +277,7 @@
       <workItem from="1587541941462" duration="4374000" />
       <workItem from="1587637226228" duration="4483000" />
       <workItem from="1587653653728" duration="3489000" />
-      <workItem from="1587713597302" duration="4040000" />
+      <workItem from="1587713597302" duration="5201000" />
     </task>
     <task id="LOCAL-00001" summary="New structure">
       <created>1581665524514</created>
@@ -479,7 +482,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587715719934</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="custom log readability improved">
+      <created>1587717826579</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1587717826579</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -499,7 +509,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
-    <MESSAGE value="New design" />
     <MESSAGE value="DB, Search, Modularity done" />
     <MESSAGE value="Custom logs fixed" />
     <MESSAGE value="line counter, sticky divs" />
@@ -524,7 +533,8 @@
     <MESSAGE value="usage fix" />
     <MESSAGE value="one email registration" />
     <MESSAGE value="mysql/error.log improvement" />
-    <option name="LAST_COMMIT_MESSAGE" value="mysql/error.log improvement" />
+    <MESSAGE value="custom log readability improved" />
+    <option name="LAST_COMMIT_MESSAGE" value="custom log readability improved" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1032" y="182" key="#Deployment" timestamp="1581864317979">
@@ -547,10 +557,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1120" y="256" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1587132200494" />
-    <state x="770" y="59" key="CommitChangelistDialog2" timestamp="1587715718162">
+    <state x="770" y="59" key="CommitChangelistDialog2" timestamp="1587717825507">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="770" y="59" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1587715718162" />
+    <state x="770" y="59" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1587717825507" />
     <state x="1011" y="100" width="816" height="847" key="DirDiffDialog" timestamp="1587154220337">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -559,10 +569,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1220" y="279" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1587307258462" />
-    <state x="1363" y="448" key="NewPhpFileDialog" timestamp="1586963349354">
+    <state x="1363" y="448" key="NewPhpFileDialog" timestamp="1587718272578">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1363" y="448" key="NewPhpFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586963349354" />
+    <state x="1363" y="448" key="NewPhpFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1587718272578" />
     <state x="891" y="159" key="SettingsEditor" timestamp="1586678726564">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
