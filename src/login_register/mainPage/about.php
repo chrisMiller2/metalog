@@ -64,6 +64,16 @@ if ($_SESSION['last_activity'] < time() - $_SESSION['expire_time']) {
                     <a href="documentation/szakdolgozat.docx">Documentation</a>
                 </span>
             </p>
+            <br>
+            <p>
+                <div class="tooltip">Ideabox:
+                    <span class="tooltiptext">
+                        If you have any ideas to improve the site, please type below!
+                    </span>
+                </div>
+                <br>
+                <?php include "ideabox.php" ?>
+            </p>
         </div>
     </div>
 
