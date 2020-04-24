@@ -34,9 +34,17 @@ switch ($_SESSION['intervalDB']) {
         $selectSQL = "SELECT time, service, message FROM Messages";
         listData($con, $selectSQL, $firstValue, $secValue);
         break;
-    case "custom_log":
-        $selectSQL = "SELECT time, service, message FROM Custom_log";
-        listData($con, $selectSQL, $firstValue, $secValue);
+    case $_SESSION['customLog']:
+        include "../customDbInfo.php";
+        $val = mysqli_query($con, "SELECT time, service, message FROM `".$_SESSION['customLog']."`");
+        if($val !== false){
+            $selectSQL = "SELECT time, service, message FROM `".$_SESSION['customLog']."`";
+            listData($con, $selectSQL, $firstValue, $secValue);
+        }else{
+            echo "The table is not read";
+        }
+
+
         break;
 }
 $con->close();
