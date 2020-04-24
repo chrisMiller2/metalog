@@ -338,9 +338,9 @@ function readLinesFromLog($fileName, $con)
     $syslogMessageRegex = "/(?<=\:\s).*$/i";
 
 //mysql_error regex MAYBE TIME & MESSAGE
-    $mysqlTimeRegex = "/^\d+-\d{2}-\d{2}\s+\d+:\d+:\d+/i";
-    $mysqlServiceRegex = "/(?<=\:\d{2}\s).+?\s(\w+)?(?=\:|\s)/i";
-    $mysqlMessageRegex = "/(?<=\:\s).*$/i";
+    $mysqlTimeRegex = "/^\d+-\d{2}-\d{2}\s+\d+:\d+:\d+(?<=\:\d{2})/i";
+    $mysqlServiceRegex = "/(?<=\:\d{2} ).+(?<=\])/i";   //(?<=\:\d{2} ).+[(?<=\])|(?<=\:)]
+    $mysqlMessageRegex = "/[^<?\]]*$/i";                //[^(?<=\:)|(?<=\])]*$
 
 //auth.log regex SESSION IS NOT NECESSARY WHILE IT APPEARS FROM TIME TO TIME
     $authTimeRegex = "/^\w{3}\s+\d+\s\d{2}:\d{2}:\d{2}/i";
