@@ -55,6 +55,8 @@ include "../customDbInfo.php";
                     if (isset($_POST['delLogButt'])) {
                         $tableSelect = $_POST['delLog'];
                         mysqli_query($con, "DROP TABLE IF EXISTS `" . $tableSelect . "`");
+                        if(unlink("/var/www/faildomain.com/src/login_register/mainPage/logs/".$tableSelect))
+                            echo "File Deleted";
                         //refreshes the site
                         echo "<meta http-equiv='refresh' content='0'>";
                     }

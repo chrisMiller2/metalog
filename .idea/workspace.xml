@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ae899390-2983-46d6-a30b-61b97734a05f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/sshConfigs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sshConfigs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/intervalData.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/intervalData.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/deleteCustomLogs.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/deleteCustomLogs.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/documentation/szakdolgozat.docx" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/documentation/szakdolgozat.docx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +59,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/login_register/mainPage" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/login_register/mainPage/documentation" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -66,19 +68,19 @@
     <property name="settings.editor.selected.configurable" value="project.propDebugger" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Christian Miller\Desktop\szakdolgozat\src\login_register\mainPage" />
-      <recent name="C:\Users\Christian Miller\Desktop\szakdolgozat\src\login_register\mainPage\usages" />
-      <recent name="C:\Users\HP EliteBook 8760w\Desktop\szakdolgozat\src\mainPage\images" />
-      <recent name="C:\Users\HP EliteBook 8760w\Desktop\szakdolgozat\src\mainPage" />
-      <recent name="C:\Users\HP EliteBook 8760w\Desktop\szakdolgozat" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Christian Miller\Desktop\szakdolgozat\src\login_register\mainPage\documentation" />
       <recent name="C:\Users\Christian Miller\Desktop\szakdolgozat\src\login_register\mainPage" />
       <recent name="C:\Users\Christian Miller\Desktop\szakdolgozat\src\login_register\mainPage\Template" />
       <recent name="C:\Users\Christian Miller\Desktop\szakdolgozat\src\login_register\mainPage\usages" />
       <recent name="C:\Users\Christian Miller\Desktop\szakdolgozat\src\login_register\mainPage\images" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Christian Miller\Desktop\szakdolgozat\src\login_register\mainPage\documentation" />
+      <recent name="C:\Users\Christian Miller\Desktop\szakdolgozat\src\login_register\mainPage" />
+      <recent name="C:\Users\Christian Miller\Desktop\szakdolgozat\src\login_register\mainPage\usages" />
+      <recent name="C:\Users\HP EliteBook 8760w\Desktop\szakdolgozat\src\mainPage\images" />
+      <recent name="C:\Users\HP EliteBook 8760w\Desktop\szakdolgozat\src\mainPage" />
     </key>
   </component>
   <component name="RunManager" selected="PHP Script.userIndex.php">
@@ -273,7 +275,8 @@
       <workItem from="1587541941462" duration="4374000" />
       <workItem from="1587637226228" duration="4483000" />
       <workItem from="1587653653728" duration="3489000" />
-      <workItem from="1587713597302" duration="19200000" />
+      <workItem from="1587713597302" duration="21039000" />
+      <workItem from="1587805426748" duration="2795000" />
     </task>
     <task id="LOCAL-00001" summary="New structure">
       <created>1581665524514</created>
@@ -506,7 +509,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587743132966</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="interval bugfix">
+      <created>1587744050605</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1587744050605</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -526,7 +536,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
-    <MESSAGE value="Activities, ufw.log added, refresh" />
     <MESSAGE value="Today's logs, change nickname" />
     <MESSAGE value="change password" />
     <MESSAGE value="histogram" />
@@ -551,7 +560,8 @@
     <MESSAGE value="custom log in separate db" />
     <MESSAGE value="delete custom log and analise only real data" />
     <MESSAGE value="ideabox" />
-    <option name="LAST_COMMIT_MESSAGE" value="ideabox" />
+    <MESSAGE value="interval bugfix" />
+    <option name="LAST_COMMIT_MESSAGE" value="interval bugfix" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1032" y="182" key="#Deployment" timestamp="1581864317979">
@@ -574,14 +584,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1120" y="256" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1587132200494" />
-    <state x="770" y="59" key="CommitChangelistDialog2" timestamp="1587743129022">
+    <state x="770" y="59" key="CommitChangelistDialog2" timestamp="1587744049823">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="770" y="59" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1587743129022" />
-    <state x="1011" y="100" width="816" height="847" key="DirDiffDialog" timestamp="1587154220337">
+    <state x="770" y="59" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1587744049823" />
+    <state x="1011" y="100" width="816" height="847" key="DirDiffDialog" timestamp="1587813539703">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1011" y="100" width="816" height="847" key="DirDiffDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1587154220337" />
+    <state x="1011" y="100" width="816" height="847" key="DirDiffDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1587813539703" />
     <state x="1220" y="279" key="FileChooserDialogImpl" timestamp="1587307258462">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
