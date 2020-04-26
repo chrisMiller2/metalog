@@ -6,8 +6,8 @@ echo shell_exec("cd ". $dir . "ls -l");
 $files = array_diff(scandir($dir), array('.','..',' '));
 
 //list uploaded files
-echo '<select name="select2">';
-echo '<option value="null"></option>';
+echo '<input list="logs" name="select2" placeholder="double click me"  autocomplete="off">';
+echo '<datalist id="logs">';
 foreach($files as $customLog){?>
     <option value="<?php echo strtolower($customLog); ?>">
         <?php echo $customLog;?></option>
@@ -17,12 +17,12 @@ foreach($files as $customLog){?>
 //handle two different calls
 if ($_SESSION['customButtons'] == "logcenter")
 {
-    echo '</select><br>
+    echo '</datalist><br>
 <input class="button" type="submit" id="searchListButton" name="searchButton" value="Custom Search"/>
 <input class="button" type="submit" id="intervalListButton" name="intervalButton" value="Custom Interval"/>
 <input class="button" type="submit" name="histogramButton" value="Custom Histogram"/>';
 }else if ($_SESSION['customButtons'] == "index"){
-    echo '</select><br>
+    echo '</datalist><br>
 <input class="button" type="submit" name="selectButton" value="Give me custom logs">';
 }
 

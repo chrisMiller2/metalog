@@ -4,8 +4,7 @@
     <list default="true" id="ae899390-2983-46d6-a30b-61b97734a05f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/sshConfigs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sshConfigs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/deleteCustomLogs.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/deleteCustomLogs.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/documentation/szakdolgozat.docx" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/documentation/szakdolgozat.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/listCustomLogs.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/listCustomLogs.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -276,7 +275,9 @@
       <workItem from="1587637226228" duration="4483000" />
       <workItem from="1587653653728" duration="3489000" />
       <workItem from="1587713597302" duration="21039000" />
-      <workItem from="1587805426748" duration="2795000" />
+      <workItem from="1587805426748" duration="2834000" />
+      <workItem from="1587835843680" duration="1226000" />
+      <workItem from="1587883294454" duration="2803000" />
     </task>
     <task id="LOCAL-00001" summary="New structure">
       <created>1581665524514</created>
@@ -516,7 +517,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587744050605</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="custom delete from server fix">
+      <created>1587813559528</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1587813559528</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -536,7 +544,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
-    <MESSAGE value="Today's logs, change nickname" />
     <MESSAGE value="change password" />
     <MESSAGE value="histogram" />
     <MESSAGE value="activity chart" />
@@ -561,7 +568,8 @@
     <MESSAGE value="delete custom log and analise only real data" />
     <MESSAGE value="ideabox" />
     <MESSAGE value="interval bugfix" />
-    <option name="LAST_COMMIT_MESSAGE" value="interval bugfix" />
+    <MESSAGE value="custom delete from server fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="custom delete from server fix" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1032" y="182" key="#Deployment" timestamp="1581864317979">
@@ -584,10 +592,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1120" y="256" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1587132200494" />
-    <state x="770" y="59" key="CommitChangelistDialog2" timestamp="1587744049823">
+    <state x="770" y="59" key="CommitChangelistDialog2" timestamp="1587813553888">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="770" y="59" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1587744049823" />
+    <state x="770" y="59" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1587813553888" />
     <state x="1011" y="100" width="816" height="847" key="DirDiffDialog" timestamp="1587813539703">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -604,18 +612,18 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="891" y="159" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1586678726564" />
-    <state x="1089" y="254" key="Vcs.Push.Dialog.v2" timestamp="1587743148461">
+    <state x="1089" y="254" key="Vcs.Push.Dialog.v2" timestamp="1587813570188">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1089" y="254" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1587743148461" />
+    <state x="1089" y="254" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1587813570188" />
     <state x="661" y="345" key="com.intellij.ide.util.TipDialog" timestamp="1580908975166">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="661" y="345" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1580908975166" />
-    <state x="1249" y="441" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1587735383577">
+    <state x="1249" y="441" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1587886240561">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1249" y="441" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1587735383577" />
+    <state x="1249" y="441" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1587886240561" />
     <state x="1401" y="333" key="ftp.server.browser" timestamp="1581000241451">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
