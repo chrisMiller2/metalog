@@ -75,24 +75,37 @@ li#menuRight {
 }
 
 /*activity table*/
+#table-scroll {
+    height:800px;
+    overflow:auto;
+    margin-top:20px;
+    width: 600px;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
 #activityTable{
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
     float: left;
     border-collapse: collapse;
-    margin-bottom: 50px;
 }
 #activityTable th {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
+    position: sticky;
+    top: 0;
+    width: 100px;
     background-color: #008bd6;
     color: white;
 }
-#activityTable td, #activityTable th {
+
+#activityTable td, #activityTable th{
     border: 1px solid #000000;
     padding: 8px;
     text-decoration: none;
 }
+
 #activityTable tr:nth-child(even){background-color: #666666;}
 #activityTable tr:nth-child(odd){background-color: #7a7a7a;}
 #activityTable tr:hover {background-color: #545454;}

@@ -338,34 +338,37 @@ $_SESSION['last_activity'] = time();
                 //refreshes the site
                 echo "<meta http-equiv='refresh' content='0'>";
             }?>
-            <div class="table">
+            <div id="table-scroll">
+                <?php
+                echo "<table border='1' id='activityTable'>
+                        <thead>
+                            <tr>
+                               <!-- ><th width='30px'>ID</th> id is not necessary to see<! --> 
+                                <th>Username</th>
+                                <th>Type</th>
+                                <th>Login</th>
+                                <th>Logout</th>
+                                <th>Date</th>
+                                <th>DELETE</th>
+                            </tr>
+                        </thead>
+                        <tbody>";
+                while($row = mysqli_fetch_array($result))
+                {
 
-            <?php
-            echo "<table border='1' id='activityTable'>
-                <tr>
-                    <th width='30px'>ID</th>
-                    <th width='100px'>Username</th>
-                    <th width='50px'>Type</th>
-                    <th width='100px'>Login</th>
-                    <th width='100px'>Logout</th>
-                    <th width='100px'>Date</th>
-                    <th width='100px'>DELETE</th>
-                </tr>";
-            while($row = mysqli_fetch_array($result))
-            {
-
-                echo "<tr>";
-                    echo "<td>" . $row['ID'] . "</td>";
-                    echo "<td>" . mb_strimwidth($row['Username'], 0, 12, "...") . "</td>";
-                    echo "<td>" . $row['Type'] . "</td>";
-                    echo "<td>" . $row['Login'] . "</td>";
-                    echo "<td>" . $row['Logout'] . "</td>";
-                    echo "<td>" . $row['Date'] . "</td>";
-                    echo "<td><a href=\"deleteActivityRecord.php?id=".$row['ID']."\">DELETE</a></td>";
-                    echo "</tr>";
-            }?>
-            </div>
+                    echo "<tr>";
+    //                    echo "<td>" . $row['ID'] . "</td>";
+                        echo "<td>" . mb_strimwidth($row['Username'], 0, 12, "...") . "</td>";
+                        echo "<td>" . $row['Type'] . "</td>";
+                        echo "<td>" . $row['Login'] . "</td>";
+                        echo "<td>" . $row['Logout'] . "</td>";
+                        echo "<td>" . $row['Date'] . "</td>";
+                        echo "<td><a href=\"deleteActivityRecord.php?id=".$row['ID']."\">DELETE</a></td>";
+                        echo "</tr>";
+                }?>
+                </tbody>
                 </table>
+            </div>
                 <?php
                 mysqli_close($con);
             ?>
