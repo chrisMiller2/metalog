@@ -328,6 +328,7 @@ $_SESSION['last_activity'] = time();
             include "../dbInfo.php";
             $result = mysqli_query($con,"SELECT * FROM Status");
             echo '<form method="post">';
+            echo 'Click "Delete" to delete a row, click "Delete all activity" to empty the table!<br>';
             echo '<input type="submit" name="deleteRows" class="button" value="Delete all activity" style="vertical-align: middle"><br>';
             echo '</form>';
             if(isset($_POST['deleteRows'])){
@@ -363,7 +364,7 @@ $_SESSION['last_activity'] = time();
                         echo "<td>" . $row['Login'] . "</td>";
                         echo "<td>" . $row['Logout'] . "</td>";
                         echo "<td>" . $row['Date'] . "</td>";
-                        echo "<td><a href=\"deleteActivityRecord.php?id=".$row['ID']."\">DELETE</a></td>";
+                        echo "<td><a class='tableDeleteButton' href=\"deleteActivityRecord.php?id=".$row['ID']."\">DELETE</a></td>";
                         echo "</tr>";
                 }?>
                 </tbody>
@@ -372,6 +373,11 @@ $_SESSION['last_activity'] = time();
                 <?php
                 mysqli_close($con);
             ?>
+            <script>
+                function orderDate() {
+
+                }
+            </script>
 
 <!--            Usertype activity chart-->
             <?php
@@ -418,7 +424,6 @@ $_SESSION['last_activity'] = time();
                     </td>
                 </tr>
             </table>
-
         </div>
     </div>
 

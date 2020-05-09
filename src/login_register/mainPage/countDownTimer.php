@@ -6,7 +6,7 @@ echo date('i:s', $timer);
 
 if ($_SESSION['last_activity'] < time() - $_SESSION['expire_time']) {
     echo "<script>
-        alert('You have been logged out due to inactivity...sad');
+        alert('You have been logged out due to inactivity!');
         window.location.href='/../logout.php';
 </script>";
 }

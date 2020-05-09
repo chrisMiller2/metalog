@@ -6,6 +6,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/Main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/Main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/adminIndex.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/adminIndex.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/login_register/mainPage/countDownTimer.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/login_register/mainPage/countDownTimer.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +60,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/login_register/mainPage/documentation" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -68,19 +69,19 @@
     <property name="settings.editor.selected.configurable" value="project.propDebugger" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Christian Miller\Desktop\szakdolgozat\src\login_register\mainPage\documentation" />
-      <recent name="C:\Users\Christian Miller\Desktop\szakdolgozat\src\login_register\mainPage" />
-      <recent name="C:\Users\Christian Miller\Desktop\szakdolgozat\src\login_register\mainPage\Template" />
-      <recent name="C:\Users\Christian Miller\Desktop\szakdolgozat\src\login_register\mainPage\usages" />
-      <recent name="C:\Users\Christian Miller\Desktop\szakdolgozat\src\login_register\mainPage\images" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Christian Miller\Desktop\szakdolgozat\src\login_register\mainPage\documentation" />
       <recent name="C:\Users\Christian Miller\Desktop\szakdolgozat\src\login_register\mainPage" />
       <recent name="C:\Users\Christian Miller\Desktop\szakdolgozat\src\login_register\mainPage\usages" />
       <recent name="C:\Users\HP EliteBook 8760w\Desktop\szakdolgozat\src\mainPage\images" />
       <recent name="C:\Users\HP EliteBook 8760w\Desktop\szakdolgozat\src\mainPage" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Christian Miller\Desktop\szakdolgozat\src\login_register\mainPage\documentation" />
+      <recent name="C:\Users\Christian Miller\Desktop\szakdolgozat\src\login_register\mainPage" />
+      <recent name="C:\Users\Christian Miller\Desktop\szakdolgozat\src\login_register\mainPage\Template" />
+      <recent name="C:\Users\Christian Miller\Desktop\szakdolgozat\src\login_register\mainPage\usages" />
+      <recent name="C:\Users\Christian Miller\Desktop\szakdolgozat\src\login_register\mainPage\images" />
     </key>
   </component>
   <component name="RunManager" selected="PHP Script.userIndex.php">
@@ -280,7 +281,12 @@
       <workItem from="1587835843680" duration="1226000" />
       <workItem from="1587883294454" duration="4287000" />
       <workItem from="1587893718686" duration="790000" />
-      <workItem from="1587894621125" duration="1057000" />
+      <workItem from="1587894621125" duration="3962000" />
+      <workItem from="1588104713659" duration="172000" />
+      <workItem from="1588786030483" duration="35000" />
+      <workItem from="1589029720857" duration="113000" />
+      <workItem from="1589030587368" duration="26000" />
+      <workItem from="1589030638432" duration="5762000" />
     </task>
     <task id="LOCAL-00001" summary="New structure">
       <created>1581665524514</created>
@@ -534,7 +540,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587887467341</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="table fixed size scrollable">
+      <created>1587895721786</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1587895721786</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -554,7 +567,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
-    <MESSAGE value="histogram" />
     <MESSAGE value="activity chart" />
     <MESSAGE value="today's log bugfix and password verification fix" />
     <MESSAGE value="monitoring" />
@@ -579,7 +591,8 @@
     <MESSAGE value="interval bugfix" />
     <MESSAGE value="custom delete from server fix" />
     <MESSAGE value="custom log autofill" />
-    <option name="LAST_COMMIT_MESSAGE" value="custom log autofill" />
+    <MESSAGE value="table fixed size scrollable" />
+    <option name="LAST_COMMIT_MESSAGE" value="table fixed size scrollable" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1032" y="182" key="#Deployment" timestamp="1581864317979">
@@ -602,30 +615,30 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1120" y="256" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1587132200494" />
-    <state x="770" y="59" key="CommitChangelistDialog2" timestamp="1587887464061">
+    <state x="770" y="59" key="CommitChangelistDialog2" timestamp="1587895718115">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="770" y="59" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1587887464061" />
+    <state x="770" y="59" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1587895718115" />
     <state x="1011" y="100" width="816" height="847" key="DirDiffDialog" timestamp="1587813539703">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1011" y="100" width="816" height="847" key="DirDiffDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1587813539703" />
-    <state x="1220" y="279" key="FileChooserDialogImpl" timestamp="1587307258462">
+    <state x="1220" y="279" key="FileChooserDialogImpl" timestamp="1589030611744">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1220" y="279" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1587307258462" />
-    <state x="1363" y="448" key="NewPhpFileDialog" timestamp="1587718272578">
+    <state x="1220" y="279" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1589030611744" />
+    <state x="1363" y="448" key="NewPhpFileDialog" timestamp="1589039599882">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1363" y="448" key="NewPhpFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1587718272578" />
+    <state x="1363" y="448" key="NewPhpFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1589039599882" />
     <state x="891" y="159" key="SettingsEditor" timestamp="1586678726564">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="891" y="159" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1586678726564" />
-    <state x="1089" y="254" key="Vcs.Push.Dialog.v2" timestamp="1587813570188">
+    <state x="1089" y="254" key="Vcs.Push.Dialog.v2" timestamp="1587895729214">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1089" y="254" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1587813570188" />
+    <state x="1089" y="254" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1587895729214" />
     <state x="661" y="345" key="com.intellij.ide.util.TipDialog" timestamp="1580908975166">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -642,10 +655,6 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1171" y="315" key="git4idea.merge.GitPullDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1587743143634" />
-    <state x="1295" y="417" key="publish.login" timestamp="1579875499905">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="1295" y="417" key="publish.login/0.0.1920.1040@0.0.1920.1040" timestamp="1579875499905" />
     <state x="1209" y="244" key="run.anything.popup" timestamp="1587019957762">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

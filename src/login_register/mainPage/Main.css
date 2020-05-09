@@ -76,7 +76,7 @@ li#menuRight {
 
 /*activity table*/
 #table-scroll {
-    height:800px;
+    height:700px;
     overflow:auto;
     margin-top:20px;
     width: 600px;
@@ -100,6 +100,11 @@ li#menuRight {
     color: white;
 }
 
+.tableDeleteButton{
+    text-decoration: none;
+    color: #000;
+}
+
 #activityTable td, #activityTable th{
     border: 1px solid #000000;
     padding: 8px;
@@ -112,7 +117,7 @@ li#menuRight {
 
 #activityScaleTable{
     float: right;
-    width: 800px;
+    width: 700px;
     align: center;
 }
 
